@@ -2,7 +2,16 @@
   #AboutMe.container
     .inner
       h1 About Me
-      | Coming Soon
+      .field.center Taoyuan, Taiwan → Brisbane, Australia → Tokyo, Japan
+      .field
+        .label Education: 
+        .body 
+          | Bachelors of Engineering - Computer Science and Engineering
+          br
+          | Waseda University, Tokyo, Japan
+      .field
+        .label Hobbies: 
+        .body Tennis, Archery, Violin
 </template>
 
 <script>
@@ -13,5 +22,20 @@ export default {
 
 <style lang='scss' scoped>
 #AboutMe {
+  
+  .field {
+    margin-top: 50px;
+    display: flex;
+    &.center {
+      justify-content: center;
+    }
+
+    .label {
+      font-weight: 600;
+      margin-right: 25px;
+      width: 100px;
+      text-align: left;
+    }
+  }
 }
 </style>

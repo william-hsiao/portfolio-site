@@ -2,17 +2,10 @@
   #Contact.container
     .inner
       h1 Contact
-      div
-        | Please send me an email at: 
-        b contact@william-hsiao.com
-      //- form
-      //-   label Name
-      //-   input(type='text')
-      //-   label Email
-      //-   input(type='text')
-      //-   label Message
-      //-   textarea
-      //-   input(type='submit', value='Send')
+      | Got a project in mind? Just have a question? Let's talk!
+      br
+      br
+      b contact@william-hsiao.com
 </template>
 
 <script>
