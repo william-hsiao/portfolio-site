@@ -1,6 +1,7 @@
 <template lang="pug">
-  .intro
-    | Intro
+  #Intro.container
+    .inner
+      | Hi! I'm William Hsiao, a software engineer currently working in Tokyo, Japan.
 </template>
 
 <script>
@@ -10,10 +11,7 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-.intro {
-  background-color: white;
-  height: calc(100% - 100px);
-  padding: 0 30px;
-  max-width: 1000%;
+#Intro {
+
 }
 </style>

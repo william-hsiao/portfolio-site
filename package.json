@@ -13,6 +13,7 @@
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^7.1.0",
     "vue": "^2.5.17",
+    "vue-analytics": "^5.16.1",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
