@@ -1,6 +1,6 @@
 <template lang="pug">
   #Skills.container
-    .inner
+    .frame
       h1 Other Skills
       ul
         li Graphics Design

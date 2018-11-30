@@ -1,0 +1,34 @@
+input, select, textarea {
+  border: 1px solid #808080;
+  box-sizing: border-box;
+  outline: none;
+  padding: 0 3px;
+  vertical-align: center;
+  &:focus {
+    border-color: #000;
+  }
+  &::placeholder {
+    color: #808080;
+  }
+  &[readonly] {
+    background-color: #1b1b1b;
+  }
+  &[disabled] {
+    background-color: #1b1b1b;
+    border-color: #808080;
+    color: #000;
+  }
+}
+input, select {
+  // height: $component-height-m;
+}
+textarea {
+  font-family: inherit;
+  padding: 3px;
+  resize: vertical;
+}
+
+label {
+  font-weight: 500;
+  margin-right: 5px;
+}

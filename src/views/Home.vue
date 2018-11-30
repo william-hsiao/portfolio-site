@@ -1,13 +1,13 @@
 <template lang="pug">
   #home
     Navbar
-    Cover.theme-cover
-    Intro.theme-1
-    DevSkills.theme-2
-    Skills.theme-3
-    Projects.theme-4
-    AboutMe.theme-1
-    Contact.theme-2
+    Cover
+    Intro
+    DevSkills
+    Skills
+    Projects
+    AboutMe
+    Contact
 </template>
 
 <script>
@@ -32,42 +32,26 @@ export default {
     Projects,
     AboutMe,
     Contact,
+  },
+  mounted() {
+    const frames = document.getElementsByClassName('container')
+    for(let i = 0; i < frames.length; i++) {
+      if (i % 2 === 0) frames[i].classList.add('dark');
+      else frames[i].classList.add('light');
+
+      if (frames[i].id === 'Cover') frames[i].classList.add('theme-cover');
+      else frames[i].classList.add(`theme-${(i - 1) % 4 + 1}`);
+    };
   }
 }
 </script>
 
 <style lang='scss'>
 #home {
-  scroll-snap-type: y proximity;
-  overflow-y: scroll;
   box-sizing: border-box;
   height: 100%;
-}
-
-.container {
-  min-height: 100%;
-  padding: 100px 0;
-  box-sizing: border-box;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
-  &:nth-child(odd) {
-    color: #000000;
-  }
-  &:nth-child(even) {
-    color: #ffffff;
-  }
-  .inner {
-    max-width: 1000px;
-    box-sizing: border-box;
-    padding: 0 50px;
-    position: relative;
-    width: 100%;
-    
-  }
+  overflow-y: scroll;
+  scroll-snap-type: y proximity;
 }
 
 .theme-cover {
@@ -84,5 +68,48 @@ export default {
 }
 .theme-4 {
   background-color: #353535;
+}
+
+.container {
+  align-items: center;
+  box-sizing: border-box;
+  color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  padding: 100px 0;
+  scroll-snap-align: start;
+  width: 100%;
+
+  .frame {
+    box-sizing: border-box;
+    max-width: 1000px;
+    min-height: 100%;
+    padding: 0 50px;
+    position: relative;
+    width: 100%;
+
+    .contents {
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+      visibility: hidden;
+      &.active {
+        position: relative;
+        visibility: visible;
+      }
+      &.standby {
+        visibility: visible;
+      }
+      h1 {
+        display: inline-block;
+      }
+    }
+  }
 }
 </style>

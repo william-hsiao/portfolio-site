@@ -1,0 +1,33 @@
+html {
+  background-color: black;
+  height: 100%;
+  min-width: 350px;
+}
+
+body {
+  font-family: 'Montserrat', 'Avenir', Helvetica, Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Play', sans-serif;
+  letter-spacing: 3px;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+// Lists
+ul {
+  list-style-type: square;
+  margin: auto;
+  padding-left: 20px;
+  text-align: left;
+  width: max-content;
+}
+li {
+  margin: 8px 0;
+}

@@ -1,6 +1,6 @@
 <template lang="pug">
   #Projects.container
-    .inner 
+    .frame
       h1 Projects
       ul
         li gakuhub

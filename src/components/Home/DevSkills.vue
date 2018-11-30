@@ -1,7 +1,7 @@
 <template lang="pug">
   #DevSkills.container
-    .inner
-      .contents(:class="{ hide: !show('summary') }")
+    .frame
+      .summary.contents.active
         h1 Developer Skills
         .list-container
           .list
@@ -20,9 +20,9 @@
             h4 Services
             ul
               li(v-for='item in summary.services') {{ item }}
-        .details(@click="viewTemplate('detailed')")
+        .details(@click="viewTemplate('summary', 'detailed', 'fade-left')")
           | View full details
-      .contents(:class="{ hide: !show('detailed') }")
+      .detailed.contents
         h1 Developer Skills
         .section
           h4 Languages
@@ -58,21 +58,22 @@
             .field(v-for='item in detailed.others.aws')
               .label {{ item.name }}
               RatingBar(:value='item.rating')
-        .details(@click="viewTemplate('summary')")
+        .details(@click="viewTemplate('detailed', 'summary', 'fade-left')")
           | ← return
 </template>
 
 <script>
-import RatingBar from '@/components/RatingBar.vue'
+import RatingBar from '@/components/RatingBar.vue';
+import { transition } from '@/assets/javascript/transition';
 
 export default {
   name: 'DevSkills',
+  mixins: [ transition ],
   components: {
     RatingBar
   },
   data() {
     return {
-      view: 'summary',
       summary: {
         lang: [ 'JavaScript', 'Java', 'C/C++' ],
         front: [ 'Vue.js', 'Sass' ],
@@ -120,13 +121,6 @@ export default {
     }
   },
   methods: {
-    viewTemplate(page) {
-      this.view = page;
-      this.$el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    },
-    show(page) {
-      return this.view === page;
-    }
   },
 }
 </script>
@@ -151,31 +145,14 @@ export default {
   }
 }
 
-.contents {
-  transition: all 1s ease-in-out;
-  opacity: 1;
-  &.hide {
-    transition-duration: 0.5s;
-    transform: translateY(200px);
-  }
-}
 .section {
   margin-bottom: 3em;
 }
-.hide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  // display: none;
-  visibility: hidden;
-  opacity: 0;
-}
 .field {
   display: flex;
-  width: 100%;
-  max-width: 300px;
   margin: auto;
+  max-width: 300px;
+  width: 100%;
   .label {
     flex-grow: 1;
     text-align: left;

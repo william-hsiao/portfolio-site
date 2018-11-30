@@ -1,6 +1,6 @@
 <template lang="pug">
   #AboutMe.container
-    .inner
+    .frame
       h1 About Me
       .field.center Taoyuan, Taiwan → Brisbane, Australia → Tokyo, Japan
       .field

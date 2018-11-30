@@ -1,6 +1,6 @@
 <template lang="pug">
   #Blog.container
-    .inner
+    .frame
       h1 Blog Posts
 </template>
 

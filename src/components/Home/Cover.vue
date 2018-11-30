@@ -1,6 +1,6 @@
 <template lang="pug">
   #Cover.container
-    .inner
+    .frame
       img.logo(alt="logo" src="../../assets/logo.png")
       h1 William Hsiao
       h3 Web Developer

@@ -1,6 +1,6 @@
 <template lang="pug">
   #Intro.container
-    .inner
+    .frame
       | Hi! I'm William Hsiao, a software engineer currently working in Tokyo, Japan.
 </template>
 

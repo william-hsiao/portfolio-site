@@ -1,0 +1,66 @@
+// Vue Fade
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+#app {
+  --animation-duration: 2s;
+}
+
+// CSS Animations
+.fade-left-in {
+  -webkit-animation: fadeLeftIn var(--animation-duration) ease both;
+  animation: fadeLeftIn var(--animation-duration) ease both;
+}
+.fade-left-out {
+  -webkit-animation: fadeLeftOut var(--animation-duration) ease both;
+  animation: fadeLeftOut var(--animation-duration) ease both;
+}
+
+@-webkit-keyframes fadeLeftIn {
+  from { opacity: 0; -webkit-transform: translateX(100%); }
+  to { opacity: 1; }
+}
+@keyframes fadeLeftIn {
+  from { opacity: 0; -webkit-transform: translateX(100%); transform: translateX(100%); }
+  to { opacity: 1; }
+}
+
+@-webkit-keyframes fadeLeftOut {
+  from { opacity: 1; }
+  to { opacity: 0; -webkit-transform: translateX(-100%); }
+}
+@keyframes fadeLeftOut {
+  from { opacity: 1; }
+  to { opacity: 0; -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+}
+
+.left-in {
+  -webkit-animation: leftIn var(--animation-duration) ease both;
+  animation: leftIn var(--animation-duration) ease both;
+}
+.left-out {
+  -webkit-animation: leftOut var(--animation-duration) ease both;
+  animation: leftOut var(--animation-duration) ease both;
+}
+
+@-webkit-keyframes leftIn {
+  from { -webkit-transform: translateX(50%); }
+  to { }
+}
+@keyframes leftIn {
+  from { -webkit-transform: translateX(50%); transform: translateX(50%); }
+  to { }
+}
+
+@-webkit-keyframes leftOut {
+  from { }
+  to { -webkit-transform: translateX(-50%); }
+}
+@keyframes leftOut {
+  from { }
+  to { -webkit-transform: translateX(-50%); transform: translateX(-50%); }
+}

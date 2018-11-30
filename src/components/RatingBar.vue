@@ -26,7 +26,7 @@ export default {
   .marked, .unmarked {
     height: 15px;
     width: 15px;
-    margin: 0 1px;
+    margin: 0 2px;
   }
   .marked {
     background-color: #353535;

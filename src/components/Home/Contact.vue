@@ -1,6 +1,6 @@
 <template lang="pug">
   #Contact.container
-    .inner
+    .frame
       h1 Contact
       | Got a project in mind? Just have a question? Let's talk!
       br

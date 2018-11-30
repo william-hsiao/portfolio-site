@@ -1,7 +1,7 @@
 <template lang="pug">
   #Skills
     
-    .inner
+    .frame
       h1 Skills
       
       .section
@@ -53,7 +53,7 @@ export default {
   box-sizing: border-box;
   width: 100%;
   overflow-y: auto;
-  .inner {
+  .frame {
     background-color: #ffffff;
     max-width: 1000px;
     padding: 50px 50px;
