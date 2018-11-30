@@ -5,7 +5,6 @@
       ul
         li gakuhub
         li gaze-key
-        li Word Prediction
         li This site!
       br
       | Details coming soon!

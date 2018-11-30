@@ -12,14 +12,14 @@
 
 <script>
 // @ is an alias to /src
-import Navbar from '@/components/Navbar.vue'
-import Cover from '@/components/Cover.vue'
-import Intro from '@/components/Intro.vue'
-import DevSkills from '@/components/DevSkills.vue'
-import Skills from '@/components/Skills.vue'
-import Projects from '@/components/Projects.vue'
-import AboutMe from '@/components/AboutMe.vue'
-import Contact from '@/components/Contact.vue'
+import Navbar from '@/components/Home/Navbar.vue'
+import Cover from '@/components/Home/Cover.vue'
+import Intro from '@/components/Home/Intro.vue'
+import DevSkills from '@/components/Home/DevSkills.vue'
+import Skills from '@/components/Home/Skills.vue'
+import Projects from '@/components/Home/Projects.vue'
+import AboutMe from '@/components/Home/AboutMe.vue'
+import Contact from '@/components/Home/Contact.vue'
 
 export default {
   name: 'home',
@@ -62,7 +62,11 @@ export default {
   }
   .inner {
     max-width: 1000px;
+    box-sizing: border-box;
     padding: 0 50px;
+    position: relative;
+    width: 100%;
+    
   }
 }
 

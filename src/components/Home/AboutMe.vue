@@ -26,7 +26,9 @@ export default {
   .field {
     margin-top: 50px;
     display: flex;
+    text-align: left;
     &.center {
+      text-align: center;
       justify-content: center;
     }
 
@@ -34,7 +36,6 @@ export default {
       font-weight: 600;
       margin-right: 25px;
       width: 100px;
-      text-align: left;
     }
   }
 }

@@ -3,18 +3,18 @@
     #nav(v-show="showNavbar")
       .navbar
         router-link.logo(to="/")
-          img.logo(alt="logo" src="../assets/logo.png")
+          img.logo(alt="logo" src="../../assets/logo.png")
           h1 William Hsiao
         .links
           a.item(href="https://www.linkedin.com/in/william-hsiao/", target="_blank")
             //- LinkedIn
-            img(src="../assets/linkedin.svg")
+            img(src="../../assets/linkedin.svg")
           a.item(href="https://github.com/william-hsiao", target="_blank")
             //- Github
-            img(src="../assets/github.svg")
+            img(src="../../assets/github.svg")
           .item.tooltip
             //- Email
-            img(src="../assets/email.svg")
+            img(src="../../assets/email.svg")
             .tooltipContent
               | contact@william-hsiao.com
 </template>
@@ -51,6 +51,7 @@ export default {
   width: 100%;
   padding: 0 30px;
   box-sizing: border-box;
+  z-index: 10000;
   .navbar {
     display: flex;
     align-items: center;
@@ -67,12 +68,18 @@ export default {
       h1 {
         font-size: 30px;
         font-weight: 400;
+        @media (max-width: 600px) {
+          font-size: 15px;
+        }
       }
       img {
         height: 75px;
         display: inline-block;
         vertical-align: middle;
         margin-right: 5px;
+        @media (max-width: 600px) {
+          height: 40px;
+        }
       } 
     }
     .links {
@@ -85,20 +92,20 @@ export default {
         &:hover img {
           filter: invert(.5);
         }
+        @media (max-width: 600px) {
+          margin: 0 5px;
+        }
       }
       img {
         height: 35px;
         width: 35px;
         display: block;
+        @media (max-width: 600px) {
+          height: 25px;
+          width: 25px;
+        }
       }
     }
   }
-}
-
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.3s;
-}
-.fade-enter, .fade-leave-to {
-  opacity: 0;
 }
 </style>

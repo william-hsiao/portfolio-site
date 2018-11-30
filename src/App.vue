@@ -13,7 +13,7 @@ export default {
 html {
   background-color: black;
   height: 100%;
-  min-width: 600px;
+  min-width: 350px;
 }
 body {
   margin: 0;
@@ -125,8 +125,17 @@ ul {
   list-style-type: square;
   text-align: left;
   padding-left: 20px;
+  width: max-content;
+  margin: auto;
 }
 li {
   margin: 8px 0;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
 </style>
