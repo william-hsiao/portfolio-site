@@ -23,17 +23,20 @@ export const transitions = {
           frame.style.height = `${fromTemplate.offsetHeight}px`;
         }
 
+        // If FROM is greater than window, TO is smaller than window
         if (fromTemplate.offsetHeight > windowViewportHeight && toTemplate.offsetHeight < windowViewportHeight) {
           paddingHeight = (windowViewportHeight - toTemplate.offsetHeight) / 2;
           toTemplate.style.paddingTop = `${paddingHeight}px`;
           toTemplate.style.paddingBottom = `${paddingHeight}px`;
         }
+        // If TO is greater than window, FROM is smaller than window
         else if (toTemplate.offsetHeight > windowViewportHeight && fromTemplate.offsetHeight < windowViewportHeight) {
           paddingHeight = (windowViewportHeight - fromTemplate.offsetHeight) / 2;
           fromTemplate.style.paddingTop = `${paddingHeight}px`;
           fromTemplate.style.paddingBottom = `${paddingHeight}px`;
         }
-        else if (fromTemplate.offsetHeight < windowViewportHeight && toTemplate.offsetHeight < windowViewportHeight) {
+        // If FROM and TO are smaller than window
+        else if (fromTemplate.offsetHeight <= windowViewportHeight && toTemplate.offsetHeight <= windowViewportHeight) {
           if (fromTemplate.offsetHeight > toTemplate.offsetHeight) {
             paddingHeight = (fromTemplate.offsetHeight - toTemplate.offsetHeight) / 2;
             toTemplate.style.paddingTop = `${paddingHeight}px`;

@@ -1,0 +1,12 @@
+.button {
+  font-family: 'Play', 'Avenir', Helvetica, Arial, sans-serif;
+  display: inline-flex;
+  // text-transform: uppercase;
+  font-size: 14px;
+  padding: 5px 10px;
+  background-color: #444444;
+  color: #ffffff;
+  &:hover {
+    background-color: #808080;
+  }
+}

@@ -12,6 +12,7 @@ export default {
 <style lang="scss">
 @import './assets/stylesheets/_animations.scss';
 @import './assets/stylesheets/_base.scss';
+@import './assets/stylesheets/_buttons.scss';
 @import './assets/stylesheets/_colours.scss';
 @import './assets/stylesheets/_forms.scss';
 @import './assets/stylesheets/_tooltips.scss';

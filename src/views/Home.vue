@@ -55,23 +55,24 @@ export default {
 }
 
 .theme-cover {
-  background-color: #000000;
+  --panel-background: #000000;
 }
 .theme-1 {
-  background-color: #efefef;
+  --panel-background: #efefef;
 }
 .theme-2 {
-  background-color: #6c6c6c;
+  --panel-background: #6c6c6c;
 }
 .theme-3 {
-  background-color: #ffffff;
+  --panel-background: #ffffff;
 }
 .theme-4 {
-  background-color: #353535;
+  --panel-background: #353535;
 }
 
 .container {
   align-items: center;
+  background-color: var(--panel-background);
   box-sizing: border-box;
   color: var(--primary);
   display: flex;
@@ -90,9 +91,6 @@ export default {
     padding: 0 50px;
     position: relative;
     width: 100%;
-    ::-webkit-scrollbar {
-      display: none;
-    };
 
     .contents {
       height: 0;

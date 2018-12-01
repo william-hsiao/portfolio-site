@@ -1,19 +1,19 @@
 <template lang="pug">
   #Cover.container
     .frame
-      img.logo(alt="logo" src="../../assets/logo.png")
+      img.logo(alt="logo" src="../../assets/images/logo.png")
       h1 William Hsiao
       h3 Web Developer
       .links
         a.item(href="https://www.linkedin.com/in/william-hsiao/", target="_blank")
           //- LinkedIn
-          img(src="../../assets/linkedin.svg")
+          img(src="../../assets/images/linkedin.svg")
         a.item(href="https://github.com/william-hsiao", target="_blank")
           //- Github
-          img(src="../../assets/github.svg")
+          img(src="../../assets/images/github.svg")
         .item.tooltip
           //- Email
-          img(src="../../assets/email.svg")
+          img(src="../../assets/images/email.svg")
           .tooltipContent
             | contact@william-hsiao.com
 </template>
