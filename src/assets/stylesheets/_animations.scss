@@ -6,37 +6,61 @@
   opacity: 0;
 }
 
-#app {
-  --animation-duration: 2s;
-}
+$animation-duration-fast: 0.5s;
+$animation-duration: 2s;
 
 // CSS Animations
-// Translation
-//  - left
-//  - right
-// Directed Fade
-//  - fade-up
-//  - fade-down
-//  - fade-left
-//  - fade-right
+// Element Transitions
+//  - fade-in
+//  - fade-out
+// Page Transitions
+//  Translation
+//    - left
+//    - right
+//  Directed Fade
+//    - fade-up
+//    - fade-down
+//    - fade-left
+//    - fade-right
+
+// ELEMENT TRANSITIONS
+.fade-in {
+  -webkit-animation: fadeIn $animation-duration-fast ease both;
+  animation: fadeIn $animation-duration-fast ease both;
+}
+.fade-out {
+  -webkit-animation: fadeOut $animation-duration-fast ease both;
+  animation: fadeOut $animation-duration-fast ease both;
+}
+
+@-webkit-keyframes fadeIn {
+	from { opactiy: 0; }
+	to { opacity: 1; }
+}
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+// PAGE TRANSITIONS
 
 // Translation
 .left-in {
-  -webkit-animation: leftIn var(--animation-duration) ease both;
-  animation: leftIn var(--animation-duration) ease both;
+  -webkit-animation: leftIn $animation-duration ease both;
+  animation: leftIn $animation-duration ease both;
 }
 .left-out {
-  -webkit-animation: leftOut var(--animation-duration) ease both;
-  animation: leftOut var(--animation-duration) ease both;
+  -webkit-animation: leftOut $animation-duration ease both;
+  animation: leftOut $animation-duration ease both;
 }
 
 .right-in {
-  -webkit-animation: rightIn var(--animation-duration) ease both;
-  animation: rightIn var(--animation-duration) ease both;
+  -webkit-animation: rightIn $animation-duration ease both;
+  animation: rightIn $animation-duration ease both;
 }
 .right-out {
-  -webkit-animation: rightOut var(--animation-duration) ease both;
-  animation: rightOut var(--animation-duration) ease both;
+  -webkit-animation: rightOut $animation-duration ease both;
+  animation: rightOut $animation-duration ease both;
 }
 
 @-webkit-keyframes leftIn {
@@ -75,43 +99,50 @@
   to { -webkit-transform: translateX(100%); transform: translateX(100%); }
 }
 
-// Directed Fade
-.fade-left-in {
-  -webkit-animation: fadeLeftIn var(--animation-duration) ease both;
-  animation: fadeLeftIn var(--animation-duration) ease both;
-}
-.fade-left-out {
-  -webkit-animation: fadeLeftOut var(--animation-duration) ease both;
-  animation: fadeLeftOut var(--animation-duration) ease both;
-}
-
-.fade-right-in {
-  -webkit-animation: fadeRightIn var(--animation-duration) ease both;
-  animation: fadeRightIn var(--animation-duration) ease both;
-}
-.fade-right-out {
-  -webkit-animation: fadeRightOut var(--animation-duration) ease both;
-  animation: fadeRightOut var(--animation-duration) ease both;
-}
-
+// Fade
 .fade-up-in {
-  -webkit-animation: fadeUpIn var(--animation-duration) ease both;
-  animation: fadeUpIn var(--animation-duration) ease both;
+  -webkit-animation: fadeUpIn $animation-duration ease both;
+  animation: fadeUpIn $animation-duration ease both;
 }
 .fade-up-out {
-  -webkit-animation: fadeUpOut var(--animation-duration) ease both;
-  animation: fadeUpOut var(--animation-duration) ease both;
+  -webkit-animation: fadeUpOut $animation-duration ease both;
+  animation: fadeUpOut $animation-duration ease both;
 }
 
 .fade-down-in {
-  -webkit-animation: fadeDownIn var(--animation-duration) ease both;
-  animation: fadeDownIn var(--animation-duration) ease both;
+  -webkit-animation: fadeDownIn $animation-duration ease both;
+  animation: fadeDownIn $animation-duration ease both;
 }
 .fade-down-out {
-  -webkit-animation: fadeDownOut var(--animation-duration) ease both;
-  animation: fadeDownOut var(--animation-duration) ease both;
+  -webkit-animation: fadeDownOut $animation-duration ease both;
+  animation: fadeDownOut $animation-duration ease both;
+}
+.fade-left-in {
+  -webkit-animation: fadeLeftIn $animation-duration ease both;
+  animation: fadeLeftIn $animation-duration ease both;
+}
+.fade-left-out {
+  -webkit-animation: fadeLeftOut $animation-duration ease both;
+  animation: fadeLeftOut $animation-duration ease both;
 }
 
+.fade-right-in {
+  -webkit-animation: fadeRightIn $animation-duration ease both;
+  animation: fadeRightIn $animation-duration ease both;
+}
+.fade-right-out {
+  -webkit-animation: fadeRightOut $animation-duration ease both;
+  animation: fadeRightOut $animation-duration ease both;
+}
+
+@-webkit-keyframes fadeOut {
+	from { opactiy: 0; }
+	to { opacity: 1; }
+}
+@keyframes fadeOut {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
 @-webkit-keyframes fadeUpIn {
   from { opacity: 0; -webkit-transform: translateY(100%); }
   to { opacity: 1; }

@@ -64,11 +64,11 @@
 
 <script>
 import RatingBar from '@/components/RatingBar.vue';
-import { transition } from '@/assets/javascript/transition';
+import { transitions } from '@/assets/javascript/transition';
 
 export default {
   name: 'DevSkills',
-  mixins: [ transition ],
+  mixins: [ transitions ],
   components: {
     RatingBar
   },
@@ -119,8 +119,6 @@ export default {
         }
       }
     }
-  },
-  methods: {
   },
 }
 </script>
