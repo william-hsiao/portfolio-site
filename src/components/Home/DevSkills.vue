@@ -20,45 +20,45 @@
             h4 Services
             ul
               li(v-for='item in summary.services') {{ item }}
-        .details(@click="viewTemplate('summary', 'detailed', 'fade-left')")
+        .details(@click="viewTemplate('summary', 'detailed', 'fade-up')")
           | View full details
       .detailed.contents
         h1 Developer Skills
         .section
           h4 Languages
-          .grid
-            .field(v-for='item in detailed.lang')
+          .skill-field-container
+            .skill-field(v-for='item in detailed.lang')
               .label {{ item.name }}
               RatingBar(:value='item.rating')
         .section
           h4 Front-End
-          .grid
-            .field(v-for='item in detailed.front')
+          .skill-field-container
+            .skill-field(v-for='item in detailed.front')
               .label {{ item.name }}
               RatingBar(:value='item.rating')
         .section
           h4 Back-End
-          .grid
-            .field(v-for='item in detailed.back.frameworks')
+          .skill-field-container
+            .skill-field(v-for='item in detailed.back.frameworks')
               .label {{ item.name }}
               RatingBar(:value='item.rating')
           h6 Databases
-          .grid
-            .field(v-for='item in detailed.back.databases')
+          .skill-field-container
+            .skill-field(v-for='item in detailed.back.databases')
               .label {{ item.name }}
               RatingBar(:value='item.rating')
         .section
           h4 Services & Others
-          .grid
-            .field(v-for='item in detailed.others.others')
+          .skill-field-container
+            .skill-field(v-for='item in detailed.others.others')
               .label {{ item.name }}
               RatingBar(:value='item.rating')
           h6 AWS
-          .grid
-            .field(v-for='item in detailed.others.aws')
+          .skill-field-container
+            .skill-field(v-for='item in detailed.others.aws')
               .label {{ item.name }}
               RatingBar(:value='item.rating')
-        .details(@click="viewTemplate('detailed', 'summary', 'fade-left')")
+        .details(@click="viewTemplate('detailed', 'summary', 'fade-down')")
           | ← return
 </template>
 
@@ -148,9 +148,10 @@ export default {
 .section {
   margin-bottom: 3em;
 }
-.field {
+.skill-field {
   display: flex;
   margin: auto;
+  margin-bottom: 2px;
   max-width: 300px;
   width: 100%;
   .label {

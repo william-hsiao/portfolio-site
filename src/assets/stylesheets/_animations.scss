@@ -11,6 +11,71 @@
 }
 
 // CSS Animations
+// Translation
+//  - left
+//  - right
+// Directed Fade
+//  - fade-up
+//  - fade-down
+//  - fade-left
+//  - fade-right
+
+// Translation
+.left-in {
+  -webkit-animation: leftIn var(--animation-duration) ease both;
+  animation: leftIn var(--animation-duration) ease both;
+}
+.left-out {
+  -webkit-animation: leftOut var(--animation-duration) ease both;
+  animation: leftOut var(--animation-duration) ease both;
+}
+
+.right-in {
+  -webkit-animation: rightIn var(--animation-duration) ease both;
+  animation: rightIn var(--animation-duration) ease both;
+}
+.right-out {
+  -webkit-animation: rightOut var(--animation-duration) ease both;
+  animation: rightOut var(--animation-duration) ease both;
+}
+
+@-webkit-keyframes leftIn {
+  from { -webkit-transform: translateX(100%); }
+  to { }
+}
+@keyframes leftIn {
+  from { -webkit-transform: translateX(100%); transform: translateX(100%); }
+  to { }
+}
+
+@-webkit-keyframes leftOut {
+  from { }
+  to { -webkit-transform: translateX(-100%); }
+}
+@keyframes leftOut {
+  from { }
+  to { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+}
+
+@-webkit-keyframes rightIn {
+  from { -webkit-transform: translateX(-100%); }
+  to { }
+}
+@keyframes rightIn {
+  from { -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+  to { }
+}
+
+@-webkit-keyframes rightOut {
+  from { }
+  to { -webkit-transform: translateX(100%); }
+}
+@keyframes rightOut {
+  from { }
+  to { -webkit-transform: translateX(100%); transform: translateX(100%); }
+}
+
+// Directed Fade
 .fade-left-in {
   -webkit-animation: fadeLeftIn var(--animation-duration) ease both;
   animation: fadeLeftIn var(--animation-duration) ease both;
@@ -18,6 +83,69 @@
 .fade-left-out {
   -webkit-animation: fadeLeftOut var(--animation-duration) ease both;
   animation: fadeLeftOut var(--animation-duration) ease both;
+}
+
+.fade-right-in {
+  -webkit-animation: fadeRightIn var(--animation-duration) ease both;
+  animation: fadeRightIn var(--animation-duration) ease both;
+}
+.fade-right-out {
+  -webkit-animation: fadeRightOut var(--animation-duration) ease both;
+  animation: fadeRightOut var(--animation-duration) ease both;
+}
+
+.fade-up-in {
+  -webkit-animation: fadeUpIn var(--animation-duration) ease both;
+  animation: fadeUpIn var(--animation-duration) ease both;
+}
+.fade-up-out {
+  -webkit-animation: fadeUpOut var(--animation-duration) ease both;
+  animation: fadeUpOut var(--animation-duration) ease both;
+}
+
+.fade-down-in {
+  -webkit-animation: fadeDownIn var(--animation-duration) ease both;
+  animation: fadeDownIn var(--animation-duration) ease both;
+}
+.fade-down-out {
+  -webkit-animation: fadeDownOut var(--animation-duration) ease both;
+  animation: fadeDownOut var(--animation-duration) ease both;
+}
+
+@-webkit-keyframes fadeUpIn {
+  from { opacity: 0; -webkit-transform: translateY(100%); }
+  to { opacity: 1; }
+}
+@keyframes fadeUpIn {
+  from { opacity: 0; -webkit-transform: translateY(100%); transform: translateY(100%); }
+  to { opacity: 1; }
+}
+
+@-webkit-keyframes fadeUpOut {
+  from { opacity: 1; }
+  to { opacity: 0; -webkit-transform: translateY(-100%); }
+}
+@keyframes fadeUpOut {
+  from { opacity: 1; }
+  to { opacity: 0; -webkit-transform: translateY(-100%); transform: translateY(-100%); }
+}
+
+@-webkit-keyframes fadeDownIn {
+  from { opacity: 0; -webkit-transform: translateY(-100%); }
+  to { opacity: 1; }
+}
+@keyframes fadeDownIn {
+  from { opacity: 0; -webkit-transform: translateY(-100%); transform: translateY(-100%); }
+  to { opacity: 1; }
+}
+
+@-webkit-keyframes fadeDownOut {
+  from { opacity: 1; }
+  to { opacity: 0; -webkit-transform: translateY(100%); }
+}
+@keyframes fadeDownOut {
+  from { opacity: 1; }
+  to { opacity: 0; -webkit-transform: translateY(100%); transform: translateY(100%); }
 }
 
 @-webkit-keyframes fadeLeftIn {
@@ -38,29 +166,20 @@
   to { opacity: 0; -webkit-transform: translateX(-100%); transform: translateX(-100%); }
 }
 
-.left-in {
-  -webkit-animation: leftIn var(--animation-duration) ease both;
-  animation: leftIn var(--animation-duration) ease both;
+@-webkit-keyframes fadeRightIn {
+  from { opacity: 0; -webkit-transform: translateX(-100%); }
+  to { opacity: 1; }
 }
-.left-out {
-  -webkit-animation: leftOut var(--animation-duration) ease both;
-  animation: leftOut var(--animation-duration) ease both;
-}
-
-@-webkit-keyframes leftIn {
-  from { -webkit-transform: translateX(50%); }
-  to { }
-}
-@keyframes leftIn {
-  from { -webkit-transform: translateX(50%); transform: translateX(50%); }
-  to { }
+@keyframes fadeRightIn {
+  from { opacity: 0; -webkit-transform: translateX(-100%); transform: translateX(-100%); }
+  to { opacity: 1; }
 }
 
-@-webkit-keyframes leftOut {
-  from { }
-  to { -webkit-transform: translateX(-50%); }
+@-webkit-keyframes fadeRightOut {
+  from { opacity: 1; }
+  to { opacity: 0; -webkit-transform: translateX(100%); }
 }
-@keyframes leftOut {
-  from { }
-  to { -webkit-transform: translateX(-50%); transform: translateX(-50%); }
+@keyframes fadeRightOut {
+  from { opacity: 1; }
+  to { opacity: 0; -webkit-transform: translateX(100%); transform: translateX(100%); }
 }

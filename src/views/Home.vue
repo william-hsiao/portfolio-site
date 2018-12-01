@@ -41,7 +41,7 @@ export default {
 
       if (frames[i].id === 'Cover') frames[i].classList.add('theme-cover');
       else frames[i].classList.add(`theme-${(i - 1) % 4 + 1}`);
-    };
+    }
   }
 }
 </script>
@@ -81,6 +81,7 @@ export default {
   padding: 100px 0;
   scroll-snap-align: start;
   width: 100%;
+  overflow-x: hidden;
 
   .frame {
     box-sizing: border-box;
@@ -89,21 +90,25 @@ export default {
     padding: 0 50px;
     position: relative;
     width: 100%;
+    ::-webkit-scrollbar {
+      display: none;
+    };
 
     .contents {
+      height: 0;
       left: 0;
+      overflow: hidden;
       position: absolute;
       right: 0;
       top: 0;
-      -webkit-transform: translate3d(0, 0, 0);
-      -moz-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
       visibility: hidden;
       &.active {
+        height: auto;
         position: relative;
         visibility: visible;
       }
       &.standby {
+        height: auto;
         visibility: visible;
       }
       h1 {
