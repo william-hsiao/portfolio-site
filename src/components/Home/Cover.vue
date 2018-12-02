@@ -3,7 +3,7 @@
     .frame
       img.logo(alt="logo" src="../../assets/images/logo.png")
       h1 William Hsiao
-      h3 Web Developer
+      h3 Software Engineer
       .links
         a.item(href="https://www.linkedin.com/in/william-hsiao/", target="_blank")
           //- LinkedIn

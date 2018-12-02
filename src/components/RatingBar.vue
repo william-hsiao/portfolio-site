@@ -29,10 +29,12 @@ export default {
     margin: 0 2px;
   }
   .marked {
-    background-color: #353535;
+    // background-color: #353535;
+    background-color: var(--primary);
   }
   .unmarked {
-    background-color: #a8a8a8;
+    // background-color: #a8a8a8;
+    background-color: #808080;
   }
 }
 </style>

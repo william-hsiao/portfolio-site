@@ -20,7 +20,7 @@
             h4 Services
             ul
               li(v-for='item in summary.services') {{ item }}
-        .details(@click="viewTemplate('summary', 'detailed', 'fade-up')")
+        .button.link(@click="viewTemplate('summary', 'detailed', 'fade-up')")
           | View full details
       .detailed.contents
         h1 Developer Skills
@@ -58,7 +58,7 @@
             .skill-field(v-for='item in detailed.others.aws')
               .label {{ item.name }}
               RatingBar(:value='item.rating')
-        .details(@click="viewTemplate('detailed', 'summary', 'fade-down')")
+        .link(@click="viewTemplate('detailed', 'summary', 'fade-down')")
           | ← return
 </template>
 
@@ -125,6 +125,10 @@ export default {
 
 <style lang='scss' scoped>
 #DevSkills {
+  &::-webkit-scrollbar {
+    appearance: none;
+    width: 0;
+  }
   .list-container {
     display: flex;
     text-align: center;
@@ -136,13 +140,11 @@ export default {
       margin: 0 25px;
     }
   }
-  .details {
+  .link {
     margin-top: 25px;
-    width: 100%;
-    cursor: pointer;
+    // width: 100%;
   }
 }
-
 .section {
   margin-bottom: 3em;
 }

@@ -6,40 +6,48 @@
         .slide-container.scroll-left.scroll-right
           .slide-wrapper
             .slide.gakuhub-slide
-              .image-container
-                img(alt='gakuhub', src='../../assets/images/gakuhub_transparent.png')
+              .image-container.link(@click="viewTemplate('summary', 'gakuhub', 'fade-up')")
+                .image-border
+                  img(alt='gakuhub', src='../../assets/images/gakuhub_transparent.png')
               h3 gakuhub
               .description 
                 | Building an online service that aims to provide a platform for internationals students within Japan to connect with each other. In addition, becoming a gateway for prospective students to obtain information and consult with current students on their experiences. 
-              //- .link
-              //-   .button(@click="viewTemplate('summary', 'gakuhub', 'fade-up')") Details
+              .link
+                .button(@click="viewTemplate('summary', 'gakuhub', 'fade-up')") Details
             .slide
-              .image-container
-                img(alt='gakuhub', src='../../assets/images/gaze_key_mock.png')
+              .image-container.link(@click="viewTemplate('summary', 'gaze-key', 'fade-up')")
+                .image-border
+                  img(alt='gakuhub', src='../../assets/images/gaze_key_mock.png')
               h3 gaze-key
               .description 
                 | Human-Computer Interaction research utilizing current eye tracking technology to develop an efficient typing system based only on gaze, without inputs such as blink and dwell time.
-              //- .link
-              //-   .button(@click="viewTemplate('summary', 'gaze-key', 'fade-up')") Details
+              .link
+                .button(@click="viewTemplate('summary', 'gaze-key', 'fade-up')") Details
             .slide.portfolio-slide
-              .image-container
+              .image-container.link(@click="viewTemplate('summary', 'portfolio', 'fade-up')")
                 .image-border
                   img(alt='gakuhub', src='../../assets/images/logo.png')
               h3 Portfolio
               .description 
                 | This site!
-              //- .link
-              //-   .button(@click="viewTemplate('summary', 'portfolio', 'fade-up')") Details
+              .link
+                .button(@click="viewTemplate('summary', 'portfolio', 'fade-up')") Details
       .gakuhub.contents
         h1 gakuhub
+        .body
+          | Building an online service that aims to provide a platform for internationals students within Japan to connect with each other. In addition, becoming a gateway for prospective students to obtain information and consult with current students on their experiences. 
         .link(@click="viewTemplate('gakuhub', 'summary', 'fade-down')")
           | ← return
       .gaze-key.contents
         h1 gaze-key
+        .body
+          | Human-Computer Interaction research utilizing current eye tracking technology to develop an efficient typing system based only on gaze, without inputs such as blink and dwell time.
         .link(@click="viewTemplate('gaze-key', 'summary', 'fade-down')")
           | ← return
       .portfolio.contents
         h1 Portfolio Site
+        .body 
+          | This site!
         .link(@click="viewTemplate('portfolio', 'summary', 'fade-down')")
           | ← return
 </template>
@@ -138,12 +146,18 @@ export default {
       flex-shrink: 0;
       max-width: 70vw;
       width: 90%;
-      img {
-        width: 100%;
+      .image-border {
+        border: 1px solid #808080;
+        box-sizing: border-box;
         height: 100%;
+        width: 100%;
+        img {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
-    &.gakuhub-slide .image-container {
+    &.gakuhub-slide .image-border {
       padding: 15px;
       background-color: #124773;
       display: flex;
@@ -153,17 +167,10 @@ export default {
         height: auto;
       }
     }
-    &.portfolio-slide .image-container {
+    &.portfolio-slide .image-border {
       background-color: #000000;
-      .image-border {
-        border: 1px solid #808080;
-        box-sizing: border-box;
-        height: 100%;
-        width: 100%;
-        img {
-          width: auto;
-          height: 100%;
-        }
+      img {
+        width: auto;
       }
     }
   }

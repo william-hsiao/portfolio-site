@@ -4,8 +4,8 @@
     Cover
     Intro
     DevSkills
-    Skills
     Projects
+    Skills
     AboutMe
     Contact
 </template>
@@ -111,6 +111,9 @@ export default {
       }
       h1 {
         display: inline-block;
+      }
+      .link {
+        cursor: pointer;
       }
     }
   }
