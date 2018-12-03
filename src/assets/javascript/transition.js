@@ -15,6 +15,14 @@ export const transitions = {
           effect = transition;
         }
 
+        fromTemplate.style.width = `${fromTemplate.offsetWidth}px`;
+        if (window.innerWidth < 1000) {
+          fromTemplate.style.marginLeft = `${(window.innerWidth - fromTemplate.offsetWidth) / 2}px`;
+        } else {
+          fromTemplate.style.marginLeft = `${(1000 - fromTemplate.offsetWidth) / 2}px`;
+        }
+
+
         fromTemplate.classList.add('standby', `${effect}-out`);
         fromTemplate.classList.remove('active');
         toTemplate.classList.add('active', `${effect}-in`);
@@ -54,6 +62,8 @@ export const transitions = {
           toTemplate.style.paddingTop = '';
           fromTemplate.style.paddingBottom = '';
           fromTemplate.style.paddingTop = '';
+          fromTemplate.style.width = '';
+          fromTemplate.style.marginLeft = '';
           fromTemplate.classList.remove('standby', `${effect}-out`);
           toTemplate.classList.remove(`${effect}-in`);
         }, 2000);

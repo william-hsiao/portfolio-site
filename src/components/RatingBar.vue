@@ -36,5 +36,12 @@ export default {
     // background-color: #a8a8a8;
     background-color: #808080;
   }
+  &.medium {
+    .marked, .unmarked {
+      height: 25px;
+      width: 25px;
+      margin: 0 5px;
+    }
+  }
 }
 </style>

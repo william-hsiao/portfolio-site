@@ -4,9 +4,12 @@
   // text-transform: uppercase;
   font-size: 14px;
   padding: 5px 10px;
-  background-color: #444444;
-  color: #ffffff;
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+  user-select: none;
   &:hover {
-    background-color: #808080;
+    background-color: var(--background-alt);
+    // background-color: #444444;
+    // background-color: #808080;
   }
 }

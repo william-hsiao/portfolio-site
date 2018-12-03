@@ -21,7 +21,7 @@
             ul
               li(v-for='item in summary.services') {{ item }}
         .button.link(@click="viewTemplate('summary', 'detailed', 'fade-up')")
-          | View full details
+          | View full list & details
       .detailed.contents
         h1 Developer Skills
         .section
@@ -115,6 +115,7 @@ export default {
             { name: 'S3', rating: 4 },
             { name: 'CloudFront', rating: 4 },
             { name: 'IAM', rating: 4 },
+            { name: 'EC2', rating: 2 },
           ],
         }
       }

@@ -5,33 +5,27 @@
         h1 Projects
         .slide-container.scroll-left.scroll-right
           .slide-wrapper
-            .slide.gakuhub-slide
+            .slide.gakuhub-slide(@click="viewTemplate('summary', 'gakuhub', 'fade-up')")
               .image-container.link(@click="viewTemplate('summary', 'gakuhub', 'fade-up')")
                 .image-border
                   img(alt='gakuhub', src='../../assets/images/gakuhub_transparent.png')
               h3 gakuhub
               .description 
                 | Building an online service that aims to provide a platform for internationals students within Japan to connect with each other. In addition, becoming a gateway for prospective students to obtain information and consult with current students on their experiences. 
-              .link
-                .button(@click="viewTemplate('summary', 'gakuhub', 'fade-up')") Details
-            .slide
+            .slide.gaze-key-slide(@click="viewTemplate('summary', 'gaze-key', 'fade-up')")
               .image-container.link(@click="viewTemplate('summary', 'gaze-key', 'fade-up')")
                 .image-border
                   img(alt='gakuhub', src='../../assets/images/gaze_key_mock.png')
               h3 gaze-key
               .description 
                 | Human-Computer Interaction research utilizing current eye tracking technology to develop an efficient typing system based only on gaze, without inputs such as blink and dwell time.
-              .link
-                .button(@click="viewTemplate('summary', 'gaze-key', 'fade-up')") Details
-            .slide.portfolio-slide
-              .image-container.link(@click="viewTemplate('summary', 'portfolio', 'fade-up')")
+            .slide.portfolio-slide(@click="viewTemplate('summary', 'portfolio', 'fade-up')")
+              .image-container.link
                 .image-border
                   img(alt='gakuhub', src='../../assets/images/logo.png')
               h3 Portfolio
               .description 
                 | This site!
-              .link
-                .button(@click="viewTemplate('summary', 'portfolio', 'fade-up')") Details
       .gakuhub.contents
         h1 gakuhub
         .body
@@ -120,6 +114,15 @@ export default {
     align-items: center;
     min-width: 300px;
     margin: 0 50px;
+    cursor: pointer;
+    border-top: 1px solid rgba(255,255,255,0);
+    border-bottom: 1px solid rgba(255,255,255,0);
+    padding: 10px;
+    &:hover {
+      border-color: #808080;
+      background-color: var(--background-alt);
+      border-radius: 3px;
+    }
     h1 {
       flex-shrink: 0;
     }

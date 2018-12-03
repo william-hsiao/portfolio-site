@@ -2,9 +2,30 @@
   #AboutMe.container
     .frame
       .summary.contents.active
-        h1 About Me
+        //- h1.article-link(@click="changeArticle('base')") About Me
+        h1.article-link About Me
         .field-container
-          .section
+          .section.outline
+            .field.article-link(@click="changeArticle('experience')")
+              h3.label Current Position:
+              .body
+                p Software Engineering Intern
+                span Repro Inc.
+            .field.article-link(@click="changeArticle('languages')")
+              h3.label Languages:
+              .body
+                p English, Japanese, Chinese (Mandarin)
+            .field.article-link(@click="changeArticle('education')")
+              h3.label Education: 
+              .body 
+                p Bachelors of Engineering
+                span Computer Science and Engineering
+                span Waseda University, Tokyo, Japan
+                .subscript Graduate September 2019
+            .field.article-link(@click="changeArticle('interests')")
+              h3.label Interests:
+              .body
+                p Tennis, Archery, Violin
             .field.locations
               .body
                 p Taiwan
@@ -17,81 +38,258 @@
               .body 
                 p Japan
                 span Tokyo
-            .field
-              .label Current Position:
-              .body
-                p Software Engineering Intern
-                span Repro Inc.
-            .field
-              .label Education: 
-              .body 
-                p Bachelors of Engineering
-                span Computer Science and Engineering
-                span Waseda University, Tokyo, Japan
-                .subscript Graduate September 2019
-            .field
-              .label Interests:
-              .body
-                p Tennis, Archery, Violin
-          .section.article
-            p The phrase:
-            i "Jack of all trades, but master of none"
-            p is befitting for me but is also a phrase that I despise. Although I always strive to be an all-rounder in the fields I commit to in order to open the doors to as many opportunities possible, I am not satisfied with where I am now. I see the glaring faults in myself and that is what drives me to keep improving myself everyday, constantly chasing to be the best that I can be and perhaps see myself working with the best in the world.
-      .background.contents
-        .field-container
-          | Taoyuan, Taiwan → Brisbane, Australia → Tokyo, Japan
-          .field
-            .label Hobbies: 
-            .body Tennis, Archery, Violin
+          .section.article-container
+            transition(name="fade" mode="out-in")
+              //- .article(v-if="showArticle === 'base'", key="1")
+              //-   i "Jack of all trades, but master of none"
+              //-   p is a phrase that is quite befitting for me but is also one that I despise. Although I always strive to be an all-rounder in the fields I commit to in order to open the doors to as many opportunities possible, I cannot say that I am satisfied with where I am now. I see the faults in myself and that is what drives me to keep improving myself everyday, constantly chasing to be the best that I can be and perhaps see myself working with the best in the world. <br><br>
+              //-   p.indent I left the comfort of my childhood home back in Australia to challenge and expose myself to the world.
+              .article(v-if="showArticle === 'experience'", key="2")
+                h3 Work Experience
+                .item
+                  h4 Software Engineering Intern, Repro Inc.
+                  h6 March 2018 - Present
+                  p Front-end intern working as a core member in several large projects ranging from UI/UX development to SDK development. The work is mainly conducted in Japanese and involves constant communication with team members and work within a live production environment utilizing AWS.
+                .item
+                  h4 Teaching Assistant, Waseda University
+                  h6 April 2017 - Present
+                  p Assisting in teaching programming to students in the international program using English
+                  p Courses: 
+                  ul
+                    li Introduction to Programming (C)
+                    li Intermediate Programming (C)
+                    li Advanced Java Programming (Java)
+                    li Numerical Analysis
+                    li Survey of Modern Mathematical Sciences A
+                .item
+                  h4 Senior Managing Assistant, SIAM
+                  h6 March 7th - March 10th 2018
+                  p Assisting with the Society for Industrial and Applied Mathematics (SIAM) 18 Conference on Parallel Processing for Scientific Computing
+                  ul
+                    li Overseeing equipment 
+                    li Coordinating assistants to sessions 
+                    li Responding to issues during the sessions
+                .item
+                  h4 Administrative Assistant, Tokyo Leisure Home
+                  h6 December 2016 - February 2018
+                  p Managing communication and documentation between the company and clients using English and Japanese
+                //- .link(@click="changeArticle('base')")
+                //-   | ← return
+              .article.languages(v-else-if="showArticle === 'languages'", key="3")
+                h3 Languages
+                .item
+                  h4 English
+                  RatingBar.medium(:value=5)
+                  p Native
+                .item
+                  h4 Japanese
+                  RatingBar.medium(:value=4)
+                  p Working Proficiency
+                .item
+                  h4 Chinese (Mandarin)
+                  RatingBar.medium(:value=4)
+                  p Conversational
+                //- .link(@click="changeArticle('base')")
+                //-   | ← return
+              .article(v-else-if="showArticle === 'education'", key="4")
+                h3 Education
+                .item
+                  h4 Bachelors of Engineering, Waseda University
+                  h6 Sepetember 2015 - September 2019
+                  p Computer Science and Engineering
+                  p Nakajima Lab
+                .item
+                  h4 Bachelor of Engineering/IT, University of Queensland
+                  h6 February 2015 - Jun 2015
+                  p Software Engineering
+                  p *Incomplete - Completed one semester before leaving to attend Waseda University
+                .item
+                  h4 Highschool Diploma, Brisbane Grammar School
+                  h6 January 2010 - November 2014
+                //- .link(@click="changeArticle('base')")
+                //-   | ← return
+              .article(v-else-if="showArticle === 'interests'", key="5")
+                h3 Interests
+                .item
+                  h4 Tennis
+                  ul
+                    li 10+ years
+                    li Brisbane Grammar School 2nds Tennis Team (2014)
+                    li Tennis Brisbane Superleague Fixtures Northside Division 5 Finalists (2013)
+                .item
+                  h4 Archery
+                  ul
+                    li 2.5+ years
+                    li Waseda Sagittarius Archery Circle
+                .item
+                  h4 Violin
+                  ul
+                    li 10+ years
+                    li Australian Music Examination Board 8th Grade
+                    li 
+                      | Brisbane Grammar School Music Program
+                      ul 
+                        li Brisbane Grammar Symphony Orchestra
+                        li Chamber Strings Ensemble
+                //- .link(@click="changeArticle('base')")
+                //-   | ← return
 </template>
 
 <script>
+import RatingBar from '@/components/RatingBar.vue'
+
 export default {
   name: 'AboutMe',
+  components: {
+    RatingBar
+  },
+  data() {
+    return {
+      showArticle: 'experience',
+    }
+  },
+  methods: {
+    changeArticle(article) {
+      this.showArticle = article;
+    }
+  }
 }
 </script>
 
 <style lang='scss' scoped>
 #AboutMe {
-  .field-container {
-    align-items: center;
+  .frame {
     display: flex;
-    margin-top: 25px;
-    @media (max-width: 800px) {
+    min-height: 70vh;
+    max-height: calc(100vh - 200px);
+    .contents {
+      display: flex;
       flex-direction: column;
-      .section {
-        width: auto;
-        margin-bottom: 25px;
+      width: 100%;
+    }
+    @media (max-width: 800px) {
+      max-height: none;
+      .field-container {
+        flex-direction: column;
+        .section {
+          width: auto;
+          margin-bottom: 25px;
+          &.outline {
+            padding-right: 0;
+            border-right: none;
+          }
+          &.article-container {
+            margin-left: 0;
+          }
+        }
       }
     }
+  }
+  .field-container {
+    display: flex;
+    margin-top: 25px;
   }
   .section {
     width: 50%;
     display: flex;
     flex-direction: column;
-    &.article {
-      padding-left: 30px;
+    &.outline {
+      padding-right: 10px;
+      border-right: 1px solid var(--background-alt)
+    }
+    &.article-container {
+      margin-left: 30px;
       text-align: left;
       font-size: 14px;
+      max-height: 50vh;
       color: var(--secondary);
-      p {
+      h3 {
+        color: var(--primary);
+        text-align: center;
+      }
+      h4 {
+        letter-spacing: 0;
         margin: 0;
       }
+      h6 {
+        letter-spacing: 0;
+        font-size: 10px;
+        text-align: right;
+        margin: 5px 0;
+      }
+      ul {
+        // margin-left: 15px;
+        width: 90%;
+        box-sizing: border-box;
+        margin: auto;
+      }
+      p, i, li {
+        font-size: 12px;
+      }
+      p {
+        margin: 0;
+        &.indent {
+          text-indent: 30px;
+        }
+      }
       i {
+        display: block;
         text-align: center;
         margin: 5px;
       }
     }
   }
+  
+  .article {
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 14px;
+    display: flex;
+    flex-direction: column;
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background: linear-gradient(to left, var(--panel-background), var(--panel-background) 44%, var(--primary) 45%, var(--primary) 55%, var(--panel-background) 56%, var(--panel-background));
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #808080;
+      -webkit-border-radius: 3px;
+      border-radius: 3px;
+    }
+    .item {
+      margin-bottom: 15px;
+    }
+  }
+  
+  .link {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .article-link {
+    border-top: 1px solid rgba(255,255,255,0);
+    border-bottom: 1px solid rgba(255,255,255,0);
+    border-radius: 3px;
+    padding: 10px;
+    cursor: pointer;
+    &:hover {
+      border-color: #808080;
+      background-color: var(--background-alt);
+    }
+  }
+  
   .field {
     display: flex;
     margin-bottom: 25px;
     text-align: left;
     .label {
-      font-weight: 600;
       margin-right: 25px;
       width: 100px;
       flex-shrink: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+      letter-spacing: 0;
     }
     .body {
       p {
@@ -108,7 +306,8 @@ export default {
     }
   }
   .locations {
-    margin-bottom: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -118,6 +317,31 @@ export default {
     .arrow {
       margin: 0 15px;
     }
+  }
+}
+
+.placeholderImg {
+  width: 150px;
+  height: 150px;
+  border: 1px solid var(--primary);
+  border-radius: 75px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.languages {
+  .item {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    .rating-container {
+      margin: 15px 0;
+    }
+  }
+  p {
+    font-size: 12px;
   }
 }
 </style>

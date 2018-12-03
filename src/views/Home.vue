@@ -5,7 +5,6 @@
     Intro
     DevSkills
     Projects
-    Skills
     AboutMe
     Contact
 </template>
@@ -16,7 +15,6 @@ import Navbar from '@/components/Home/Navbar.vue'
 import Cover from '@/components/Home/Cover.vue'
 import Intro from '@/components/Home/Intro.vue'
 import DevSkills from '@/components/Home/DevSkills.vue'
-import Skills from '@/components/Home/Skills.vue'
 import Projects from '@/components/Home/Projects.vue'
 import AboutMe from '@/components/Home/AboutMe.vue'
 import Contact from '@/components/Home/Contact.vue'
@@ -28,7 +26,6 @@ export default {
     Cover,
     Intro,
     DevSkills,
-    Skills,
     Projects,
     AboutMe,
     Contact,
@@ -59,12 +56,14 @@ export default {
 }
 .theme-1 {
   --panel-background: #efefef;
+  --background-alt: #eaeaea;
 }
 .theme-2 {
   --panel-background: #6c6c6c;
+  --background-alt: #808080;
 }
 .theme-3 {
-  --panel-background: #ffffff;
+  --panel-background: #dedede;
 }
 .theme-4 {
   --panel-background: #353535;
