@@ -2,8 +2,7 @@
   #AboutMe.container
     .frame
       .summary.contents.active
-        //- h1.article-link(@click="changeArticle('base')") About Me
-        h1.article-link About Me
+        h1.article-link(@click="changeArticle('base')") About Me
         .field-container
           .section.outline
             .field.article-link(@click="changeArticle('experience')")
@@ -40,16 +39,19 @@
                 span Tokyo
           .section.article-container
             transition(name="fade" mode="out-in")
-              //- .article(v-if="showArticle === 'base'", key="1")
-              //-   i "Jack of all trades, but master of none"
-              //-   p is a phrase that is quite befitting for me but is also one that I despise. Although I always strive to be an all-rounder in the fields I commit to in order to open the doors to as many opportunities possible, I cannot say that I am satisfied with where I am now. I see the faults in myself and that is what drives me to keep improving myself everyday, constantly chasing to be the best that I can be and perhaps see myself working with the best in the world. <br><br>
-              //-   p.indent I left the comfort of my childhood home back in Australia to challenge and expose myself to the world.
+              .article.main(v-if="showArticle === 'base'", key="1")
+                p.indent I am an aspiring full-stack developer currently based in Tokyo. Although my work so far has mostly been around web development, I am always eager to venture into new fields and face new challenges. I believe that to create the best applications, one must have a solid understanding of all components not only on the technical aspects but also how each component contributes to the greater purpose of the project. It is with this mindset that I step into projects and aim to learn as much as I can from each experience. Even if it’s something I am already familiar with, there is always more to gain, more to discover, more to improve upon.
+                i "Jack of all trades, but master of none"
+                p is a phrase that is quite befitting of me yet one that I despise. Although I always strive to be an all-rounder in the fields I commit to in order to open the doors to as many opportunities possible, I cannot say that I am satisfied with where I am now. There is always more to learn and that is what drives me to keep improving myself everyday, constantly chasing to be the best that I can be.
+                p I want to challenge the world.
+                p I want to develop a product that changes lives.
+                p I want to meet and work with like-minded people and see how far we can go.
               .article(v-if="showArticle === 'experience'", key="2")
                 h3 Work Experience
                 .item
                   h4 Software Engineering Intern, Repro Inc.
                   h6 March 2018 - Present
-                  p Front-end intern working as a core member in several large projects ranging from UI/UX development to SDK development. The work is mainly conducted in Japanese and involves constant communication with team members and work within a live production environment utilizing AWS.
+                  p Software engineering intern working as a core member in several large projects ranging from UI/UX development to SDK development. The work is mainly conducted in Japanese and involves constant communication with team members and work within a live production environment utilizing AWS.
                 .item
                   h4 Teaching Assistant, Waseda University
                   h6 April 2017 - Present
@@ -73,8 +75,8 @@
                   h4 Administrative Assistant, Tokyo Leisure Home
                   h6 December 2016 - February 2018
                   p Managing communication and documentation between the company and clients using English and Japanese
-                //- .link(@click="changeArticle('base')")
-                //-   | ← return
+                .link(@click="changeArticle('base')")
+                  | ← return
               .article.languages(v-else-if="showArticle === 'languages'", key="3")
                 h3 Languages
                 .item
@@ -87,10 +89,10 @@
                   p Working Proficiency
                 .item
                   h4 Chinese (Mandarin)
-                  RatingBar.medium(:value=4)
+                  RatingBar.medium(:value=3)
                   p Conversational
-                //- .link(@click="changeArticle('base')")
-                //-   | ← return
+                .link(@click="changeArticle('base')")
+                  | ← return
               .article(v-else-if="showArticle === 'education'", key="4")
                 h3 Education
                 .item
@@ -106,8 +108,8 @@
                 .item
                   h4 Highschool Diploma, Brisbane Grammar School
                   h6 January 2010 - November 2014
-                //- .link(@click="changeArticle('base')")
-                //-   | ← return
+                .link(@click="changeArticle('base')")
+                  | ← return
               .article(v-else-if="showArticle === 'interests'", key="5")
                 h3 Interests
                 .item
@@ -131,8 +133,8 @@
                       ul 
                         li Brisbane Grammar Symphony Orchestra
                         li Chamber Strings Ensemble
-                //- .link(@click="changeArticle('base')")
-                //-   | ← return
+                .link(@click="changeArticle('base')")
+                  | ← return
 </template>
 
 <script>
@@ -145,7 +147,7 @@ export default {
   },
   data() {
     return {
-      showArticle: 'experience',
+      showArticle: 'base',
     }
   },
   methods: {
@@ -176,7 +178,9 @@ export default {
           margin-bottom: 25px;
           &.outline {
             padding-right: 0;
+            padding-bottom: 25px;
             border-right: none;
+            border-bottom: 1px solid var(--background-alt);
           }
           &.article-container {
             margin-left: 0;
@@ -259,6 +263,11 @@ export default {
     }
     .item {
       margin-bottom: 15px;
+    }
+    &.main {
+      p, i {
+        margin-bottom: 20px;
+      }
     }
   }
   
