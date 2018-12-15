@@ -71,10 +71,6 @@
                     li Overseeing equipment 
                     li Coordinating assistants to sessions 
                     li Responding to issues during the sessions
-                .item
-                  h4 Administrative Assistant, Tokyo Leisure Home
-                  h6 December 2016 - February 2018
-                  p Managing communication and documentation between the company and clients using English and Japanese
                 .link(@click="changeArticle('base')")
                   | ← return
               .article.languages(v-else-if="showArticle === 'languages'", key="3")
@@ -162,17 +158,16 @@ export default {
 #AboutMe {
   .frame {
     display: flex;
-    min-height: 70vh;
-    max-height: calc(100vh - 200px);
     .contents {
       display: flex;
       flex-direction: column;
       width: 100%;
     }
     @media (max-width: 800px) {
-      max-height: none;
       .field-container {
         flex-direction: column;
+        height: auto;
+        max-height: none;
         .section {
           width: auto;
           margin-bottom: 25px;
@@ -192,6 +187,8 @@ export default {
   .field-container {
     display: flex;
     margin-top: 25px;
+    height: calc(100vh - 200px - 100px);
+    max-height: 600px;
   }
   .section {
     width: 50%;
@@ -205,7 +202,6 @@ export default {
       margin-left: 30px;
       text-align: left;
       font-size: 14px;
-      max-height: 50vh;
       color: var(--secondary);
       h3 {
         color: var(--primary);

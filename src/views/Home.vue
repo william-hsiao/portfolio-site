@@ -6,6 +6,7 @@
     DevSkills
     Projects
     AboutMe
+    //- Blog
     Contact
 </template>
 
@@ -17,6 +18,7 @@ import Intro from '@/components/Home/Intro.vue'
 import DevSkills from '@/components/Home/DevSkills.vue'
 import Projects from '@/components/Home/Projects.vue'
 import AboutMe from '@/components/Home/AboutMe.vue'
+// import Blog from '@/components/Home/Blog.vue'
 import Contact from '@/components/Home/Contact.vue'
 
 export default {
@@ -28,6 +30,7 @@ export default {
     DevSkills,
     Projects,
     AboutMe,
+    // Blog,
     Contact,
   },
   mounted() {
@@ -107,9 +110,6 @@ export default {
       &.standby {
         height: auto;
         visibility: visible;
-      }
-      h1 {
-        display: inline-block;
       }
       .link {
         cursor: pointer;

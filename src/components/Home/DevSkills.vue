@@ -20,7 +20,7 @@
             h4 Services
             ul
               li(v-for='item in summary.services') {{ item }}
-        .button.link(@click="viewTemplate('summary', 'detailed', 'fade-up')")
+        .button(@click="viewTemplate('summary', 'detailed', 'fade-up')")
           | View full list & details
       .detailed.contents
         h1 Developer Skills
@@ -53,9 +53,24 @@
             .skill-field(v-for='item in detailed.others.others')
               .label {{ item.name }}
               RatingBar(:value='item.rating')
+          h6 Tests & CI
+          .skill-field-container
+            .skill-field(v-for='item in detailed.others.tests')
+              .label {{ item.name }}
+              RatingBar(:value='item.rating')
           h6 AWS
           .skill-field-container
             .skill-field(v-for='item in detailed.others.aws')
+              .label {{ item.name }}
+              RatingBar(:value='item.rating')
+          h6 OS Familiarity
+          .skill-field-container
+            .skill-field(v-for='item in detailed.others.os')
+              .label {{ item.name }}
+              RatingBar(:value='item.rating')
+          h6 Graphic Design
+          .skill-field-container
+            .skill-field(v-for='item in detailed.others.graphic')
               .label {{ item.name }}
               RatingBar(:value='item.rating')
         .link(@click="viewTemplate('detailed', 'summary', 'fade-down')")
@@ -94,6 +109,7 @@ export default {
         front: [ 
           { name: 'Vue.js', rating: 5 },
           { name: 'Sass', rating: 5 },
+          { name: 'TypeScript', rating: 3 },
         ],
         back: {
           frameworks: [ 
@@ -106,16 +122,32 @@ export default {
           ],
         },
         others: {
-          others: [ 
+          others: [
+            { name: 'npm', rating: 5 },
             { name: 'Git', rating: 4 },
-            { name: 'Wercker', rating: 3 }, 
             { name: 'Unity', rating: 3 },
+            { name: 'nginx', rating: 2 },
+          ],
+          tests: [
+            { name: 'Wercker', rating: 4 },
+            { name: 'TestCafe', rating: 4 },
+            { name: 'Mocha', rating: 3 },
+            { name: 'Jasmine', rating: 3 },
           ],
           aws: [
             { name: 'S3', rating: 4 },
             { name: 'CloudFront', rating: 4 },
             { name: 'IAM', rating: 4 },
             { name: 'EC2', rating: 2 },
+          ],
+          os: [
+            { name: 'Windows', rating: 5 },
+            { name: 'Mac OS X', rating: 4 },
+            { name: 'Linux', rating: 3 },
+          ],
+          graphic: [
+            { name: 'Adobe Photoshop', rating: 4 },
+            { name: 'GIMP', rating: 4 },
           ],
         }
       }
@@ -141,9 +173,8 @@ export default {
       margin: 0 25px;
     }
   }
-  .link {
+  .button, .link {
     margin-top: 25px;
-    // width: 100%;
   }
 }
 .section {
