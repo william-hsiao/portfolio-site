@@ -5,12 +5,15 @@
       h1 William Hsiao
       h3 Software Engineer
       .links
-        a.item(href="https://www.linkedin.com/in/william-hsiao/", target="_blank")
-          //- LinkedIn
-          img(src="../../assets/images/linkedin.svg")
         a.item(href="https://github.com/william-hsiao", target="_blank")
           //- Github
           img(src="../../assets/images/github.svg")
+        a.item(href="https://twitter.com/william_hsiao_", target="_blank")
+          //- Twitter
+          img(src="../../assets/images/twitter.svg")
+        a.item(href="https://www.linkedin.com/in/william-hsiao/", target="_blank")
+          //- LinkedIn
+          img(src="../../assets/images/linkedin.svg")
         .item.tooltip
           //- Email
           img(src="../../assets/images/email.svg")
