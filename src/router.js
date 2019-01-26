@@ -13,9 +13,26 @@ export default new Router({
       component: Home
     },
     {
+      path: '/blog',
+      name: 'blog',
+      component: () => import(/* webpackChunkName: "blog" */ './views/Blog.vue'),
+      children: [
+        {
+          path: '',
+          name: 'blogHome',
+          component: () => import(/* webpackChunkName: "blogHome" */ './views/Blog/Home.vue'),
+        },
+        {
+          path: ':id',
+          name: 'blogArticle',
+          component: () => import(/* webpackChunkName: "blogHome" */ './views/Blog/Article.vue'),
+        },
+      ],
+    },
+    {
       path: '*',
       redirect: '/'
-    }
+    },
     // {
     //   path: '/about',
     //   name: 'about',

@@ -98,7 +98,7 @@ export default {
       detailed: {
         lang: [ 
           { name: 'JavaScript', rating: 5 },
-          { name: 'Java', rating: 5 },
+          { name: 'Java', rating: 4 },
           { name: 'C/C++', rating: 4 },
           { name: 'C#', rating: 4 },
           { name: 'Python', rating: 3 },

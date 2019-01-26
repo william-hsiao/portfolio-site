@@ -22,7 +22,6 @@ export const transitions = {
           fromTemplate.style.marginLeft = `${(1000 - fromTemplate.offsetWidth) / 2}px`;
         }
 
-
         fromTemplate.classList.add('standby', `${effect}-out`);
         fromTemplate.classList.remove('active');
         toTemplate.classList.add('active', `${effect}-in`);

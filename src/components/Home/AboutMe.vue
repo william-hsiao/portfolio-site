@@ -281,6 +281,7 @@ export default {
     &:hover {
       border-color: #808080;
       background-color: var(--background-alt);
+      transition: all 0.3s ease;
     }
   }
   
