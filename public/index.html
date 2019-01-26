@@ -6,12 +6,40 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>William Hsiao</title>
+    <meta name="keywords" content="Software Engineer,Developer,Javascript,Full-stack">
     <link href="https://fonts.googleapis.com/css?family=Play|Montserrat" rel="stylesheet">
+    <style>
+      html, body {
+        height: 100%;
+        width: 100%;
+        background-color: #000;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+      }
+      #load-screen {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        font-family: 'Play', sans-serif;
+        letter-spacing: 3px;
+        opacity: 1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: all 0.3s ease;
+      }
+    </style>
   </head>
   <body>
     <noscript>
       <strong>We're sorry but portfolio-site doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
+    <div id="load-screen">
+      <p> Loading... </p>
+    </div>
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>

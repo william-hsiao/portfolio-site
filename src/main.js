@@ -12,5 +12,10 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
-  render: h => h(App)
+  render: h => h(App),
+  mounted() {
+    const loadScreen = document.getElementById('load-screen');
+    loadScreen.style.opacity = '0';
+    loadScreen.style.display = 'none';
+  }
 }).$mount('#app')
