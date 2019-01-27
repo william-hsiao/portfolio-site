@@ -48,8 +48,18 @@
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex';
+
 export default {
   name: 'BlogArticle',
+  methods: {
+    ...mapMutations({
+      updateTitle: 'updateTitle',
+    })
+  },
+  mounted() {
+    this.updateTitle('Blog');
+  },
 }
 </script>
 

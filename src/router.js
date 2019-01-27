@@ -25,6 +25,21 @@ export default new Router({
           }
         },
         {
+          path: 'skills',
+          name: 'skills',
+          component: () => import(/* webpackChunkName: "skills" */ './views/DevSkills.vue'),
+        },
+        {
+          path: 'projects',
+          name: 'projects',
+          component: () => import(/* webpackChunkName: "projects" */ './views/Projects.vue'),
+        },
+        {
+          path: 'about',
+          name: 'aboutMe',
+          component: () => import(/* webpackChunkName: "blog" */ './views/AboutMe.vue'),
+        },
+        {
           path: 'blog',
           name: 'blog',
           component: () => import(/* webpackChunkName: "blog" */ './views/Blog.vue'),
@@ -44,7 +59,7 @@ export default new Router({
     {
       path: '/showcase',
       name: 'showcase',
-      component: () => import(/* webpackChunkName: "blog" */ './views/Showcase.vue'),
+      component: () => import(/* webpackChunkName: "showcase" */ './views/Showcase.vue'),
     },
     {
       path: '*',

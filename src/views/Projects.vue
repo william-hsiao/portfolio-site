@@ -1,21 +1,21 @@
 <template lang="pug">
-  #PageNotFound
-    h2 Page Not Found
+  #Projects
+    h2 Projects
 </template>
 
 <script>
 import { mapState, mapMutations } from 'vuex';
 
 export default {
-  name: 'PageNotFound',
+  name: 'Projects',
   methods: {
     ...mapMutations({
       updateTitle: 'updateTitle',
     })
   },
   mounted() {
-    this.updateTitle('404 (>.<)');
-  },
+    this.updateTitle('Projects');
+  }
 }
 </script>
 

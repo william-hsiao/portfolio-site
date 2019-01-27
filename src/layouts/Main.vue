@@ -6,7 +6,7 @@
           img.logo(alt="logo" src="../assets/images/logo.png")
         router-link.white(to='/blog')
           h5 William Hsiao
-          h1 Blog
+          h1 {{ pageTitle }}
     .spacer
     .section.body
       .contents
@@ -23,10 +23,11 @@
             router-link.link(to='/blog')
               h3 Blog
             h5 ・
-            router-link.link(to='/')
-              h3 Extras
             router-link.link(to='/showcase')
               h3 Showcase
+            h5 ・
+            router-link.link(to='/extras')
+              h3 Extras
             h5 ・
             p social icon links here
             p contact@william-hsiao.com
@@ -42,9 +43,15 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
 
 export default {
   name: 'MainLayout',
+  computed: {
+    ...mapState([
+      'pageTitle',
+    ])
+  }
 }
 </script>
 

@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import { mapState, mapMutations } from 'vuex';
 import ArticleContainer from '@/components/ArticleContainer.vue';
 import { twitterFeed } from '@/assets/javascript/twitterFeed';
 
@@ -13,6 +14,14 @@ export default {
   mixins: [ twitterFeed ],
   components: {
     ArticleContainer,
+  },
+  methods: {
+    ...mapMutations({
+      updateTitle: 'updateTitle',
+    })
+  },
+  mounted() {
+    this.updateTitle('Blog');
   },
   created() {
     let instagram = document.createElement('script');
