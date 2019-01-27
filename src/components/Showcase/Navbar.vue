@@ -32,11 +32,11 @@ export default {
   },
   methods: {
     navScroll() {
-      this.showNavbar = (document.getElementById('home').scrollTop >= window.innerHeight) ? true : false;
+      this.showNavbar = (document.getElementById('Showcase').scrollTop >= window.innerHeight) ? true : false;
     },
   },
   mounted() {
-    document.getElementById('home').addEventListener('scroll', this.navScroll)
+    document.getElementById('Showcase').addEventListener('scroll', this.navScroll, { passive: true })
   },
 }
 </script>

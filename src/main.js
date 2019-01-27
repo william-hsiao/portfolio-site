@@ -16,6 +16,7 @@ new Vue({
   mounted() {
     const loadScreen = document.getElementById('load-screen');
     loadScreen.style.opacity = '0';
-    loadScreen.style.display = 'none';
+    loadScreen.style.pointerEvents = 'none';
+    // loadScreen.style.display = 'none';
   }
 }).$mount('#app')

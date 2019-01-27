@@ -30,7 +30,7 @@ export const pageEntry = {
     function animateOnView() {
       if (!component.visible && page.scrollTop >= component.$el.offsetTop - window.innerHeight / 2
         && page.scrollTop <= (component.$el.offsetTop + component.$el.offsetHeight) + window.innerHeight / 2) {
-        // page.removeEventListener('scroll', animateOnView);
+        // page.removeEventListener('scroll', animateOnView, { passive: true });
         component.setVisibility(true);
         component.transition(frame, `${effect}-in`).then(() => {
           frame.style.opacity = '';
@@ -45,6 +45,6 @@ export const pageEntry = {
         }
       }
     };
-    page.addEventListener('scroll', animateOnView);
+    page.addEventListener('scroll', animateOnView, { passive: true });
   },
 }

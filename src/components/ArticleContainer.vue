@@ -1,6 +1,6 @@
 <template lang="pug">
   .article-container
-    router-link.article(v-for="(article, index) in articles", :to='getLink(article.url)', key='index')
+    router-link.article(v-for="(article, index) in articles", :to='getLink(article.url)', :key='getKey(index)')
       .img
       .body
         h4 {{ article.title }}
@@ -12,12 +12,16 @@ export default {
   name: 'ArticleContainer',
   props: {
     articles: Array,
+    keyPrefix: String,
   },
   methods: {
     getLink(url) {
       return url ? `/blog/${url}` : this.$route.path;
-    }
-  }
+    },
+    getKey(index) {
+      return `${this.keyPrefix}-${index}`;
+    },
+  },
 }
 </script>
 

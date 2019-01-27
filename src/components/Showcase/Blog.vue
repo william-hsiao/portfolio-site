@@ -4,9 +4,9 @@
       .contents.active
         h1 Blog
         h3 Latest
-        article-container(:articles='latest')
+        article-container(:articles='latest', keyPrefix='latest')
         h3 Featured
-        article-container(:articles='featured')
+        article-container(:articles='featured', keyPrefix='featured')
         router-link.link(to='/blog')
           .button View more →
         a.medium-link(href="https://medium.com/@william_hsiao" target="_blank") Read on Medium.com
