@@ -5,6 +5,7 @@ import socials from './modules/Socials'
 
 // Components
 import devSkills from './modules/DevSkills'
+import projects from './modules/Projects'
 
 Vue.use(Vuex)
 
@@ -24,5 +25,6 @@ export default new Vuex.Store({
   modules: {
     socials,
     devSkills,
+    projects,
   },
 })

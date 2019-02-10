@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex';
+import { mapMutations } from 'vuex';
 
 export default {
   name: 'PageNotFound',
@@ -19,5 +19,5 @@ export default {
 }
 </script>
 
-<style lang='scss' scope>
+<style lang='scss' scoped>
 </style>

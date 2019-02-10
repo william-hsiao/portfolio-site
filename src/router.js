@@ -5,7 +5,7 @@ import Home from './views/Home.vue'
 
 Vue.use(Router)
 
-export default new Router({
+const router =  new Router({
   mode: 'history',
   routes: [
     {
@@ -50,6 +50,11 @@ export default new Router({
           component: () => import(/* webpackChunkName: "blogArticle" */ './views/BlogArticle.vue'),
         },
         {
+          path: 'extras',
+          name: 'extras',
+          component: () => import(/* webpackChunkName: "extras" */ './views/Extras.vue'),
+        },
+        {
           path: '404',
           name: 'pageNotFound',
           component: () => import(/* webpackChunkName: "404" */ './views/PageNotFound.vue'),
@@ -75,3 +80,10 @@ export default new Router({
     // }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  if (to.path !== '/showcase' && window.innerWidth < 1000) next('/showcase');
+  else next();
+})
+
+export default router;

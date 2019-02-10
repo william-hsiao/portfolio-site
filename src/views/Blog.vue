@@ -57,7 +57,7 @@ export default {
 }
 </script>
 
-<style lang='scss' scope>
+<style lang='scss' scoped>
 .socials {
   display: flex;
   margin-top: 50px;

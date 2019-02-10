@@ -4,10 +4,10 @@ import router from './router'
 import VueAnalytics from 'vue-analytics'
 import store from './store/index'
 
-// Vue.use(VueAnalytics, {
-//   id: 'UA-130037056-1',
-//   router
-// })
+Vue.use(VueAnalytics, {
+  id: 'UA-130037056-1',
+  router
+})
 
 Vue.config.productionTip = false
 Vue.config.devtools = true

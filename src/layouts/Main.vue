@@ -4,7 +4,7 @@
       .contents
         router-link.black(to='/')
           img.logo(alt="logo" src="../assets/images/logo.png")
-        router-link.white(to='/blog')
+        router-link.white(:to='getBannerLink()')
           h5 William Hsiao
           h1 {{ pageTitle }}
     .spacer
@@ -20,16 +20,23 @@
               h3 Projects
             router-link.link(to='/about')
               h3 About Me
-            router-link.link(to='/blog')
-              h3 Blog
-            h5 ・
-            router-link.link(to='/showcase')
-              h3 Showcase
-            h5 ・
+            //- router-link.link(to='/blog')
+            //-   h3 Blog
+            .spacer
             router-link.link(to='/extras')
               h3 Extras
-            h5 ・
-            p social icon links here
+            .spacer
+            .socials
+              a.item(:href="socials.github.url", target="_blank")
+                //- Github
+                img(src="@/assets/images/github.svg")
+              a.item(:href="socials.twitter.url", target="_blank")
+                //- Twitter
+                img(src="@/assets/images/twitter.svg")
+              a.item(:href="socials.github.url", target="_blank")
+                //- LinkedIn
+                img(src="@/assets/images/linkedin.svg")
+            .spacer
             p contact@william-hsiao.com
             p Copyright &copy; 2019
         .main
@@ -50,8 +57,24 @@ export default {
   computed: {
     ...mapState([
       'pageTitle',
+      'socials',
     ])
-  }
+  },
+  methods: {
+    getBannerLink() {
+      if (this.pageTitle === 'Dev Skills') {
+        return '/skills';
+      } else if (this.pageTitle === 'Projects') {
+        return '/projects';
+      } else if (this.pageTitle === 'About Me') {
+        return '/about';
+      } else if (this.pageTitle === 'Blog') {
+        return '/blog';
+      } else {
+        return '/';
+      }
+    }
+  },
 }
 </script>
 
@@ -147,46 +170,20 @@ export default {
         display: block;
         margin: 5px auto;
       }
+      .socials {
+        display: flex;
+        justify-content: space-evenly;
+
+        img:hover {
+          filter: invert(.5);
+        }
+      }
+      .spacer {
+        margin: 30px auto;
+        border-top: 1px solid #565656;
+        width: 75%;
+      }
     }
-  }
-  // .footer {
-  //   height: 35px;
-  //   background: linear-gradient(to right, #000000, #000000 50%, #ffffff 50%, #ffffff);
-  //   flex-grow: 0;
-  //   display: flex;
-  //   flex-direction: column;
-  //   .contents {
-  //     height: 100%;
-  //     width: 100%;
-  //     display: flex;
-  //     flex-grow: 1;
-  //   }
-  //   .main {
-  //     flex-grow: 1;
-  //     background-color: #000000;
-  //     display: flex;
-  //   }
-  //   .sidebar {
-  //     width: 20%;
-  //     box-sizing: border-box;
-  //     background-color: #ffffff;
-  //   }
-  // }
-  .spacer {
-    height: 1px;
-    width: 100%;
-    flex-shrink: 0;
-    // background-color: #f5f5f5;
-    background-color: #808080;
-    // background-color: #000000;
-    // border-top: 2px solid #ffffff;
-    // border-bottom: 2px solid #ffffff;
-  }
-  .footer {
-    height: 50px;
-    width: 100%;
-    flex-shrink: 0;
-    background-color: #1e1e1e;
   }
 }
 </style>

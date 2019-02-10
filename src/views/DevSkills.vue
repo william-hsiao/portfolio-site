@@ -35,19 +35,5 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-// More to assets
-.section {
-  margin-bottom: 3em;
-}
-.skill-field {
-  display: flex;
-  margin: auto;
-  margin-bottom: 2px;
-  max-width: 300px;
-  width: 100%;
-  .label {
-    flex-grow: 1;
-    text-align: left;
-  }
-}
+@import '@/assets/stylesheets/DevSkills.scss';
 </style>

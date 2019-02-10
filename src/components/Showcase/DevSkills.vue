@@ -3,8 +3,8 @@
     .frame
       .summary.contents.active
         h1 Developer Skills
-        .list-container(v-for="category in summary")
-          .list
+        .list-container
+          .list(v-for="category in summary")
             h4 {{ category.name }}
             ul
               li(v-for='item in category.items') {{ item }}
@@ -48,6 +48,7 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+@import '@/assets/stylesheets/DevSkills.scss';
 #DevSkills {
   &::-webkit-scrollbar {
     appearance: none;
@@ -66,20 +67,6 @@ export default {
   }
   .button, .link {
     margin-top: 25px;
-  }
-}
-.section {
-  margin-bottom: 3em;
-}
-.skill-field {
-  display: flex;
-  margin: auto;
-  margin-bottom: 2px;
-  max-width: 300px;
-  width: 100%;
-  .label {
-    flex-grow: 1;
-    text-align: left;
   }
 }
 </style>

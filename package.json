@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "compile": "node ./utility/compilePug",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
