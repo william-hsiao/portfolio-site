@@ -2,10 +2,10 @@
   #Blog.container
     .frame
       .contents.active
-        h1 Blog
-        h3 Latest
-        article-container(:articles='latest', keyPrefix='latest')
-        h3 Featured
+        h1 Blogs & Articles
+        // h3 Latest
+        // article-container(:articles='latest', keyPrefix='latest')
+        // h3 Featured
         article-container(:articles='featured', keyPrefix='featured')
         router-link.link(to='/blog')
           .button View more →
@@ -24,24 +24,16 @@ export default {
     return {
       latest: [
         {
-          title: 'University in Japan, my experience',
-          body: 'This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. ',
-          imgURL: '',
-          url: 'university-in-japan',
+          title: '',
+          body: '',
+          url: '',
         },
       ],
       featured: [
         {
-          title: 'University in Japan, my experience',
-          body: 'This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. ',
-          imgURL: '',
-          url: 'university-in-japan',
-        },
-        {
-          title: 'University in Japan, my experience',
-          body: 'This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. This is some text. ',
-          imgURL: '',
-          url: 'university-in-japan',
+          title: 'Job Hunting as a Software Engineering Student (Part 1)',
+          body: 'Finding your first job isn’t easy, at least for the majority of people. There are so many things to look through and even more to stress about. Where do you even start? What are you even meant to say during interview but even before then, how do you even land one?',
+          url: 'job-hunting-as-a-software-engineering-student-part-1',
         },
       ]
     }

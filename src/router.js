@@ -6,23 +6,21 @@ import Home from './views/Home.vue'
 Vue.use(Router)
 
 const router =  new Router({
-  mode: 'hash',
+  mode: 'history',
   routes: [
+    {
+      path: '/',
+      name: 'showcase',
+      component: () => import(/* webpackChunkName: "showcase" */ './views/Showcase.vue'),
+    },
     {
       path: '/',
       component: MainLayout,
       children: [
         {
-          path: '',
+          path: 'home',
           name: 'home',
           component: Home,
-          beforeEnter: (to, from, next) => {
-            if (document.cookie.indexOf('fs') === -1) {
-              document.cookie = 'fs=1; expires=Fri, 31 Dec 9999 23:59:59 GMT';
-              next('/showcase');
-            }
-            next();
-          }
         },
         {
           path: 'skills',
@@ -62,11 +60,6 @@ const router =  new Router({
       ],
     },
     {
-      path: '/showcase',
-      name: 'showcase',
-      component: () => import(/* webpackChunkName: "showcase" */ './views/Showcase.vue'),
-    },
-    {
       path: '*',
       redirect: '/404'
     },
@@ -82,7 +75,7 @@ const router =  new Router({
 })
 
 router.beforeEach((to, from, next) => {
-  if (to.path !== '/showcase' && window.innerWidth < 1000) next('/showcase');
+  if (to.path !== '/' && window.innerWidth < 1000) next('/');
   else next();
 })
 

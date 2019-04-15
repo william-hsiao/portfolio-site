@@ -7,7 +7,7 @@ export default {
       },
       {
         name: 'Front-End',
-        items: [ 'Vue.js', 'Sass' ],
+        items: [ 'Vue.js', 'Sass', 'Angular' ],
       },
       {
         name: 'Back-End',
@@ -15,7 +15,7 @@ export default {
       },
       {
         name: 'Services',
-        items: [ 'Wercker', 'AWS' ],
+        items: [ 'Wercker', 'AWS', 'TestCafe' ],
       },
     ],
     detailed: [
@@ -26,6 +26,7 @@ export default {
             name: '',
             items: [
               { name: 'JavaScript', rating: 5 },
+              { name: 'TypeScript', rating: 4 },
               { name: 'Java', rating: 4 },
               { name: 'C/C++', rating: 4 },
               { name: 'C#', rating: 4 },
@@ -45,7 +46,7 @@ export default {
             items: [ 
               { name: 'Vue.js', rating: 5 },
               { name: 'Sass', rating: 5 },
-              { name: 'TypeScript', rating: 3 },
+              { name: 'Angular', rating: 2 }
             ],
           }
         ],

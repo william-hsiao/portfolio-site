@@ -12,7 +12,7 @@
       .contents
         .sidebar.dark
           .sidebar-content
-            router-link.link(to='/')
+            router-link.link(to='/home')
               h3 Home
             router-link.link(to='/skills')
               h3 Dev Skills
@@ -20,8 +20,8 @@
               h3 Projects
             router-link.link(to='/about')
               h3 About Me
-            //- router-link.link(to='/blog')
-            //-   h3 Blog
+            router-link.link(to='/blog')
+              h3 Blogs & Articles
             .spacer
             router-link.link(to='/extras')
               h3 Extras
@@ -71,7 +71,7 @@ export default {
       } else if (this.pageTitle === 'Blog') {
         return '/blog';
       } else {
-        return '/';
+        return '/home';
       }
     }
   },

@@ -5,6 +5,8 @@
       h3 Monthly Cookbook
       iframe(width="100%", height="450", frameborder="no", src="https://www.instagram.com/p/Bs5UFuJB8gD/embed")
       iframe(width="100%", height="450", frameborder="no", src="https://www.instagram.com/p/BtXbTDhARVT/embed")
+      iframe(width="100%", height="450", frameborder="no", src="https://www.instagram.com/p/BuoMHw1gX5l/embed")
+      iframe(width="100%", height="450", frameborder="no", src="https://www.instagram.com/p/BwO18WvAlNZ/embed")
     .soundcloud
       h2 Soundcloud
       iframe(width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/575231160&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true")
@@ -27,7 +29,7 @@ export default {
     })
   },
   mounted() {
-    this.updateTitle('Home');
+    this.updateTitle('Extras');
   },
   created() {
     let instagram = document.createElement('script');

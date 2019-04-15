@@ -129,6 +129,8 @@
                       ul 
                         li Brisbane Grammar Symphony Orchestra
                         li Chamber Strings Ensemble
+                router-link(to='/extras')
+                  .button See More
                 .link(@click="changeArticle('base')")
                   | ← return
 </template>
@@ -264,6 +266,11 @@ export default {
       p, i {
         margin-bottom: 20px;
       }
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
     }
   }
   

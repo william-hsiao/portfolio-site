@@ -9,3 +9,9 @@ export default {
   name: 'Intro',
 }
 </script>
+
+<style scoped>
+.frame {
+  font-size: 14px;
+}
+</style>

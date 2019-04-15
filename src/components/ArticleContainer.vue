@@ -41,7 +41,7 @@ export default {
     h4 {
       font-size: 14px;
       margin-top: 0;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
       letter-spacing: initial;
     }
     &:hover {

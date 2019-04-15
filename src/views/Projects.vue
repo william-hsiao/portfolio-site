@@ -27,6 +27,8 @@ export default {
 <style lang='scss'>
 #Projects {
   font-size: 12px;
+  line-height: 2;
+
   .project-item {
     margin-bottom: 50px;
     p {

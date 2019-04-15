@@ -6,7 +6,7 @@
     DevSkills
     Projects
     AboutMe
-    //- Blog
+    Blog
     Contact
 </template>
 
