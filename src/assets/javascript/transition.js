@@ -1,6 +1,7 @@
 export const transitions = {
   methods: {
     viewTemplate(from, to, transition = 'random') {
+      if (to === 'repro-web-sdk') window.reproio.track('view-web-sdk');
       return new Promise((resolve) => {
         const frame = this.$el.getElementsByClassName('frame')[0];
         const fromTemplate = this.$el.getElementsByClassName(from)[0];
