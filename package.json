@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "compile": "node ./utility/compilePug",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "publish": "git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "node-sass": "^4.10.0",
