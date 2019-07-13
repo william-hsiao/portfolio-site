@@ -19,6 +19,7 @@ export default {
 <style lang='scss'>
   .intro {
     margin-bottom: 50px;
+
     .panel-bg {
       background-color: #E8E8E8;
       transform: skew(0, 12deg);

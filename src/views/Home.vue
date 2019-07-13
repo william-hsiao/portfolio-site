@@ -56,16 +56,30 @@ export default {
     &:nth-of-type(even) {
       z-index: 100;
       color: #000;
+
+      .panel-contents {
+        h1 {
+          text-align: left;
+        }
+      }
     }
   }
   .panel-contents {
     display: flex;
+    flex-direction: column;
     align-content: center;
     justify-content: center;
-    max-width: 2560px;
+    max-width: 1440px;
     z-index: 100;
-    width: 100%;
-    padding: 200px 75px;
+    width: 60%;
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    h1 {
+      font-size: 50px;
+      font-weight: 300;
+      text-align: right;
+    }
   }
   .panel-bg {
     box-sizing: border-box;

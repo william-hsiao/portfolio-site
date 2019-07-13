@@ -23,6 +23,7 @@
     .panel-contents {
       padding-top: 120px;
       padding-bottom: 160px;
+      flex-direction: row;
     }
     .panel-bg {
       background-color: #000;
