@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.panel.about
+  section#about.panel
     .panel-bg
     .panel-contents
       h1 About
@@ -13,7 +13,7 @@ export default {
 </script>
 
 <style lang='scss'>
-  .about {
+  #about {
     .panel-bg {
       background-color: #232323;
       transform: skew(0, -12deg);

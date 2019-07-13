@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.panel.intro
+  section#intro.panel
     .panel-bg
       .accent.top-left
       .accent.top-right
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style lang='scss'>
-  .intro {
+  #intro {
     margin-bottom: 50px;
 
     .panel-bg {
