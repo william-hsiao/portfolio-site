@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import VueAnalytics from 'vue-analytics'
+import axios from 'axios'
 
 Vue.use(VueAnalytics, {
   id: 'UA-130037056-1',
@@ -11,6 +12,7 @@ Vue.use(VueAnalytics, {
 Vue.config.productionTip = false
 Vue.config.devtools = true
 
+Vue.prototype.$http = axios
 Vue.directive('fade-in', {
   bind(el) {
     el.style.opacity = '0';

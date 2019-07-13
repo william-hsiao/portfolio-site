@@ -37,6 +37,7 @@
       align-content: center;
       letter-spacing: 5px;
       margin-left: 100px;
+      text-align: center;
     }
     .name {
       font-size: 36px;
