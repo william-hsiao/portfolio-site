@@ -1,5 +1,6 @@
 <template lang="pug">
   .container
+    nav-menu
     cover
     socials
     intro
@@ -7,11 +8,12 @@
     blog
     about
 
-    section.panel.footer
+    .panel.footer
       .panel-bg
 </template>
 
 <script>
+import NavMenu from '@/components/Nav.vue'
 import Cover from '@/components/Cover.vue'
 import Socials from '@/components/Socials.vue'
 import Intro from '@/components/Intro.vue'
@@ -23,6 +25,7 @@ export default {
   name: 'home',
 
   components: {
+    NavMenu,
     Cover,
     Socials,
     Intro,
@@ -36,10 +39,6 @@ export default {
       const socials = document.querySelector('.socials');
       if (window.scrollY > 0) socials.classList.add('docked');
       else socials.classList.remove('docked');
-
-      const panels = document.querySelectorAll('section.panel');
-      const currentPanel = [...panels].find((panel, idx) => window.scrollY >= panel.offsetTop && window.scrollY < panels[idx+1].offsetTop);
-      if (currentPanel) history.pushState(null, null, `#${currentPanel.id}`);
     })
   },
 }

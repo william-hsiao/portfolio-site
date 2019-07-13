@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.panel
+  section#top.panel
     .panel-bg
     .panel-contents
       img.logo(src='@/assets/images/logo_cover.png')
@@ -14,8 +14,8 @@
   }
 </script>
 
-<style lang='scss' scoped>
-  .panel {
+<style lang='scss'>
+  #top {
     margin-bottom: 75px;
     margin-top: -200px;
     padding-top: 200px;
