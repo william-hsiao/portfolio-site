@@ -36,6 +36,10 @@ export default {
       const socials = document.querySelector('.socials');
       if (window.scrollY > 0) socials.classList.add('docked');
       else socials.classList.remove('docked');
+
+      const panels = document.querySelectorAll('.panel');
+      const currentPanel = [...panels].find((panel, idx) => window.scrollY >= panel.offsetTop && window.scrollY < panels[idx+1].offsetTop);
+      if (currentPanel) history.pushState(null, null, `#${currentPanel.id}`);
     })
   },
 }
