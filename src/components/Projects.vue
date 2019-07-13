@@ -40,6 +40,7 @@ export default {
           justify-content: center;
           align-content: center;
           width: 20%;
+          text-align: center;
         }
         .thumbnail {
           display: flex;

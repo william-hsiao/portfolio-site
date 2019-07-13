@@ -37,7 +37,7 @@ export default {
       if (window.scrollY > 0) socials.classList.add('docked');
       else socials.classList.remove('docked');
 
-      const panels = document.querySelectorAll('.panel');
+      const panels = document.querySelectorAll('section.panel');
       const currentPanel = [...panels].find((panel, idx) => window.scrollY >= panel.offsetTop && window.scrollY < panels[idx+1].offsetTop);
       if (currentPanel) history.pushState(null, null, `#${currentPanel.id}`);
     })
@@ -56,15 +56,14 @@ export default {
     position: relative;
     z-index: 1;
     color: #fff;
+    min-height: 800px;
 
     &:nth-of-type(even) {
       z-index: 100;
       color: #000;
 
       .panel-contents {
-        h1 {
-          text-align: left;
-        }
+        text-align: left;
       }
     }
   }
@@ -78,11 +77,11 @@ export default {
     width: 60%;
     padding-top: 200px;
     padding-bottom: 200px;
+    text-align: right;
 
     h1 {
       font-size: 50px;
       font-weight: 300;
-      text-align: right;
     }
   }
   .panel-bg {

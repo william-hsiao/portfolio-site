@@ -7,7 +7,16 @@
       .accent.bottom-right
     .panel-contents
       h1 Hello!
-      .temp-content
+      p I am a Software Engineer currently working in Tokyo, Japan
+      .line
+        .text Frontend
+        .image
+      .line
+        .image
+        .text Backend
+      .line
+        .text And even some design
+        .image
 </template>
 
 <script>
@@ -54,6 +63,32 @@ export default {
           border-bottom: 1px solid #a7a7a7;
           border-right: 1px solid #a7a7a7;
           transform: skew(0, -32deg);
+        }
+      }
+    }
+
+    .panel-contents {
+      font-size: 18px;
+
+      .line {
+        display: flex;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        margin: auto;
+        width: 80%;
+
+        .text {
+          display: flex;
+          flex-direction: column;
+          align-content: center;
+          justify-content: center;
+          flex-grow: 1;
+          text-align: center;
+        }
+        .image {
+          height: 100px;
+          width: 200px;
+          background-color: #a7a7a7;
         }
       }
     }
