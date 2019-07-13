@@ -1,6 +1,6 @@
 <template lang="pug">
   .nav
-    nav-item(v-for='panel in panels', :panel='panel', :currentPanel='currentPanel')
+    nav-item(v-for='panel in panels', :panel='panel', :currentPanel='currentPanel' :key='panel.id')
 </template>
 
 <script>
@@ -31,7 +31,7 @@ export default {
       if (currentPanel) {
         history.pushState(null, null, `#${currentPanel.id}`);
         this.currentPanel = currentPanel;
-      };
+      }
     }
   },
 

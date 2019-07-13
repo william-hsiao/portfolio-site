@@ -6,15 +6,15 @@
       .accent.bottom-left
       .accent.bottom-right
     .panel-contents
-      h1 Hello!
-      p I am a Software Engineer currently working in Tokyo, Japan
-      .line
+      h1(v-fade-in) Hello!
+      p(v-fade-in) I am a Software Engineer currently working in Tokyo, Japan
+      .line(v-fade-in)
         .text Frontend
         .image
-      .line
+      .line(v-fade-in)
         .image
         .text Backend
-      .line
+      .line(v-fade-in)
         .text And even some design
         .image
 </template>

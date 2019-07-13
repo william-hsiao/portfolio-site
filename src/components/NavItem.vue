@@ -44,7 +44,7 @@ export default {
     }
 
     &.current .dot {
-      background-color: #565656;
+      background-color: #888888;
     }
   }
   .label {
@@ -53,12 +53,12 @@ export default {
     justify-content: center;
     margin-left: 10px;
     text-transform: capitalize;
-    color: #565656;
+    color: #888888;
   }
   .dot {
     height: 25px;
     width: 25px;
-    border: 1px solid #565656;
+    border: 1px solid #888888;
     box-sizing: border-box;
     flex-shrink: 0;
   }

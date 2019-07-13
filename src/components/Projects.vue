@@ -2,8 +2,8 @@
   section#projects.panel
     .panel-bg
     .panel-contents
-      h1 Projects
-      .project-container
+      h1(v-fade-in) Projects
+      .project-container(v-fade-in)
         .project-item(v-for='n in 5')
           .date
             span 2017

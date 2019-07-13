@@ -1,7 +1,7 @@
 <template lang="pug">
   section#blog.panel
     .panel-bg
-    .panel-contents
+    .panel-contents(v-fade-in)
       h1 Blog &amp; Articles
       .temp-content
 </template>

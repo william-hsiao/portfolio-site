@@ -17,8 +17,6 @@
 <style lang='scss'>
   #top {
     margin-bottom: 75px;
-    margin-top: -200px;
-    padding-top: 200px;
 
     .panel-contents {
       padding-top: 120px;
