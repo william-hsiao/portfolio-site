@@ -11,7 +11,7 @@
             span 2018
           .thumbnail
           .text-content
-            h3 Title
+            h3 npm package
             p Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body
 </template>
 

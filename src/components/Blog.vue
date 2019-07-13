@@ -98,6 +98,11 @@ export default {
       }
       .title {
         font-size: 16px;
+        word-break: break-all;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
       .pubDate {
         display: inline-block;
