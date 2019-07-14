@@ -8,26 +8,35 @@
           .date
             span 2018
             span ~
-            span Ongoing
-          .thumbnail
+            span now
           .text-content
-            h3 Repro Web SDK
+            .title
+              h3 Repro Web SDK
+              span Typescript
             p I work as one of the core members in developing the Repro Web SDK which enables user activity on web pages to be tracked with the Repro marketing service. The Web SDK was launched in December 2018 and is continuing to be developed to form one of the pillars of Repro.
+            .link
+              a(href='https://docs.repro.io/en/dev/web/index.html#web', target='_blank') Learn more
+
         .project-item
           .date
             span 2019
-          .thumbnail
           .text-content
-            h3 Testcafe Browser Provider CrossBrowserTesting
+            .title
+              h3 Testcafe Browser Provider CrossBrowserTesting
+              span Javascript
             p A package that
+            .link
+              a(href='https://www.npmjs.com/package/testcafe-browser-provider-cbt', target='_blank') View on npm
+
         .project-item
           .date
             span 2018
             span ~
             span 2019
-          .thumbnail
           .text-content
-            h3 gaze-key
+            .title
+              h3 gaze-key
+              span C#
             p Human-Computer Interaction research utilizing current eye tracking technology to develop an efficient typing system based only on gaze, without inputs such as blink and dwell time.
 </template>
 
@@ -37,7 +46,7 @@ export default {
 }
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
   #projects {
     padding-bottom: 100px;
     margin-bottom: -40px;
@@ -51,6 +60,7 @@ export default {
         display: flex;
         margin: 50px auto;
         .date {
+          flex-shrink: 0;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -58,19 +68,29 @@ export default {
           width: 20%;
           text-align: center;
         }
-        .thumbnail {
-          display: flex;
-          justify-content: center;
-          align-content: center;
-          width: 20%;
-          background-color: #c2c2c2;
-        }
         .text-content {
+          flex-grow: 1;
           text-align: left;
           margin-left: 25px;
-          width: 60%;
-          h3 {
-            margin-top: 5px;
+          .title {
+            * {
+              display: inline-block;
+            }
+
+            h3 {
+              margin-top: 5px;
+            }
+            span {
+              padding-left: 10px;
+              color: #b8b8b8;
+            }
+          }
+          p {
+            margin: 0;
+          }
+          .link {
+            margin-top: 10px;
+            text-decoration: underline;
           }
         }
       }

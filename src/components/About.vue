@@ -62,7 +62,8 @@ export default {
       }
       .bio {
         width: 50%;
-        margin-top: 150px;
+        margin-top: 50px;
+        justify-content: center;
         display: flex;
         flex-direction: column;
         img {
