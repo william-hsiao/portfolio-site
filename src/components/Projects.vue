@@ -4,15 +4,31 @@
     .panel-contents
       h1(v-fade-in) Projects
       .project-container(v-fade-in)
-        .project-item(v-for='n in 5')
+        .project-item
           .date
-            span 2017
-            span ~
             span 2018
+            span ~
+            span Ongoing
           .thumbnail
           .text-content
-            h3 npm package
-            p Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body Body
+            h3 Repro Web SDK
+            p I work as one of the core members in developing the Repro Web SDK which enables user activity on web pages to be tracked with the Repro marketing service. The Web SDK was launched in December 2018 and is continuing to be developed to form one of the pillars of Repro.
+        .project-item
+          .date
+            span 2019
+          .thumbnail
+          .text-content
+            h3 Testcafe Browser Provider CrossBrowserTesting
+            p A package that
+        .project-item
+          .date
+            span 2018
+            span ~
+            span 2019
+          .thumbnail
+          .text-content
+            h3 gaze-key
+            p Human-Computer Interaction research utilizing current eye tracking technology to develop an efficient typing system based only on gaze, without inputs such as blink and dwell time.
 </template>
 
 <script>
@@ -46,12 +62,16 @@ export default {
           display: flex;
           justify-content: center;
           align-content: center;
-          width: 30%;
+          width: 20%;
           background-color: #c2c2c2;
         }
         .text-content {
           text-align: left;
           margin-left: 25px;
+          width: 60%;
+          h3 {
+            margin-top: 5px;
+          }
         }
       }
     }
