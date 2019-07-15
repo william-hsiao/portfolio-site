@@ -1,6 +1,10 @@
 <template lang="pug">
   section#blog.panel
     .panel-bg
+      .accent.top-left
+      .accent.top-right
+      .accent.bottom-left
+      .accent.bottom-right
     .panel-contents(v-fade-in)
       h1 Blog &amp; Articles
       .posts-container

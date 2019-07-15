@@ -8,87 +8,68 @@
     .panel-contents
       h1(v-fade-in) Hello!
       p(v-fade-in) I am a Software Engineer currently working in Tokyo, Japan
-      .line(v-fade-in)
-        .text Frontend
-        .image
-      .line(v-fade-in)
-        .image
-        .text Backend
-      .line(v-fade-in)
-        .text And even some design
-        .image
+      p(v-fade-in) My work is primary around Web Development
+      .field-container(v-fade-in)
+        .field
+          .title Frontend
+          .body {{ formatToString(frontend) }}
+        .field
+          .title Backend
+          .body {{ formatToString(backend) }}
+        .field
+          .title Design
+          .body {{ formatToString(design) }}
 </template>
 
 <script>
 export default {
   name: 'intro',
+  data() {
+    return {
+      frontend: ['Typescript', 'Vue.js'],
+      backend: ['NodeJS', 'Ruby on Rails', 'MySQL', 'MongoDB'],
+      design: ['Figma', 'Photoshop'],
+    }
+  },
+  methods: {
+    formatToString(strArray) {
+      return strArray.join('・');
+    }
+  }
 }
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
   #intro {
     margin-bottom: 50px;
 
     .panel-bg {
       background-color: #E8E8E8;
       transform: skew(0, 12deg);
-
-      .accent {
-        position: absolute;
-        height: 5%;
-        width: 10%;
-
-        &.top-left {
-          top: 200px;
-          left: 100px;
-          border-top: 1px solid #a7a7a7;
-          border-left: 1px solid #a7a7a7;
-          transform: skew(0, -32deg);
-        }
-        &.top-right {
-          top: 200px;
-          right: 100px;
-          border-top: 1px solid #a7a7a7;
-          border-right: 1px solid #a7a7a7;
-        }
-        &.bottom-left {
-          bottom: 200px;
-          left: 100px;
-          border-bottom: 1px solid #a7a7a7;
-          border-left: 1px solid #a7a7a7;
-        }
-        &.bottom-right {
-          bottom: 200px;
-          right: 100px;
-          border-bottom: 1px solid #a7a7a7;
-          border-right: 1px solid #a7a7a7;
-          transform: skew(0, -32deg);
-        }
-      }
     }
 
     .panel-contents {
       font-size: 18px;
 
-      .line {
+      .field-container {
         display: flex;
-        padding-top: 100px;
-        padding-bottom: 100px;
-        margin: auto;
-        width: 80%;
-
-        .text {
-          display: flex;
-          flex-direction: column;
-          align-content: center;
-          justify-content: center;
-          flex-grow: 1;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        .field {
+          padding: 25px;
+          width: 33%;
+          box-sizing: border-box;
           text-align: center;
-        }
-        .image {
-          height: 100px;
-          width: 200px;
-          background-color: #a7a7a7;
+          &:not(:last-child) {
+            border-right: 1px solid #a7a7a7;
+          }
+          .title {
+            margin-bottom: 15px;
+          }
+          .body {
+            font-size: 14px;
+            color: #a7a7a7;
+          }
         }
       }
     }

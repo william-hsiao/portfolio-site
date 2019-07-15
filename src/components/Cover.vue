@@ -19,7 +19,7 @@
     margin-bottom: 75px;
 
     .panel-contents {
-      padding-top: 120px;
+      padding-top: 150px;
       padding-bottom: 160px;
       flex-direction: row;
       width: 80%;
@@ -38,6 +38,7 @@
       letter-spacing: 5px;
       margin-left: 100px;
       text-align: center;
+      font-family: 'Play', sans-serif;
     }
     .name {
       font-size: 36px;

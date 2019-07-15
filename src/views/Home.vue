@@ -64,6 +64,39 @@ export default {
       .panel-contents {
         text-align: left;
       }
+
+      .panel-bg .accent {
+        position: absolute;
+        height: 5%;
+        width: 10%;
+
+        &.top-left {
+          top: 200px;
+          left: 100px;
+          border-top: 1px solid #a7a7a7;
+          border-left: 1px solid #a7a7a7;
+          transform: skew(0, -32deg);
+        }
+        &.top-right {
+          top: 100px;
+          right: 100px;
+          border-top: 1px solid #a7a7a7;
+          border-right: 1px solid #a7a7a7;
+        }
+        &.bottom-left {
+          bottom: 100px;
+          left: 100px;
+          border-bottom: 1px solid #a7a7a7;
+          border-left: 1px solid #a7a7a7;
+        }
+        &.bottom-right {
+          bottom: 200px;
+          right: 100px;
+          border-bottom: 1px solid #a7a7a7;
+          border-right: 1px solid #a7a7a7;
+          transform: skew(0, -32deg);
+        }
+      }
     }
   }
   .panel-contents {
