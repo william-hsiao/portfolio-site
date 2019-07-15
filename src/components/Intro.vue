@@ -50,7 +50,7 @@ export default {
     }
 
     .panel-contents {
-      font-size: 18px;
+      font-size: 1em;
       margin-bottom: 300px;
 
       .align-right {
@@ -73,11 +73,30 @@ export default {
             margin-bottom: 15px;
           }
           .body {
-            font-size: 14px;
+            font-size: .8em;
             color: #a7a7a7;
           }
         }
       }
     }
+    
+    @media only screen and (max-width: 1080px) {
+      .panel-contents {
+        .align-right {
+          text-align: left;
+        }
+        .field-container {
+          flex-direction: column;
+          .field {
+            width: auto;
+
+            &:not(:last-child) {
+              border-right: none;
+            }
+          }
+        }
+      }
+    }
   }
+
 </style>

@@ -47,6 +47,7 @@ export default {
 
     .panel-contents {
       flex-direction: row-reverse;
+      font-size: .9em;
 
       .main {
         margin-left: 50px;
@@ -91,6 +92,19 @@ export default {
               display: block;
             }
           }
+        }
+      }
+    }
+
+    @media only screen and (max-width: 1080px) {
+      .panel-contents {
+        flex-direction: column;
+        .main {
+          width: auto;
+          margin-left: 0;
+        }
+        .bio {
+          width: auto;
         }
       }
     }

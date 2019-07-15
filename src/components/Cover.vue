@@ -2,7 +2,8 @@
   section#top.panel
     .panel-bg
     .panel-contents
-      img.logo(src='@/assets/images/logo_cover.png')
+      .logo
+        img(src='@/assets/images/logo_cover.png')
       .title-container
         span.name William Hsiao
         span.subtitle Software Engineer
@@ -41,7 +42,7 @@
       font-family: 'Play', sans-serif;
     }
     .name {
-      font-size: 36px;
+      font-size: 2em;
       padding: 50px 150px;
       position: relative;
     }
@@ -67,16 +68,41 @@
     }
     .subtitle {
       margin: 50px auto 0;
-      font-size: 18px;
+      font-size: 1em;
       color: #595959;
     }
     .logo {
-      height: 500px;
-      position: relative;
-      animation-duration: 1s;
-      animation-name: bobble;
-      animation-iteration-count: infinite;
-      animation-direction: alternate;
+      max-width: 30vw;
+      img {
+        width: 100%;
+        position: relative;
+        animation-duration: 1s;
+        animation-name: bobble;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+    }
+
+    @media only screen and (max-width: 1080px) {
+      .panel-contents {
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 50px;
+
+        .title-container {
+          margin-left: 0;
+          margin-top: 25px;
+        }
+        .name {
+          padding: 0;
+          &::before, &::after {
+            display: none;
+          }
+        }
+        .logo {
+          max-width: none;
+        }
+      }
     }
   }
 
@@ -88,4 +114,5 @@
       bottom: 8px;
     }
   }
+
 </style>

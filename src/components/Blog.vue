@@ -94,7 +94,7 @@ export default {
           color: #FFF;
           margin-bottom: 5px;
           border-radius: 5px;
-          font-size: 9px;
+          font-size: .6em;
           user-select: none;
           text-transform: capitalize;
 
@@ -104,7 +104,6 @@ export default {
         }
       }
       .title {
-        font-size: 16px;
         word-break: break-all;
 
         &:hover {
@@ -114,7 +113,10 @@ export default {
       .pubDate {
         display: inline-block;
         margin-left: 10px;
-        font-size: 12px;
+        font-size: .8em;
+      }
+      .description {
+        font-size: .9em;
       }
     }
 

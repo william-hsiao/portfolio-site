@@ -46,20 +46,21 @@ export default {
     &.current .dot {
       background-color: #888888;
     }
-  }
-  .label {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 10px;
-    text-transform: capitalize;
-    color: #888888;
-  }
-  .dot {
-    height: 25px;
-    width: 25px;
-    border: 1px solid #888888;
-    box-sizing: border-box;
-    flex-shrink: 0;
+
+    .label {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 10px;
+      text-transform: capitalize;
+      color: #888888;
+    }
+    .dot {
+      height: 25px;
+      width: 25px;
+      border: 1px solid #888888;
+      box-sizing: border-box;
+      flex-shrink: 0;
+    }
   }
 </style>

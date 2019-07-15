@@ -86,25 +86,59 @@ export default {
           text-align: left;
           margin-left: 25px;
           .title {
+            margin-top: 5px;
+            margin-bottom: 10px;
+
             * {
               display: inline-block;
             }
 
             h3 {
-              margin-top: 5px;
+              margin: 0;
             }
             span {
               padding-left: 10px;
               color: #b8b8b8;
+              font-size: .8em;
             }
           }
           p {
             margin: 0;
+            font-size: .8em;
           }
           .link {
             margin-top: 10px;
             text-decoration: underline;
             text-align: right;
+            font-size: .8em;
+          }
+        }
+      }
+    }
+
+    @media only screen and (max-width: 1080px) {
+      .project-container {
+        .project-item {
+          flex-direction: column;
+          .date {
+            flex-direction: row;
+            justify-content: flex-start;
+            width: auto;
+            font-size: .8em;
+            span:not(:last-child) {
+              margin-right: 5px;
+            }
+          }
+          .text-content {
+            margin-left: 0;
+            .title {
+              * {
+                display: block;
+              }
+              span {
+                padding-left: 0;
+              }
+            }
           }
         }
       }

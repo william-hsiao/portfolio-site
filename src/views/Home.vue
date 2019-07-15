@@ -112,7 +112,7 @@ export default {
     text-align: right;
 
     h1 {
-      font-size: 50px;
+      font-size: 2em;
       font-weight: 300;
     }
   }
@@ -136,7 +136,9 @@ export default {
     }
   }
 
-  .temp-content {
-    height: 1000px;
+  @media only screen and (max-width: 1080px) {
+    .panel-bg .accent {
+      display: none;
+    }
   }
 </style>

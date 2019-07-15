@@ -59,5 +59,9 @@ export default {
     &.docked .item:not(:last-child) {
       margin-bottom: 10px;
     }
+
+    @media only screen and (max-width: 1080px) {
+      display: none;
+    }
   }
 </style>

@@ -59,5 +59,9 @@ export default {
     &:hover {
       width: auto;
     }
+
+    @media only screen and (max-width: 1080px) {
+      display: none;
+    }
   }
 </style>
