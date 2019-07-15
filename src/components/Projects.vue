@@ -6,6 +6,30 @@
       .project-container(v-fade-in)
         .project-item
           .date
+            span 2019
+            span ~
+            span now
+          .text-content
+            .title
+              h3 Github Taskboard (Work in Progress)
+              span Angular, Ruby on Rails
+            p Taskboard that syncs up with Github, automatically creating a new card for every pull request you make! Keep track of everything you are working on including managing your requested reviews.
+            .link
+              a(href='https://github.com/william-hsiao/task-organiser', target='_blank') View on Github
+
+        .project-item
+          .date
+            span 2019
+          .text-content
+            .title
+              h3 TestCafe Browser Provider: CrossBrowserTesting
+              span Javascript
+            p A CrossBrowserTesting browser provider plugin for TestCafe. Built using the TestCafe browser provider generator, this plugin posts test resutls back to the CrossBrowserTesting dashboard and uses a named local connection for each test allowing you to run multiple tests without interfering with each other.
+            .link
+              a(href='https://www.npmjs.com/package/testcafe-browser-provider-cbt', target='_blank') View on npm
+
+        .project-item
+          .date
             span 2018
             span ~
             span now
@@ -13,20 +37,9 @@
             .title
               h3 Repro Web SDK
               span Typescript
-            p I work as one of the core members in developing the Repro Web SDK which enables user activity on web pages to be tracked with the Repro marketing service. The Web SDK was launched in December 2018 and is continuing to be developed to form one of the pillars of Repro.
+            p The Repro Web SDK enables tracking user activity on your web pages and can be view and analyized with the Repro marketing service. The Web SDK was launched in December 2018 and is continuing to be developed to form one of the pillars of Repro. I work as one of the core developers of the SDK having been responsible for many features such as cross-domain support.
             .link
               a(href='https://docs.repro.io/en/dev/web/index.html#web', target='_blank') Learn more
-
-        .project-item
-          .date
-            span 2019
-          .text-content
-            .title
-              h3 Testcafe Browser Provider CrossBrowserTesting
-              span Javascript
-            p A package that
-            .link
-              a(href='https://www.npmjs.com/package/testcafe-browser-provider-cbt', target='_blank') View on npm
 
         .project-item
           .date
@@ -36,7 +49,7 @@
           .text-content
             .title
               h3 gaze-key
-              span C#
+              span Unity, C#
             p Human-Computer Interaction research utilizing current eye tracking technology to develop an efficient typing system based only on gaze, without inputs such as blink and dwell time.
 </template>
 
@@ -91,6 +104,7 @@ export default {
           .link {
             margin-top: 10px;
             text-decoration: underline;
+            text-align: right;
           }
         }
       }

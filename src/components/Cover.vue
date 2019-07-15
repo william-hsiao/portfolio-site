@@ -19,8 +19,8 @@
     margin-bottom: 75px;
 
     .panel-contents {
-      padding-top: 150px;
-      padding-bottom: 160px;
+      margin-top: 150px;
+      margin-bottom: 160px;
       flex-direction: row;
       width: 80%;
     }

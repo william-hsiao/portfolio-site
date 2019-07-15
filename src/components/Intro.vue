@@ -8,7 +8,7 @@
     .panel-contents
       h1(v-fade-in) Hello!
       p(v-fade-in) I am a Software Engineer currently working in Tokyo, Japan
-      p(v-fade-in) My work is primary around Web Development
+      p(v-fade-in) Recently, I've been working on a lot of web applications, focusing on the frontend, but I am certainly up for trying my hand in a variety of fields.
       .field-container(v-fade-in)
         .field
           .title Frontend
@@ -19,6 +19,7 @@
         .field
           .title Design
           .body {{ formatToString(design) }}
+      p.align-right(v-fade-in) Got a project in mind? Just have a question? Let's talk!
 </template>
 
 <script>
@@ -50,6 +51,11 @@ export default {
 
     .panel-contents {
       font-size: 18px;
+      margin-bottom: 300px;
+
+      .align-right {
+        text-align: right;
+      }
 
       .field-container {
         display: flex;

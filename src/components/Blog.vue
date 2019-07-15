@@ -9,7 +9,7 @@
       h1 Blog &amp; Articles
       .posts-container
         .post(v-for='post in posts', :key='post.title')
-          a.title(:href='post.href') {{ post.title }}
+          a.title(:href='post.href', target='_blank') {{ post.title }}
             .pubDate {{ post.pubDate }}
           .tags
             .tag(v-for='category in post.categories') {{ parseTag(category) }}

@@ -107,8 +107,8 @@ export default {
     max-width: 1440px;
     z-index: 100;
     width: 60%;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    margin-top: 200px;
+    margin-bottom: 200px;
     text-align: right;
 
     h1 {
