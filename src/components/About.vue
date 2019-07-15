@@ -69,7 +69,7 @@ export default {
         img {
           width: 50%;
           margin: 0 auto;
-          border-radius: 10px;
+          border-radius: 5px;
         }
         .name {
           text-align: center;

@@ -65,7 +65,7 @@ export default {
 }
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
   #blog {
     h1 {
       margin: 0;
@@ -73,6 +73,9 @@ export default {
     .panel-bg {
       background-color: #E7E7E7;
       transform: skew(0, 12deg);
+    }
+    .panel-contents {
+      margin-bottom: 300px;
     }
 
     .posts-container {
