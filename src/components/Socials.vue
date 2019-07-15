@@ -61,7 +61,7 @@ export default {
     }
 
     @media only screen and (max-width: 1080px) {
-      display: none;
+      // display: none;
     }
   }
 </style>
