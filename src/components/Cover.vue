@@ -72,7 +72,11 @@
       color: #595959;
     }
     .logo {
-      max-width: 30vw;
+      max-width: 25vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
       img {
         width: 100%;
         position: relative;
