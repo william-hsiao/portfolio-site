@@ -116,7 +116,7 @@ export default {
         font-size: .8em;
       }
       .description {
-        font-size: .9em;
+        font-size: .8em;
       }
     }
 

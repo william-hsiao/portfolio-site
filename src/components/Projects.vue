@@ -11,7 +11,7 @@
             span now
           .text-content
             .title
-              h3 Github Taskboard (Work in Progress)
+              h3 Github Taskboard
               span Angular, Ruby on Rails
             p Taskboard that syncs up with Github, automatically creating a new card for every pull request you make! Keep track of everything you are working on including managing your requested reviews.
             .link

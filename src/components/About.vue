@@ -47,7 +47,7 @@ export default {
 
     .panel-contents {
       flex-direction: row-reverse;
-      font-size: .9em;
+      font-size: .8em;
 
       .main {
         margin-left: 50px;
@@ -74,7 +74,7 @@ export default {
         }
         .name {
           text-align: center;
-          font-size: 24px;
+          font-size: 1.8em;
           margin-top: 25px;
           margin-bottom: 25px;
           font-family: 'Play', sans-serif;
@@ -82,6 +82,8 @@ export default {
         }
         table {
           border-spacing: 25px 10px;
+          font-size: .9em;
+
           .label {
             color: #888888;
             vertical-align: text-top;
