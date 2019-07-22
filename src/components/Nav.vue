@@ -28,7 +28,7 @@ export default {
         return window.scrollY < this.panels[idx+1].offsetTop;
       })
 
-      if (currentPanel) {
+      if (currentPanel && currentPanel !== this.currentPanel) {
         history.pushState(null, null, `#${currentPanel.id}`);
         this.currentPanel = currentPanel;
       }
