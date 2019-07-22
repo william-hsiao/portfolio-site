@@ -31,6 +31,10 @@ export default {
   methods: {
     parseTag(label) {
       return label.replace(/-/g, ' ');
+    },
+    toISODate(date) {
+      const splitDate = date.split(' ');
+      return `${splitDate[0]}T${splitDate[1]}Z`;
     }
   },
 
@@ -45,7 +49,7 @@ export default {
           div.innerHTML = item.description;
           const description = div.querySelector('p').innerText;
           const href = item.guid;
-          const pubDate = new Date(item.pubDate).toLocaleDateString('en-AU', {
+          const pubDate = new Date(this.toISODate(item.pubDate)).toLocaleDateString('en-AU', {
             year: 'numeric',
             month: 'long',
             day: 'numeric',
