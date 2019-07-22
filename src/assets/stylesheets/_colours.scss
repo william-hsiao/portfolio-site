@@ -1,11 +1,11 @@
-#app, .light {
+#app, .panel:nth-of-type(even) {
   --primary: #000000;
   --secondary: #6c6c6c;
   --background: #ffffff;
   --background-alt: #efefef;
 }
 
-.dark {
+.panel:nth-of-type(odd) {
   --primary: #ffffff;
   --secondary: #efefef;
   --background: #000000;
