@@ -29,7 +29,7 @@ export default {
       })
 
       if (currentPanel && currentPanel !== this.currentPanel) {
-        history.pushState(null, null, `#${currentPanel.id}`);
+        history.replaceState(null, null, `#${currentPanel.id}`);
         this.currentPanel = currentPanel;
       }
     }
