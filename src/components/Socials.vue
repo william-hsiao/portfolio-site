@@ -9,16 +9,27 @@
     a.item(href="https://www.linkedin.com/in/william-hsiao/", target="_blank")
       //- LinkedIn
       img(src="@/assets/images/linkedin.svg")
-    .item.tooltip
+    .item.tooltip(@click="copyToClipboard")
       //- Email
       img(src="@/assets/images/email.svg")
       .tooltipContent
-        | contact@william-hsiao.com
+        | {{ email }}
+        span Click to copy to clipboard
 </template>
 
 <script>
 export default {
   name: 'socials',
+  data() {
+    return {
+      email: 'contact@william-hsiao.com',
+    }
+  },
+  methods: {
+    copyToClipboard() {
+      navigator.clipboard.writeText(this.email);
+    },
+  },
 }
 </script>
 
@@ -58,6 +69,15 @@ export default {
     }
     &.docked .item:not(:last-child) {
       margin-bottom: 10px;
+    }
+
+    .item.tooltip {
+      cursor: pointer;
+
+      span {
+        display: block;
+        font-size: 10px;
+      }
     }
 
     @media only screen and (max-width: 1080px) {
