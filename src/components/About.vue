@@ -18,7 +18,7 @@
             td.label Current Position:
             td.value
               span Software Engineer,
-              span Repro. Inc
+              span ExaWizards Inc.
           tr
             td.label Languages:
             td.value
@@ -34,81 +34,81 @@
 
 <script>
 export default {
-  name: 'about',
-}
+  name: "about",
+};
 </script>
 
 <style lang='scss' scoped>
-  #about {
-    .panel-bg {
-      background-color: #232323;
-      transform: skew(0, -12deg);
+#about {
+  .panel-bg {
+    background-color: #232323;
+    transform: skew(0, -12deg);
+  }
+
+  .panel-contents {
+    flex-direction: row-reverse;
+    font-size: 0.8em;
+
+    .main {
+      margin-left: 50px;
+      width: 50%;
+      text-align: center;
+      h1 {
+        margin-bottom: 50px;
+      }
+      p {
+        margin-bottom: 30px;
+        margin-top: 30px;
+      }
     }
-
-    .panel-contents {
-      flex-direction: row-reverse;
-      font-size: .8em;
-
-      .main {
-        margin-left: 50px;
+    .bio {
+      width: 50%;
+      margin-top: 50px;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      img {
         width: 50%;
+        margin: 0 auto;
+        border-radius: 5px;
+      }
+      .name {
         text-align: center;
-        h1 {
-          margin-bottom: 50px;
-        }
-        p {
-          margin-bottom: 30px;
-          margin-top: 30px;
-        }
+        font-size: 1.8em;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        font-family: "Play", sans-serif;
+        letter-spacing: 3px;
       }
-      .bio {
-        width: 50%;
-        margin-top: 50px;
-        justify-content: center;
-        display: flex;
-        flex-direction: column;
-        img {
-          width: 50%;
-          margin: 0 auto;
-          border-radius: 5px;
-        }
-        .name {
-          text-align: center;
-          font-size: 1.8em;
-          margin-top: 25px;
-          margin-bottom: 25px;
-          font-family: 'Play', sans-serif;
-          letter-spacing: 3px;
-        }
-        table {
-          border-spacing: 25px 10px;
-          font-size: .9em;
+      table {
+        border-spacing: 25px 10px;
+        font-size: 0.9em;
 
-          .label {
-            color: #888888;
-            vertical-align: text-top;
-          }
-          .value {
-            text-align: left;
-            span {
-              display: block;
-            }
-          }
+        .label {
+          color: #888888;
+          vertical-align: text-top;
         }
-      }
-    }
-
-    @media only screen and (max-width: 1080px) {
-      .panel-contents {
-        flex-direction: column;
-        .main {
-          width: auto;
-          margin-left: 0;
-        }
-        .bio {
-          width: auto;
+        .value {
+          text-align: left;
+          span {
+            display: block;
+          }
         }
       }
     }
   }
+
+  @media only screen and (max-width: 1080px) {
+    .panel-contents {
+      flex-direction: column;
+      .main {
+        width: auto;
+        margin-left: 0;
+      }
+      .bio {
+        width: auto;
+      }
+    }
+  }
+}
 </style>

@@ -7,19 +7,6 @@
         .project-item
           .date
             span 2019
-            span ~
-            span now
-          .text-content
-            .title
-              h3 Github Taskboard
-              span Angular, Ruby on Rails
-            p Taskboard that syncs up with Github, automatically creating a new card for every pull request you make! Keep track of everything you are working on including managing your requested reviews.
-            .link
-              a(href='https://github.com/william-hsiao/task-organiser', target='_blank') View on Github
-
-        .project-item
-          .date
-            span 2019
           .text-content
             .title
               h3 TestCafe Browser Provider: CrossBrowserTesting
@@ -32,7 +19,7 @@
           .date
             span 2018
             span ~
-            span now
+            span 2020
           .text-content
             .title
               h3 Repro Web SDK
@@ -66,93 +53,93 @@
 
 <script>
 export default {
-  name: 'projects',
-}
+  name: "projects",
+};
 </script>
 
 <style lang='scss' scoped>
-  #projects {
-    padding-bottom: 100px;
-    margin-bottom: -40px;
-    .panel-bg {
-      background-color: #343434;
-      transform: skew(0, -12deg);
-    }
+#projects {
+  padding-bottom: 100px;
+  margin-bottom: -40px;
+  .panel-bg {
+    background-color: #343434;
+    transform: skew(0, -12deg);
+  }
 
-    .project-container {
-      .project-item {
+  .project-container {
+    .project-item {
+      display: flex;
+      margin: 50px auto;
+      .date {
+        flex-shrink: 0;
         display: flex;
-        margin: 50px auto;
-        .date {
-          flex-shrink: 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-content: center;
-          width: 20%;
-          text-align: center;
-          font-size: .8em;
-        }
-        .text-content {
-          flex-grow: 1;
-          text-align: left;
-          margin-left: 25px;
-          .title {
-            margin-bottom: 10px;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        width: 20%;
+        text-align: center;
+        font-size: 0.8em;
+      }
+      .text-content {
+        flex-grow: 1;
+        text-align: left;
+        margin-left: 25px;
+        .title {
+          margin-bottom: 10px;
 
-            * {
-              display: inline-block;
-            }
-
-            h3 {
-              margin: 0;
-            }
-            span {
-              padding-left: 10px;
-              color: #b8b8b8;
-              font-size: .8em;
-            }
+          * {
+            display: inline-block;
           }
-          p {
+
+          h3 {
             margin: 0;
-            font-size: .8em;
           }
-          .link {
-            margin-top: 10px;
-            text-decoration: underline;
-            text-align: right;
-            font-size: .8em;
+          span {
+            padding-left: 10px;
+            color: #b8b8b8;
+            font-size: 0.8em;
           }
+        }
+        p {
+          margin: 0;
+          font-size: 0.8em;
+        }
+        .link {
+          margin-top: 10px;
+          text-decoration: underline;
+          text-align: right;
+          font-size: 0.8em;
         }
       }
     }
+  }
 
-    @media only screen and (max-width: 1080px) {
-      .project-container {
-        .project-item {
-          flex-direction: column;
-          .date {
-            flex-direction: row;
-            justify-content: flex-start;
-            width: auto;
-            font-size: .8em;
-            span:not(:last-child) {
-              margin-right: 5px;
-            }
+  @media only screen and (max-width: 1080px) {
+    .project-container {
+      .project-item {
+        flex-direction: column;
+        .date {
+          flex-direction: row;
+          justify-content: flex-start;
+          width: auto;
+          font-size: 0.8em;
+          span:not(:last-child) {
+            margin-right: 5px;
           }
-          .text-content {
-            margin-left: 0;
-            .title {
-              * {
-                display: block;
-              }
-              span {
-                padding-left: 0;
-              }
+        }
+        .text-content {
+          margin-left: 0;
+          .title {
+            * {
+              display: block;
+            }
+            span {
+              padding-left: 0;
             }
           }
         }
       }
     }
   }
+}
 </style>
