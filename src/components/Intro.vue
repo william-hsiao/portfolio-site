@@ -27,8 +27,8 @@ export default {
   name: 'intro',
   data() {
     return {
-      frontend: ['Typescript', 'Vue.js'],
-      backend: ['NodeJS', 'Ruby on Rails', 'MySQL', 'MongoDB'],
+      frontend: ['Vue.js', 'React', 'TypeScript', 'SASS'],
+      backend: ['NodeJS', 'Django', 'MySQL', 'MongoDB', 'Elasticsearch'],
       design: ['Figma', 'Photoshop'],
     }
   },

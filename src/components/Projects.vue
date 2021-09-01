@@ -2,8 +2,34 @@
 section#projects.panel
   .panel-bg
   .panel-contents
-    h1(v-fade-in) Projects
+    h1(v-fade-in) Projects/Past Work
     .project-container(v-fade-in)
+      .project-item
+        .date
+          span 2021
+          span ~
+          span On-going
+        .text-content
+          .title
+            h3 Haive - Skill Mapping
+            span React, Hapi
+          p A small project that started from a small demo that I made to visualize the skills in the company I was working at to help the Engineering Managers. I continued on as my own personal project just as something to work on as I haven't had the time to write code myself at work.
+          .link
+            a(href='https://github.com/william-hsiao/haive') View on Github
+
+      .project-item
+        .date
+          span 2020
+          span ~
+          span 2021
+        .text-content
+          .title
+            h3 exaBase Company Search
+            span Next.js (React), Django, Elasticsearch
+          p A search engine built for discovering Japanese companies. I served as the Technical Lead & Product Manager of this product for around 6 months before transitioning to another high priority project. The challenge of building a search engine isn't just serving the "correct" results but finding the overlap with what the user expects.
+          .link
+            a(href='https://exawizards.com/exabase/companysearch/', target='_blank') Learn more
+
       .project-item
         .date
           span 2019
@@ -24,7 +50,7 @@ section#projects.panel
           .title
             h3 Repro Web SDK
             span Typescript
-          p The Repro Web SDK enables tracking user activity on your web pages and can be view and analyized with the Repro marketing service. The Web SDK was launched in December 2018 and is continuing to be developed to form one of the pillars of Repro. I work as one of the core developers of the SDK having been responsible for many features such as cross-domain support.
+          p The Repro Web SDK enables tracking user activity on your web pages and can be view and analyized with the Repro marketing service. The Web SDK was launched in December 2018 and is continuing to be developed to form one of the pillars of Repro. I worked as one of the core developers of the SDK having been responsible for many features such as cross-domain support.
           .link
             a(href='https://docs.repro.io/en/dev/web/index.html#web', target='_blank') Learn more
 
@@ -41,6 +67,8 @@ section#projects.panel
 
       .project-item
         .date
+          span 2018
+          span ~
           span On-going
         .text-content
           .title

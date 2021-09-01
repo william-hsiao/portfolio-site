@@ -25,11 +25,6 @@ section#about.panel
             span English
             span Japanese
             span Chinese (Mandarin)
-        tr
-          td.label Interests:
-          td.value
-            span Tennis
-            span Violin
 </template>
 
 <script>
