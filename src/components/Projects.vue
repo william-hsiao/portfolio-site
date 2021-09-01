@@ -13,7 +13,7 @@ section#projects.panel
           .title
             h3 Haive - Skill Mapping
             span React, Hapi
-          p A small project that started from a small demo that I made to visualize the skills in the company I was working at to help the Engineering Managers. I continued on as my own personal project just as something to work on as I haven't had the time to write code myself at work.
+          p A small project that started from a small demo that I made to visualize the skills in the company I was working at to help the Engineering Managers. I continued on as my own personal project to just have fun and go all out to see my current level.
           .link
             a(href='https://github.com/william-hsiao/haive') View on Github
 
