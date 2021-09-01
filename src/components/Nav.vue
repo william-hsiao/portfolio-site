@@ -1,6 +1,6 @@
 <template lang="pug">
-  .nav
-    nav-item(v-for='panel in panels', :panel='panel', :currentPanel='currentPanel' :key='panel.id')
+.nav
+  nav-item(v-for='panel in panels', :panel='panel', :currentPanel='currentPanel' :key='panel.id')
 </template>
 
 <script>
@@ -47,21 +47,21 @@ export default {
 </script>
 
 <style lang='scss'>
-  .nav {
-    position: fixed;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1000;
-    margin-left: 25px;
-    width: 25px;
-    overflow: hidden;
-    &:hover {
-      width: auto;
-    }
-
-    @media only screen and (max-width: 1080px) {
-      display: none;
-    }
+.nav {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1000;
+  margin-left: 25px;
+  width: 25px;
+  overflow: hidden;
+  &:hover {
+    width: auto;
   }
+
+  @media only screen and (max-width: 1080px) {
+    display: none;
+  }
+}
 </style>

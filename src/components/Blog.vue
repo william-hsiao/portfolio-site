@@ -1,24 +1,26 @@
 <template lang="pug">
-  section#blog.panel
-    .panel-bg
-      .accent.top-left
-      .accent.top-right
-      .accent.bottom-left
-      .accent.bottom-right
-    .panel-contents(v-fade-in)
-      h1 Blog &amp; Articles
-      .posts-container
-        .post(v-for='post in posts', :key='post.title')
-          a.title(:href='post.href', target='_blank') {{ post.title }}
-            .pubDate {{ post.pubDate }}
-          .tags
-            .tag(v-for='category in post.categories') {{ parseTag(category) }}
-          .description {{ post.description }}
-      .link
-        a.button(href='https://medium.com/@william_hsiao', target="_blank") See all
+section#blog.panel
+  .panel-bg
+    .accent.top-left
+    .accent.top-right
+    .accent.bottom-left
+    .accent.bottom-right
+  .panel-contents(v-fade-in)
+    h1 Blog &amp; Articles
+    .posts-container
+      .post(v-for='post in posts', :key='post.title')
+        a.title(:href='post.href', target='_blank') {{ post.title }}
+          .pubDate {{ post.pubDate }}
+        .tags
+          .tag(v-for='category in post.categories') {{ parseTag(category) }}
+        .description {{ post.description }}
+    .link
+      a.button(href='https://medium.com/@william_hsiao', target="_blank") See all
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'blog',
 
@@ -39,7 +41,7 @@ export default {
   },
 
   beforeMount() {
-    this.$http.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40william_hsiao')
+    axios.get('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40william_hsiao')
       .then(res => {
         if (res.status !== 200) return;
 
@@ -70,62 +72,62 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-  #blog {
-    h1 {
-      margin: 0;
-    }
-    .panel-bg {
-      background-color: #E7E7E7;
-      transform: skew(0, 12deg);
-    }
-    .panel-contents {
-      margin-bottom: 300px;
-    }
+#blog {
+  h1 {
+    margin: 0;
+  }
+  .panel-bg {
+    background-color: #E7E7E7;
+    transform: skew(0, 12deg);
+  }
+  .panel-contents {
+    margin-bottom: 300px;
+  }
 
-    .posts-container {
-      margin-top: 50px;
-    }
+  .posts-container {
+    margin-top: 50px;
+  }
 
-    .post {
-      margin-bottom: 50px;
+  .post {
+    margin-bottom: 50px;
 
-      .tags {
-        margin-top: 10px;
-        .tag {
-          display: inline-block;
-          padding: 3px 10px;
-          background-color: #565656;
-          color: #FFF;
-          margin-bottom: 5px;
-          border-radius: 5px;
-          font-size: .6em;
-          user-select: none;
-          text-transform: capitalize;
-
-          &:not(:last-child) {
-            margin-right: 5px;
-          }
-        }
-      }
-      .title {
-        word-break: break-all;
-
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-      .pubDate {
+    .tags {
+      margin-top: 10px;
+      .tag {
         display: inline-block;
-        margin-left: 10px;
-        font-size: .8em;
-      }
-      .description {
-        font-size: .8em;
+        padding: 3px 10px;
+        background-color: #565656;
+        color: #FFF;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        font-size: .6em;
+        user-select: none;
+        text-transform: capitalize;
+
+        &:not(:last-child) {
+          margin-right: 5px;
+        }
       }
     }
+    .title {
+      word-break: break-all;
 
-    .link {
-      text-align: right;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .pubDate {
+      display: inline-block;
+      margin-left: 10px;
+      font-size: .8em;
+    }
+    .description {
+      font-size: .8em;
     }
   }
+
+  .link {
+    text-align: right;
+  }
+}
 </style>

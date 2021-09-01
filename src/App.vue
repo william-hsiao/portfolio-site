@@ -1,7 +1,9 @@
 <template lang="pug">
-  #app
+#app
+  router-view(v-slot="{ Component }")
     transition(name='fade', mode='out-in')
-      router-view
+      keep-alive
+        component(:is="Component")
 </template>
 
 <script>
