@@ -6,19 +6,6 @@ section#projects.panel
     .project-container(v-fade-in)
       .project-item
         .date
-          span 2021
-          span ~
-          span On-going
-        .text-content
-          .title
-            h3 Haive - Skill Mapping
-            span React, Hapi
-          p A small project that started from a small demo that I made to visualize the skills in the company I was working at to help the Engineering Managers. I continued on as my own personal project to just have fun and go all out to see my current level.
-          .link
-            a(href='https://github.com/william-hsiao/haive') View on Github
-
-      .project-item
-        .date
           span 2020
           span ~
           span 2021
@@ -85,7 +72,7 @@ export default {
 };
 </script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 #projects {
   padding-bottom: 100px;
   margin-bottom: -40px;

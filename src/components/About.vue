@@ -17,8 +17,8 @@ section#about.panel
         tr
           td.label Current Position:
           td.value
-            span Software Engineer,
-            span ExaWizards Inc.
+            span Head of Engineering,
+            span VisionWiz Inc.
         tr
           td.label Languages:
           td.value
@@ -33,7 +33,7 @@ export default {
 };
 </script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 #about {
   .panel-bg {
     background-color: #232323;
