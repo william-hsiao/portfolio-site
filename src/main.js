@@ -10,7 +10,6 @@ const app = createApp({
     const loadScreen = document.getElementById("load-screen");
     loadScreen.style.opacity = "0";
     loadScreen.style.pointerEvents = "none";
-    // loadScreen.style.display = 'none';
   },
 });
 
