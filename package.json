@@ -6,9 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "compile": "node ./utility/compilePug",
-    "publish": "git subtree push --prefix dist heroku master",
-    "publish-force": "git push heroku `git subtree split --prefix dist v2`:master"
+    "compile": "node ./utility/compilePug"
   },
   "dependencies": {
     "@vue/compat": "^3.2.6",
