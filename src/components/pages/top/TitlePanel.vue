@@ -27,7 +27,7 @@ onMounted(() => {
   
   
 <style lang="scss" scoped>
-$transition-time: 1.5s;
+$transition-time: .35s;
 
 .title-panel {
   position: relative;
@@ -41,36 +41,40 @@ $transition-time: 1.5s;
   align-items: center;
   justify-content: center;
 
-  transition: all $transition-time linear;
+  transition: all calc($transition-time * 1.5) linear $transition-time;
 
   .content {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+
+    min-width: 80%;
+    transition: min-width $transition-time linear;
   }
 
   .logo {
-    height: 300px;
-    width: 300px;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
 
     img {
-      height: 100%;
-      width: 100%;
+      height: 300px;
+      width: 300px;
     }
   }
 
   .title {
-    padding-left: 2rem;
-    opacity: 1;
-    max-width: 100%;
-    translate: none;
-    overflow: visible;
-    white-space: nowrap;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    position: absolute;
+    padding-right: 3rem; // offset for img whitespace
 
     color: $color-background-primary-contrast;
 
-    transition: max-width calc($transition-time / 2) linear, opacity $transition-time linear, translate $transition-time linear;
+    opacity: 1;
+    transition: all $transition-time linear $transition-time;
   }
 
   .bg-main,
@@ -80,7 +84,7 @@ $transition-time: 1.5s;
     height: 200%;
     position: absolute;
 
-    transition: all calc($transition-time / 3) linear;
+    transition: all calc($transition-time / 2) linear $transition-time;
   }
 
   .bg-main {
@@ -98,11 +102,12 @@ $transition-time: 1.5s;
   &.transition-in {
     min-height: 100vh;
 
+    .content {
+      min-width: 0;
+    }
+
     .title {
-      padding-left: 0;
       opacity: 0;
-      max-width: 0;
-      translate: -1rem 0;
     }
 
     .bg-main,
