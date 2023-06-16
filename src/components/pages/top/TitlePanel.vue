@@ -90,11 +90,11 @@ $transition-time: .35s;
   .bg-main {
     background-color: $color-background-primary;
     transform: skew(0deg, -10deg);
-    bottom: 0;
+    bottom: 3rem;
   }
 
   .bg-sub {
-    background-color: $color-background-secondary;
+    background-color: $color-background-tertiary;
     transform: skew(0deg, 15deg);
     bottom: 0;
   }
