@@ -1,7 +1,6 @@
 <template>
   <div class="footer-panel">
-    <div class="bg-main" />
-    <div class="bg-sub" />
+    <BackgroundPanes class='bg' variant="home-footer" />
 
     <div class="content">
     </div>
@@ -9,41 +8,21 @@
 </template>
   
 <script setup lang="ts">
+import BackgroundPanes from '@/components/BackgroundPanes.vue';
 </script>
-  
-  
-<style lang="scss" scoped>
-$transition-time: .35s;
 
+<style lang="scss" scoped>
 .footer-panel {
-  position: relative;
-  isolation: isolate;
-  overflow: visible;
   box-sizing: border-box;
+
+  position: relative;
+
+  .bg {
+    position: absolute;
+  }
 
   // Temp
   margin-top: 1000px;
   height: 500px;
-
-  .bg-main,
-  .bg-sub {
-    width: 100vw;
-    mix-blend-mode: multiply;
-    height: 200%;
-    position: absolute;
-  }
-
-  .bg-main {
-    background-color: $color-background-secondary;
-    transform: skew(0deg, -10deg);
-    top: 0;
-  }
-
-  .bg-sub {
-    background-color: $color-background-tertiary;
-    transform: skew(0deg, 15deg);
-    top: 5rem;
-  }
-
 }
 </style>

@@ -1,7 +1,6 @@
 <template>
   <div class="title-panel" :class="{ 'transition-in': transitionIn }">
-    <div class="bg-main" />
-    <div class="bg-sub" />
+    <BackgroundPanes class="bg" variant="home-header" />
 
     <div class="content">
       <div class="logo">
@@ -17,6 +16,7 @@
   
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
+import BackgroundPanes from '@/components/BackgroundPanes.vue';
 
 const transitionIn = ref(true)
 
@@ -30,9 +30,6 @@ onMounted(() => {
 $transition-time: .35s;
 
 .title-panel {
-  position: relative;
-  isolation: isolate;
-  overflow: visible;
   padding: 5rem 0;
   box-sizing: border-box;
   min-height: 0;
@@ -42,6 +39,21 @@ $transition-time: .35s;
   justify-content: center;
 
   transition: all calc($transition-time * 1.5) linear $transition-time;
+
+  position: relative;
+
+  .bg {
+    position: absolute;
+
+    &:deep {
+
+      .bg-main,
+      .bg-sub {
+        transition: all calc($transition-time / 2) linear $transition-time;
+      }
+
+    }
+  }
 
   .content {
     display: flex;
@@ -77,28 +89,6 @@ $transition-time: .35s;
     transition: all $transition-time linear $transition-time;
   }
 
-  .bg-main,
-  .bg-sub {
-    width: 100vw;
-    mix-blend-mode: multiply;
-    height: 200%;
-    position: absolute;
-
-    transition: all calc($transition-time / 2) linear $transition-time;
-  }
-
-  .bg-main {
-    background-color: $color-background-primary;
-    transform: skew(0deg, -10deg);
-    bottom: 3rem;
-  }
-
-  .bg-sub {
-    background-color: $color-background-tertiary;
-    transform: skew(0deg, 15deg);
-    bottom: 0;
-  }
-
   &.transition-in {
     min-height: 100vh;
 
@@ -110,9 +100,13 @@ $transition-time: .35s;
       opacity: 0;
     }
 
-    .bg-main,
-    .bg-sub {
-      transform: none;
+
+    .bg:deep {
+
+      .bg-main,
+      .bg-sub {
+        transform: none;
+      }
     }
   }
 }
