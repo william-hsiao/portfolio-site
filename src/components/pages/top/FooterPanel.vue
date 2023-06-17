@@ -14,6 +14,7 @@ import BackgroundPanes from '@/components/BackgroundPanes.vue';
 <style lang="scss" scoped>
 .footer-panel {
   box-sizing: border-box;
+  height: 20vh;
 
   position: relative;
 
@@ -21,8 +22,5 @@ import BackgroundPanes from '@/components/BackgroundPanes.vue';
     position: absolute;
   }
 
-  // Temp
-  margin-top: 1000px;
-  height: 500px;
 }
 </style>

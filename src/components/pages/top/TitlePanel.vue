@@ -30,7 +30,7 @@ onMounted(() => {
 $transition-time: .35s;
 
 .title-panel {
-  padding: 5rem 0;
+  padding: 10vh 0 20vh;
   box-sizing: border-box;
   min-height: 0;
 
@@ -71,8 +71,8 @@ $transition-time: .35s;
     width: 100%;
 
     img {
-      height: 300px;
-      width: 300px;
+      height: 40vh;
+      aspect-ratio: 1 / 1;
     }
   }
 
@@ -81,7 +81,6 @@ $transition-time: .35s;
     justify-content: flex-end;
     width: 100%;
     position: absolute;
-    padding-right: 3rem; // offset for img whitespace
 
     color: $color-background-primary-contrast;
 

@@ -1,7 +1,7 @@
 <template>
   <div class="bg-pane" :class="[variant]">
-    <div class="bg-main" />
     <div class="bg-sub" />
+    <div class="bg-main" />
   </div>
 </template>
 
@@ -24,7 +24,7 @@ defineProps<{
     width: 100%;
     mix-blend-mode: multiply;
     position: absolute;
-    height: 150%;
+    height: 200%;
   }
 
   .bg-main {
@@ -59,6 +59,22 @@ defineProps<{
       background-color: $color-background-tertiary;
       transform: skew(0deg, 15deg);
       top: 0;
+    }
+  }
+
+  &.home-section {
+    .bg-main {
+      background-color: $color-background-secondary;
+      transform: skew(0deg, -10deg);
+      height: 100%;
+      mix-blend-mode: normal;
+    }
+
+    .bg-sub {
+      background-color: $color-background-tertiary;
+      transform: skew(0deg, 15deg);
+      height: 90%;
+      mix-blend-mode: normal;
     }
   }
 }
