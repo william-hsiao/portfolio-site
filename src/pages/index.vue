@@ -5,11 +5,14 @@
     <Panel class="section">
       <h2>Hello!</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Welcome to my corner of the internet! I am a Full-stack Web Engineer based in Tokyo, currently serving as the Head
+        of Engineering at VisionWiz Inc. I consider myself more of a generalist, working my way through the frontend,
+        backend and infrastructure. That said, my personal preference has always leaned toward the frontend where I
+        started my career. Aside from coding, I've had experiences leading teams, managing multiple projects and even
+        dipping my hands into UI/UX design.
+      </p>
+      <p>
+        Got a project in mind? Have a question? Let's talk!
       </p>
     </Panel>
 
