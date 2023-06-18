@@ -6,6 +6,8 @@
 body {
   margin: 0;
   font-family: $font-family-body;
+  color: $color-background-base-contrast;
+  background-color: $color-background-base;
 }
 
 h1,

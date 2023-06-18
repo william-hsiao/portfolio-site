@@ -1,7 +1,16 @@
-$color-background-primary: #1F1F1F;
-$color-background-secondary: #484848;
-$color-background-tertiary: #D0D0D0;
-$color-background-primary-contrast: #FFF;
+$color-grey-90: #1F1F1F;
+$color-grey-80: #484848;
+$color-grey-20: #D0D0D0;
+$color-white: #FFF;
+
+// Light mode
+$color-background-base: $color-white;
+$color-background-primary: $color-grey-90;
+$color-background-secondary: $color-grey-80;
+$color-background-tertiary: $color-grey-20;
+
+$color-background-base-contrast: $color-grey-90;
+$color-background-primary-contrast: $color-white;
 
 $font-family-headers: 'Play', san-serif;
 $font-family-body: 'Montserrat', san-serif;

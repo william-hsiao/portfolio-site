@@ -56,6 +56,7 @@ import BackgroundPanes from '@/components/BackgroundPanes.vue';
 
 <style lang="scss" scoped>
 main {
+  background-color: $color-white;
   overflow: hidden;
 
 
@@ -91,7 +92,7 @@ main {
     padding-bottom: 30vh;
 
     .content {
-      color: $color-background-primary-contrast;
+      color: $color-white;
       position: relative;
       text-align: right;
     }
