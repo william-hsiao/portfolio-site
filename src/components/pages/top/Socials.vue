@@ -23,6 +23,8 @@
 .socials {
   display: flex;
   justify-content: space-evenly;
+  line-height: 1;
+  gap: 1rem;
 
   .icon {
     &:hover {

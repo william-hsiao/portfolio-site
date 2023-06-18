@@ -10,6 +10,10 @@
           Blog
         </NuxtLink>
       </div>
+
+      <div class="spacer" />
+
+      <Socials />
     </Panel>
   </header>
 
@@ -26,7 +30,8 @@
 </template>
 
 <script setup lang="ts">
-import Panel from '~/components/Panel.vue';
+import Panel from '@/components/Panel.vue';
+import Socials from '@/components/pages/top/Socials.vue';
 import { COPYRIGHT_STATEMENT } from '@/constants';
 </script>
 
@@ -46,6 +51,8 @@ header {
     }
 
     .links {
+      margin-left: 2rem;
+
       a {
         color: $color-background-primary-contrast;
         font-size: 1rem;
@@ -58,6 +65,10 @@ header {
           text-decoration: underline;
         }
       }
+    }
+
+    .spacer {
+      flex-grow: 1;
     }
   }
 }
