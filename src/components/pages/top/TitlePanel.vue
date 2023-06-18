@@ -30,7 +30,7 @@ onMounted(() => {
 $transition-time: .35s;
 
 .title-panel {
-  padding: 10vh 0 20vh;
+  padding: 10vh 0;
   box-sizing: border-box;
   min-height: 0;
 
@@ -61,15 +61,10 @@ $transition-time: .35s;
     justify-content: center;
     position: relative;
 
-    min-width: 80%;
     transition: min-width $transition-time linear;
   }
 
   .logo {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-
     img {
       height: 40vh;
       aspect-ratio: 1 / 1;
@@ -77,15 +72,18 @@ $transition-time: .35s;
   }
 
   .title {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    position: absolute;
-
-    color: $color-background-primary-contrast;
-
+    max-width: 100%;
     opacity: 1;
-    transition: all $transition-time linear $transition-time;
+    text-align: right;
+    overflow: hidden;
+    transition: max-width $transition-time linear,
+      opacity calc($transition-time * 1.5) linear;
+
+    h1 {
+      color: $color-background-primary-contrast;
+      padding-left: 10vw;
+      white-space: nowrap;
+    }
   }
 
   &.transition-in {
@@ -96,6 +94,7 @@ $transition-time: .35s;
     }
 
     .title {
+      max-width: 0;
       opacity: 0;
     }
 
