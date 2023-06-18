@@ -5,7 +5,10 @@
     </div>
 
     <div class="title">
-      <h1>William Hsiao</h1>
+      <div class="container">
+        <h1>William Hsiao</h1>
+        <Socials />
+      </div>
     </div>
   </Panel>
 </template>
@@ -13,6 +16,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import Panel from '@/components/Panel.vue';
+import Socials from './Socials.vue';
 
 const transitionIn = ref(true)
 
@@ -69,9 +73,12 @@ $transition-time: .35s;
     transition: max-width $transition-time linear,
       opacity calc($transition-time * 1.5) linear;
 
+    .container {
+      padding-left: 10vw;
+    }
+
     h1 {
       color: $color-background-primary-contrast;
-      padding-left: 10vw;
       white-space: nowrap;
     }
   }
