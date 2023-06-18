@@ -2,28 +2,13 @@
   <h1>Blog</h1>
 
   <ContentList :query="query" v-slot="{ list }">
-    <div v-for="article in list" :key="article._path" class="article">
-      <div class="date">{{ formatDate(new Date(article.date)) }}</div>
-
-      <NuxtLink :to="article._path">
-        <h2>{{ article.title }}</h2>
-      </NuxtLink>
-
-      <div v-if="article.tags?.length > 0" class="tags-container">
-        <Tag v-for="tag in article.tags">
-          {{ tag }}
-        </Tag>
-      </div>
-
-      <p>{{ article.description }}</p>
-    </div>
+    <ListItem v-for="article in list" :article="article" :key="article._path" />
   </ContentList>
 </template>
 
 <script setup lang="ts">
 import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
-import Tag from '@/components/common/Tag.vue';
-import { formatDate } from '@/utils/date';
+import ListItem from '@/components/pages/blog/ListItem.vue';
 
 const query: QueryBuilderParams = { path: '/blog', sort: [{ date: -1 }] }
 </script>

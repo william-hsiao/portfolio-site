@@ -15,13 +15,15 @@
 
     <Panel class="section blog" background-variant="home-section">
       <h2>Blog</h2>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
+      <ContentList :query="query" v-slot="{ list }">
+        <ListItem v-for="article in list" :article="article" :key="article._path" class="article" />
+      </ContentList>
+
+      <NuxtLink to="/blog">
+        <Button>
+          Read more
+        </Button>
+      </NuxtLink>
     </Panel>
 
     <Panel class="section">
@@ -42,9 +44,14 @@
 </template>
 
 <script setup lang="ts">
-import TitlePanel from '@/components/pages/top/TitlePanel.vue';
+import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types';
 import Panel from '@/components/Panel.vue';
+import Button from '@/components/common/Button.vue';
+import TitlePanel from '@/components/pages/top/TitlePanel.vue';
+import ListItem from '@/components/pages/blog/ListItem.vue';
 import { COPYRIGHT_STATEMENT } from '@/constants';
+
+const query: QueryBuilderParams = { path: '/blog', limit: 3, sort: [{ date: -1 }] }
 
 definePageMeta({
   layout: false
@@ -67,6 +74,10 @@ main {
       font-size: 4vh;
     }
 
+    h3 {
+      font-size: 3vh;
+    }
+
     p {
       font-size: 2vh;
     }
@@ -85,6 +96,21 @@ main {
 
     color: $color-white;
     text-align: right;
+
+    .article {
+      h3 {
+        color: $color-white;
+      }
+
+      p {
+        font-size: 1.8vh;
+      }
+
+      .tag,
+      .date {
+        font-size: 1.5vh;
+      }
+    }
   }
 }
 
