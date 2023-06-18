@@ -7,7 +7,7 @@
 
 <script setup lang="ts">
 defineProps<{
-  variant: 'home-header' | 'home-footer' | 'home-section' | 'header'
+  variant: 'home-header' | 'home-footer' | 'home-section' | 'header' | 'footer'
 }>()
 </script>
 
@@ -41,7 +41,6 @@ defineProps<{
     .bg-main {
       background-color: $color-background-primary;
       bottom: 0;
-
     }
 
     .bg-sub {
@@ -76,6 +75,34 @@ defineProps<{
       transform: skew(0deg, 15deg);
       height: 110%;
       top: -5%;
+    }
+  }
+
+  &.header {
+    .bg-main {
+      background-color: $color-background-primary;
+      transform: skew(0deg, -1deg);
+      bottom: 0;
+    }
+
+    .bg-sub {
+      background-color: $color-background-tertiary;
+      transform: skew(0deg, 2deg);
+      bottom: -3%;
+    }
+  }
+
+  &.footer {
+    .bg-main {
+      background-color: $color-background-secondary;
+      transform: skew(0deg, -1deg);
+      top: -3%;
+    }
+
+    .bg-sub {
+      background-color: $color-background-tertiary;
+      transform: skew(0deg, 2deg);
+      top: 0;
     }
   }
 }

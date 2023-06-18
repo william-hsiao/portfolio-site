@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: "src/",
 
-  modules: ["@nuxtjs/google-fonts"],
+  modules: ["@nuxt/content", "@nuxtjs/google-fonts"],
 
   googleFonts: {
     families: {

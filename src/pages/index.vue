@@ -51,6 +51,10 @@
 import TitlePanel from '@/components/pages/top/TitlePanel.vue';
 import FooterPanel from '@/components/pages/top/FooterPanel.vue';
 import BackgroundPanes from '@/components/BackgroundPanes.vue';
+
+definePageMeta({
+  layout: false
+})
 </script>
 
 
