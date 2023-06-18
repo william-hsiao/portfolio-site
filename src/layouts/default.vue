@@ -65,6 +65,7 @@ header {
 main {
   width: 85%;
   max-width: 1000px;
+  min-height: calc(100vh - 20rem);
   margin: 0 auto;
 }
 

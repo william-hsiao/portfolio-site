@@ -10,6 +10,7 @@ body {
   font-family: $font-family-body;
   color: $color-background-base-contrast;
   background-color: $color-background-base;
+  line-height: 1.5;
 }
 
 #__nuxt {
