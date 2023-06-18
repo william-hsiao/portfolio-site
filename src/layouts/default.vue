@@ -1,8 +1,6 @@
 <template>
   <header>
-    <BackgroundPanes class="bg" variant="header" />
-
-    <div class="content">
+    <Panel backgroundVariant="header">
       <NuxtLink to="/">
         <img src="@/assets/images/logo.svg" class="logo" />
       </NuxtLink>
@@ -12,8 +10,7 @@
           Blog
         </NuxtLink>
       </div>
-    </div>
-
+    </Panel>
   </header>
 
   <main>
@@ -21,30 +18,23 @@
   </main>
 
   <footer>
-    <BackgroundPanes class="bg" variant="footer" />
+    <Panel backgroundVariant="footer">
 
-    <div class="content">
       {{ COPYRIGHT_STATEMENT }}
-    </div>
+    </Panel>
   </footer>
 </template>
 
 <script setup lang="ts">
-import BackgroundPanes from '@/components/BackgroundPanes.vue';
+import Panel from '~/components/Panel.vue';
 import { COPYRIGHT_STATEMENT } from '@/constants';
 </script>
 
 <style lang="scss" scoped>
 header {
-  position: relative;
   margin-bottom: 5rem;
 
-  .bg {
-    position: absolute;
-  }
-
-  .content {
-    position: relative;
+  &:deep(.content) {
     padding: 1.5rem 5rem;
     box-sizing: border-box;
     display: flex;
@@ -79,15 +69,9 @@ main {
 }
 
 footer {
-  position: relative;
   margin-top: 5rem;
 
-  .bg {
-    position: absolute;
-  }
-
-  .content {
-    position: relative;
+  &:deep(.content) {
     padding: 1.5rem 5rem;
     box-sizing: border-box;
 

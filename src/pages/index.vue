@@ -2,55 +2,49 @@
   <main>
     <TitlePanel />
 
-    <section class="intro">
-      <div class="content">
-        <h2>Hello!</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
-    </section>
+    <Panel class="section">
+      <h2>Hello!</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Panel>
 
-    <section class='blog'>
-      <BackgroundPanes class='bg' variant="home-section" />
+    <Panel class="section blog" background-variant="home-section">
+      <h2>Blog</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Panel>
 
-      <div class="content">
-        <h2>Blog</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
-    </section>
+    <Panel class="section">
+      <h2>Past Work</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+    </Panel>
 
-    <section class="past-work">
-      <div class="content">
-        <h2>Past Work</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
-    </section>
-
-    <FooterPanel />
+    <Panel class="footer" backgroundVariant="home-footer">
+      {{ COPYRIGHT_STATEMENT }}
+    </Panel>
   </main>
 </template>
 
 <script setup lang="ts">
 import TitlePanel from '@/components/pages/top/TitlePanel.vue';
-import FooterPanel from '@/components/pages/top/FooterPanel.vue';
-import BackgroundPanes from '@/components/BackgroundPanes.vue';
+import Panel from '@/components/Panel.vue';
+import { COPYRIGHT_STATEMENT } from '@/constants';
 
 definePageMeta({
   layout: false
@@ -78,28 +72,27 @@ main {
     }
   }
 
-  section {
-    padding: 35vh 15vw;
-    box-sizing: border-box;
-
-    position: relative;
-
-    .bg {
-      position: absolute;
-      top: 0;
-      left: 0;
+  .section {
+    &:deep(.content) {
+      padding: 35vh 15vw;
+      box-sizing: border-box;
     }
   }
 
-  .blog {
+  .blog:deep(.content) {
     padding-top: 20vh;
     padding-bottom: 30vh;
 
-    .content {
-      color: $color-white;
-      position: relative;
-      text-align: right;
-    }
+    color: $color-white;
+    text-align: right;
   }
+}
+
+.footer:deep(.content) {
+  box-sizing: border-box;
+  padding: 15vh 0 5vh;
+  color: $color-background-primary-contrast-sub;
+  text-align: center;
+  font-size: 1.5vh;
 }
 </style>
