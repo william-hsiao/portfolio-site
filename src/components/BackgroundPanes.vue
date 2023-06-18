@@ -25,6 +25,8 @@ defineProps<{
     mix-blend-mode: multiply;
     position: absolute;
     height: 200%;
+
+    box-shadow: 0 1vh 4vh rgb(0 0 0 / 35%);
   }
 
   .bg-main {
@@ -67,14 +69,13 @@ defineProps<{
       background-color: $color-background-secondary;
       transform: skew(0deg, -10deg);
       height: 100%;
-      mix-blend-mode: normal;
     }
 
     .bg-sub {
       background-color: $color-background-tertiary;
       transform: skew(0deg, 15deg);
-      height: 90%;
-      mix-blend-mode: normal;
+      height: 110%;
+      top: -5%;
     }
   }
 }
