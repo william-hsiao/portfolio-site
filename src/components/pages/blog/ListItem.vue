@@ -35,10 +35,15 @@ defineProps<{
 .article {
   margin: 2rem 0;
 
-  h3 {
-    margin: 0.3rem 0 0.5rem;
-    letter-spacing: 0.1rem;
-    text-decoration: underline;
+  a {
+    h3 {
+      margin: 0.3rem 0 0.5rem;
+      letter-spacing: 0.1rem;
+    }
+
+    &:hover h3 {
+      text-decoration: underline;
+    }
   }
 
   .date {
