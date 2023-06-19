@@ -9,6 +9,10 @@
         <NuxtLink to="/blog">
           Blog
         </NuxtLink>
+
+        <NuxtLink to="/career">
+          Career
+        </NuxtLink>
       </div>
 
       <div class="spacer" />
@@ -59,10 +63,14 @@ header {
         text-decoration: none;
         text-transform: uppercase;
         font-family: $font-family-headers;
-        letter-spacing: 0.25rem;
+        letter-spacing: 0.15rem;
 
         &:hover {
           text-decoration: underline;
+        }
+
+        &:not(:last-child) {
+          margin-right: 1rem;
         }
       }
     }
