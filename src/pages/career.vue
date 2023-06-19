@@ -9,7 +9,7 @@
 
   <ContentRenderer v-for="article in data" :value="article" :key="article._path">
     <section>
-      <h2>{{ article.title }}</h2>
+      <h3>{{ article.title }}</h3>
 
       <div class="subtitle">
         <div>
@@ -41,13 +41,13 @@ const { data } = await useAsyncData('career-md', () => queryContent('/career').f
 section {
   margin: 3rem 0;
 
-  h2 {
-    margin: 0;
+  h3 {
+    margin: .5rem 0;
   }
 
   .subtitle {
     font-size: $font-size-s;
-    color: $color-background-primary-contrast-sub;
+    color: $color-background-base-contrast-sub;
     margin-bottom: .5rem;
   }
 
