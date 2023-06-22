@@ -2,7 +2,7 @@
   <main>
     <TitlePanel />
 
-    <Panel class="section">
+    <Panel class="section intro">
       <h2>Hello!</h2>
       <p>
         Welcome to my corner of the internet! I am a Full-stack Web Engineer based in Tokyo, currently serving as the Head
@@ -31,7 +31,7 @@
       </NuxtLink>
     </Panel>
 
-    <Panel class="section">
+    <Panel class="section career">
       <h2>Past Work & Experience</h2>
 
       <p>
@@ -117,6 +117,7 @@ main {
     }
 
     button {
+      padding: 1vh 2vw;
       font-size: 1.75vh;
     }
   }
@@ -129,8 +130,8 @@ main {
   }
 
   .blog:deep(.content) {
-    padding-top: 15vh;
-    padding-bottom: 20vh;
+    padding-top: 25vh;
+    padding-bottom: 25vh;
 
     color: $color-white;
     text-align: right;
@@ -144,20 +145,26 @@ main {
         font-size: 1.8vh;
       }
 
-      .tag,
       .date {
         font-size: 1.5vh;
       }
     }
   }
 
-  .tags-container {
+  .blog:deep(.content) .tags-container,
+  .career .tags-container {
+    gap: .5vw;
+
+    .tag {
+      padding: .25vh .75vw;
+      font-size: 1.5vh;
+    }
+  }
+
+  .career .tags-container {
     display: flex;
-    gap: 1vw;
     flex-wrap: wrap;
     margin-bottom: 5vh;
-
-    font-size: 1.5vh;
   }
 }
 

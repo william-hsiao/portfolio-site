@@ -86,8 +86,8 @@ defineProps<{
       .bg-sub {
         background-color: $color-background-tertiary;
         transform: skew(0deg, 15deg);
-        height: 110%;
-        top: -5%;
+        height: 104%;
+        top: -2%;
       }
     }
 
