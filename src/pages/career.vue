@@ -58,6 +58,8 @@ section {
   }
 
   &:deep(blockquote) {
+    margin: 0;
+    color: $color-background-base-contrast-sub;
     font-style: italic;
   }
 
