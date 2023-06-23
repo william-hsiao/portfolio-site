@@ -6,13 +6,8 @@
       </NuxtLink>
 
       <div class="links">
-        <NuxtLink to="/blog">
-          Blog
-        </NuxtLink>
-
-        <NuxtLink to="/career">
-          Career
-        </NuxtLink>
+        <NuxtLink to="/blog">Blog</NuxtLink>
+        <NuxtLink to="/career">Career</NuxtLink>
       </div>
 
       <div class="spacer" />
@@ -58,15 +53,19 @@ header {
       margin-left: 2rem;
 
       a {
+        box-sizing: border-box;
         color: $color-background-primary-contrast;
         font-size: 1rem;
         text-decoration: none;
         text-transform: uppercase;
         font-family: $font-family-headers;
         letter-spacing: 0.15rem;
+        padding: .5rem .5rem;
+        border-bottom: 1px solid $color-transparent;
+        transition: border-color .2s ease;
 
         &:hover {
-          text-decoration: underline;
+          border-color: $color-background-primary-contrast-sub;
         }
 
         &:not(:last-child) {
