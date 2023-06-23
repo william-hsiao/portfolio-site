@@ -8,8 +8,6 @@ tags:
   - Career Advice
 ---
 
-# Job Hunting as a Software Engineering Student (Part 1)
-
 Finding your first job isn't easy, at least for the majority of people. There are so many things to look through and even more to stress about. Where do you even start? What are you even meant to say during interview but even before then, how do you even land one?
 
 _Standard Disclaimer: I am by no means an expert in any way. This article is based on what I personally experienced, heard from other people and what I wished I had done. Your experiences will more than likely differ from mine but I hope this will at least provide you with a few things to think about._

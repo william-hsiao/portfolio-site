@@ -8,8 +8,6 @@ tags:
   - Career Advice
 ---
 
-# Job Hunting as a Software Engineering Student (Part 2)
-
 ## Beginning the Search
 
 Once you're ready to venture forth into the job market, it's time to put all of your hard work to use. Before worrying about which companies you would like to apply for, the first thing you should do is to make yourself discoverable.

@@ -6,8 +6,6 @@ tags:
   - Personal
 ---
 
-# Reflections - August 2020
-
 2020 has without a doubt, been a year to remember. I went from watching my home country burn, to the beginning of a cultural revolution across the ocean and to top it off, a virus making waves around the world. On a personal level, it has really been a year to evaluate where I was and eventually deciding it was time to leave my job.
 
 Rewinding back to 2018, I began looking for an internship having put less priority on my bachelor's research in favour of gaining some real-world development experience. It was in March that through my lab professor that I joined a small start-up called Repro. My first year took me right into the commotion of it all, working through an UI overhaul of our dashboard and then to building an SDK for the Web. I learnt an immense amount during this time and gained a lot of confidence in my own skills. By the time March came around again, I had already made significant contributions to the projects and felt like I was treated like a full-time engineer. In the following months, I found myself in more leadership positions, even checking up on my team members and suggesting to them what to do.
