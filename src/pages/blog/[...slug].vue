@@ -1,23 +1,33 @@
 <template>
   <ContentRenderer :value="data!">
-    <article>
-      <div class="publish-date">{{ formatDate(new Date(data!.date)) }}</div>
-      <h1>{{ data!.title }}</h1>
+    <article v-if="data">
+      <div class="publish-date">{{ formatDate(new Date(data.date)) }}</div>
+      <h1>{{ data.title }}</h1>
 
-      <div v-if="data!.tags && data!.tags.length > 0" class="tags-container">
-        <Tag v-for="tag in data!.tags">
+      <div v-if="data.tags && data.tags.length > 0" class="tags-container">
+        <Tag v-for="tag in data.tags">
           {{ tag }}
         </Tag>
       </div>
 
-      <ContentRendererMarkdown :value="data!" />
+      <ContentRendererMarkdown :value="data" />
     </article>
+
+    <template #empty>
+      <div class="empty">
+        <div>Page not found</div>
+        <NuxtLink to="/blog">
+          <Button>Return to blogs</Button>
+        </NuxtLink>
+      </div>
+    </template>
   </ContentRenderer>
 </template>
 
 <script setup lang="ts">
 import { ParsedContent } from '@nuxt/content/dist/runtime/types';
 import Tag from '@/components/common/Tag.vue';
+import Button from '@/components/common/Button.vue';
 import { formatDate } from '@/utils/date';
 
 interface BlogParsedContent extends ParsedContent {
@@ -53,5 +63,12 @@ article {
       text-indent: 2rem;
     }
   }
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
 }
 </style>
