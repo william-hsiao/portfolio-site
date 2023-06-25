@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       domain: process.env.NUXT_PUBLIC_DOMAIN,
+      gtag: process.env.NUXT_PUBLIC_GTAG,
     },
   },
 

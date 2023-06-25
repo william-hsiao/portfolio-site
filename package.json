@@ -19,6 +19,7 @@
     "vue-tsc": "^1.8.0"
   },
   "dependencies": {
-    "lottie-web": "^5.12.2"
+    "lottie-web": "^5.12.2",
+    "vue-gtag": "^2.0.1"
   }
 }
