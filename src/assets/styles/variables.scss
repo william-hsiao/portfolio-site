@@ -1,0 +1,27 @@
+// Colours
+$color-grey-90: #1F1F1F;
+$color-grey-80: #484848;
+$color-grey-50: #888888;
+$color-grey-30: #BABABA;
+$color-grey-20: #D0D0D0;
+$color-white: #FFF;
+$color-transparent: rgba(0, 0, 0, 0);
+$color-transparent-semi: rgba(0, 0, 0, 0.25);
+
+// Light mode
+$color-background-base: $color-white;
+$color-background-primary: $color-grey-90;
+$color-background-secondary: $color-grey-80;
+$color-background-tertiary: $color-grey-20;
+
+$color-background-base-contrast: $color-grey-90;
+$color-background-base-contrast-sub: $color-grey-50;
+$color-background-primary-contrast: $color-white;
+$color-background-primary-contrast-sub: $color-grey-30;
+
+// Font
+$font-family-headers: 'Play', san-serif;
+$font-family-body: 'Montserrat', san-serif;
+
+$font-size-m: 1rem;
+$font-size-s: 0.8rem;

@@ -1,29 +1,52 @@
-<template lang="pug">
-#app
-  router-view(v-slot="{ Component }")
-    transition(name='fade', mode='out-in')
-      keep-alive
-        component(:is="Component")
+<template>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
 
-<script>
-export default {
-  name: 'App',
-}
+<script setup lang="ts">
+const route = useRoute();
+const config = useRuntimeConfig();
+
+const siteTitle = 'William Hsiao';
+useHead({
+  titleTemplate: () => route.meta.title ? `${route.meta.title} - ${siteTitle}` : siteTitle,
+  meta: [
+    {
+      property: 'og:title',
+      content: () => route.meta.title ? `${route.meta.title} - ${siteTitle}` : siteTitle,
+    },
+    {
+      property: 'og:image',
+      content: `${config.public.domain}/ogp.png`,
+    }
+  ]
+})
 </script>
 
 <style lang="scss">
-@import './assets/stylesheets/_animations.scss';
-@import './assets/stylesheets/_base.scss';
-@import './assets/stylesheets/_buttons.scss';
-@import './assets/stylesheets/_colours.scss';
-@import './assets/stylesheets/_forms.scss';
-@import './assets/stylesheets/_tooltips.scss';
+body {
+  margin: 0;
+  font-family: $font-family-body;
+  color: $color-background-base-contrast;
+  background-color: $color-background-base;
+  line-height: 1.5;
+}
 
-#app {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  height: 100%;
-  text-align: center;
+#__nuxt {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-family-headers;
+  letter-spacing: 0.1rem;
+}
+
+a {
+  color: $color-background-base-contrast;
+  text-decoration: none;
 }
 </style>

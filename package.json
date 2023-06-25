@@ -1,56 +1,26 @@
 {
-  "name": "portfolio-site",
-  "version": "0.1.0",
+  "name": "william-hsiao-portfolio",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "compile": "node ./utility/compilePug"
-  },
-  "dependencies": {
-    "@vue/compat": "^3.2.6",
-    "@vue/compiler-sfc": "^3.2.6",
-    "axios": "^0.21.1",
-    "core-js": "^3.6.5",
-    "node-sass": "^6.0.1",
-    "pug": "^3.0.2",
-    "pug-plain-loader": "^1.0.0",
-    "sass-loader": "^10.2.0",
-    "vue": "^3.2.6",
-    "vue-gtag": "^2.0.1",
-    "vue-router": "^4.0.11"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^4.5.13",
-    "@vue/cli-plugin-eslint": "^4.5.13",
-    "@vue/cli-service": "^4.5.13",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2"
+    "@nuxt/content": "^2.7.0",
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/google-fonts": "^3.0.1",
+    "@types/node": "^18",
+    "nuxt": "^3.5.2",
+    "nuxt-security": "^0.13.1",
+    "sass": "^1.63.4",
+    "typescript": "^5.1.3",
+    "vue-tsc": "^1.8.0"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+  "dependencies": {
+    "lottie-web": "^5.12.2",
+    "vue-gtag": "^2.0.1"
+  }
 }
