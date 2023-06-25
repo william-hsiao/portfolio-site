@@ -2,6 +2,11 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   srcDir: "src/",
+  runtimeConfig: {
+    public: {
+      domain: process.env.NUXT_PUBLIC_DOMAIN,
+    },
+  },
 
   modules: ["@nuxt/content", "@nuxtjs/google-fonts"],
 
