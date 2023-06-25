@@ -4,6 +4,16 @@
   </NuxtLayout>
 </template>
 
+<script setup lang="ts">
+const route = useRoute()
+
+const siteTitle = 'William Hsiao'
+useHead({
+  titleTemplate: () => route.meta.title ? `${route.meta.title} - ${siteTitle}` : siteTitle,
+  meta: [{ property: 'og:title', content: `${siteTitle} - ${route.meta.title}` }]
+})
+</script>
+
 <style lang="scss">
 body {
   margin: 0;

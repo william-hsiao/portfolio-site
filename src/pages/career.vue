@@ -34,6 +34,10 @@
 <script setup lang="ts">
 import Tag from '@/components/common/Tag.vue';
 
+definePageMeta({
+  title: 'Career'
+})
+
 const { data } = await useAsyncData('career-md', () => queryContent('/career').find())
 </script>
 

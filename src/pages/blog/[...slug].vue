@@ -30,13 +30,15 @@ import Tag from '@/components/common/Tag.vue';
 import Button from '@/components/common/Button.vue';
 import { formatDate } from '@/utils/date';
 
+// TODO: Update HTML title
+
 interface BlogParsedContent extends ParsedContent {
   date: string;
   tags?: string[];
 }
 
-const route = useRoute()
-const { data } = await useAsyncData(`blog:${route.path}`, () => queryContent<BlogParsedContent>(route.path).findOne())
+const route = useRoute();
+const { data } = await useAsyncData(`blog:${route.path}`, () => queryContent<BlogParsedContent>(route.path).findOne());
 </script>
 
 <style lang="scss" scoped>
