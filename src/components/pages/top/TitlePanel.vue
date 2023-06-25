@@ -1,7 +1,6 @@
 <template>
   <Panel class="title-panel" :class="{ 'transition-in': transitionIn }" background-variant="home-header">
-    <div class="logo">
-      <img src="@/assets/images/logo.svg" />
+    <div class="logo" ref="logoContainerRef">
     </div>
 
     <div class="title">
@@ -15,13 +14,28 @@
   
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
+import Lottie from 'lottie-web'
+import LOGO_LOTTIE_JSON from '@/assets/logo_lottie.json'
 import Panel from '@/components/Panel.vue';
 import Socials from './Socials.vue';
 
 const transitionIn = ref(true)
+const logoContainerRef = ref(null)
 
-onMounted(() => {
-  setTimeout(() => (transitionIn.value = false), 1500);
+onMounted(async () => {
+  if (!logoContainerRef.value) return;
+
+  const lottie = await Lottie.loadAnimation({
+    container: logoContainerRef.value,
+    renderer: 'svg',
+    loop: false,
+    autoplay: true,
+    animationData: LOGO_LOTTIE_JSON,
+  })
+
+  lottie.addEventListener('complete', () => {
+    transitionIn.value = false
+  })
 })
 </script>
   
@@ -46,10 +60,8 @@ $transition-time: .35s;
   }
 
   .logo {
-    img {
-      height: 40vh;
-      aspect-ratio: 1 / 1;
-    }
+    height: 40vh;
+    aspect-ratio: 1 / 1;
   }
 
   .title {
