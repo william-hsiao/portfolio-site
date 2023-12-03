@@ -1,7 +1,10 @@
 <template>
-  <Panel class="title-panel" :class="{ 'transition-in': transitionIn }" background-variant="home-header">
-    <div class="logo" ref="logoContainerRef">
-    </div>
+  <Panel
+    class="title-panel"
+    :class="{ 'transition-in': transitionIn }"
+    background-variant="home-header"
+  >
+    <div ref="logoContainerRef" class="logo"></div>
 
     <div class="title">
       <div class="container">
@@ -11,16 +14,16 @@
     </div>
   </Panel>
 </template>
-  
+
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import Lottie from 'lottie-web'
-import LOGO_LOTTIE_JSON from '@/assets/logo_lottie.json'
-import Panel from '@/components/Panel.vue';
+import Lottie from 'lottie-web';
 import Socials from './Socials.vue';
+import LOGO_LOTTIE_JSON from '@/assets/logo_lottie.json';
+import Panel from '@/components/Panel.vue';
 
-const transitionIn = ref(true)
-const logoContainerRef = ref(null)
+const transitionIn = ref(true);
+const logoContainerRef = ref(null);
 
 onMounted(async () => {
   if (!logoContainerRef.value) return;
@@ -31,17 +34,16 @@ onMounted(async () => {
     loop: false,
     autoplay: true,
     animationData: LOGO_LOTTIE_JSON,
-  })
+  });
 
   lottie.addEventListener('complete', () => {
-    transitionIn.value = false
-  })
-})
+    transitionIn.value = false;
+  });
+});
 </script>
-  
-  
+
 <style lang="scss" scoped>
-$transition-time: .35s;
+$transition-time: 0.35s;
 
 .title-panel {
   box-sizing: border-box;
@@ -83,7 +85,6 @@ $transition-time: .35s;
   transition: all calc($transition-time * 1.5) linear $transition-time;
 
   &:deep(.bg) {
-
     .bg-main,
     .bg-sub {
       transition: all calc($transition-time / 2) linear $transition-time;
@@ -120,13 +121,11 @@ $transition-time: .35s;
     }
 
     &:deep(.bg) {
-
       .bg-main,
       .bg-sub {
         transform: none;
       }
     }
-
   }
 }
 
@@ -149,6 +148,5 @@ $transition-time: .35s;
       max-height: 0;
     }
   }
-
 }
 </style>

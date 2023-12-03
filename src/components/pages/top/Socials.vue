@@ -12,13 +12,12 @@
       <img src="@/assets/images/linkedin.svg" class="icon" />
     </NuxtLink>
 
-
     <NuxtLink to="mailto:contact@william-hsiao.com">
       <img src="@/assets/images/email.svg" class="icon" />
     </NuxtLink>
   </div>
 </template>
-  
+
 <style lang="scss" scoped>
 .socials {
   display: flex;

@@ -17,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-import type { ParsedContent } from '@nuxt/content/dist/runtime/types'
+import type { ParsedContent } from '@nuxt/content/dist/runtime/types';
 import Tag from '@/components/common/Tag.vue';
 import { formatDate } from '@/utils/date';
 
@@ -27,8 +27,8 @@ interface MdParsedContent extends ParsedContent {
 }
 
 defineProps<{
-  article: MdParsedContent
-}>()
+  article: MdParsedContent;
+}>();
 </script>
 
 <style lang="scss" scoped>
@@ -45,7 +45,7 @@ defineProps<{
       margin: 0;
       letter-spacing: 0.1rem;
       font-size: 1.5rem;
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
     }
 
     &:hover h3 {
@@ -55,9 +55,7 @@ defineProps<{
 
   .tags-container {
     display: inline-flex;
-    gap: .25rem;
+    gap: 0.25rem;
   }
 }
 </style>
-
-

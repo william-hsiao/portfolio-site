@@ -1,7 +1,7 @@
 <template>
   <div class="layout">
     <header>
-      <Panel backgroundVariant="header">
+      <Panel background-variant="header">
         <NuxtLink to="/">
           <img src="@/assets/images/logo.svg" class="logo" />
         </NuxtLink>
@@ -22,8 +22,7 @@
     </main>
 
     <footer>
-      <Panel backgroundVariant="footer">
-
+      <Panel background-variant="footer">
         {{ COPYRIGHT_STATEMENT }}
       </Panel>
     </footer>
@@ -66,9 +65,9 @@ header {
         text-transform: uppercase;
         font-family: $font-family-headers;
         letter-spacing: 0.15rem;
-        padding: .5rem .5rem;
+        padding: 0.5rem 0.5rem;
         border-bottom: 1px solid $color-transparent;
-        transition: border-color .2s ease;
+        transition: border-color 0.2s ease;
 
         &:hover {
           border-color: $color-background-primary-contrast-sub;

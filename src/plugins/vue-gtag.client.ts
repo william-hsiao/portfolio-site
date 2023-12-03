@@ -1,10 +1,10 @@
-import VueGtag from "vue-gtag";
+import VueGtag from 'vue-gtag';
 
 export default defineNuxtPlugin((nuxtApp) => {
   const config = useRuntimeConfig();
 
   if (!config.public.gtag) {
-    console.info("GTAG ID not found");
+    console.info('GTAG ID not found');
     return;
   }
 
@@ -15,6 +15,6 @@ export default defineNuxtPlugin((nuxtApp) => {
         id: config.public.gtag,
       },
     },
-    useRouter()
+    useRouter(),
   );
 });

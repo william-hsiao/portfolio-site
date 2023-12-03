@@ -40,7 +40,9 @@ interface BlogParsedContent extends ParsedContent {
 }
 
 const route = useRoute();
-const { data } = await useAsyncData(`blog:${route.path}`, () => queryContent<BlogParsedContent>(route.path).findOne());
+const { data } = await useAsyncData(`blog:${route.path}`, () =>
+  queryContent<BlogParsedContent>(route.path).findOne(),
+);
 </script>
 
 <style lang="scss" scoped>
@@ -52,13 +54,13 @@ article {
 
   h1 {
     font-size: 2rem;
-    margin-top: .1rem;
+    margin-top: 0.1rem;
     margin-bottom: 1rem;
   }
 
   .tags-container {
     display: inline-flex;
-    gap: .25rem;
+    gap: 0.25rem;
     margin: 1rem 0;
   }
 

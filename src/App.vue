@@ -10,18 +10,20 @@ const config = useRuntimeConfig();
 
 const siteTitle = 'William Hsiao';
 useHead({
-  titleTemplate: () => route.meta.title ? `${route.meta.title} - ${siteTitle}` : siteTitle,
+  titleTemplate: () =>
+    route.meta.title ? `${route.meta.title} - ${siteTitle}` : siteTitle,
   meta: [
     {
       property: 'og:title',
-      content: () => route.meta.title ? `${route.meta.title} - ${siteTitle}` : siteTitle,
+      content: () =>
+        route.meta.title ? `${route.meta.title} - ${siteTitle}` : siteTitle,
     },
     {
       property: 'og:image',
       content: `${config.public.domain}/ogp.png`,
-    }
-  ]
-})
+    },
+  ],
+});
 </script>
 
 <style lang="scss">

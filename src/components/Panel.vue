@@ -13,8 +13,13 @@
 
 <script setup lang="ts">
 defineProps<{
-  backgroundVariant?: 'home-header' | 'home-footer' | 'home-section' | 'header' | 'footer'
-}>()
+  backgroundVariant?:
+    | 'home-header'
+    | 'home-footer'
+    | 'home-section'
+    | 'header'
+    | 'footer';
+}>();
 </script>
 
 <style lang="scss" scoped>
