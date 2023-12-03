@@ -1,27 +1,29 @@
 <template>
-  <ContentRenderer :value="data!">
-    <article v-if="data">
-      <div class="publish-date">{{ formatDate(new Date(data.date)) }}</div>
-      <h1>{{ data.title }}</h1>
+  <div>
+    <ContentRenderer :value="data!">
+      <article v-if="data">
+        <div class="publish-date">{{ formatDate(new Date(data.date)) }}</div>
+        <h1>{{ data.title }}</h1>
 
-      <div v-if="data.tags && data.tags.length > 0" class="tags-container">
-        <Tag v-for="tag in data.tags">
-          {{ tag }}
-        </Tag>
-      </div>
+        <div v-if="data.tags && data.tags.length > 0" class="tags-container">
+          <Tag v-for="tag in data.tags">
+            {{ tag }}
+          </Tag>
+        </div>
 
-      <ContentRendererMarkdown :value="data" />
-    </article>
+        <ContentRendererMarkdown :value="data" />
+      </article>
 
-    <template #empty>
-      <div class="empty">
-        <div>Page not found</div>
-        <NuxtLink to="/blog">
-          <Button>Return to blogs</Button>
-        </NuxtLink>
-      </div>
-    </template>
-  </ContentRenderer>
+      <template #empty>
+        <div class="empty">
+          <div>Page not found</div>
+          <NuxtLink to="/blog">
+            <Button>Return to blogs</Button>
+          </NuxtLink>
+        </div>
+      </template>
+    </ContentRenderer>
+  </div>
 </template>
 
 <script setup lang="ts">

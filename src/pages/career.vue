@@ -1,34 +1,36 @@
 <template>
-  <h1>Career</h1>
+  <div>
+    <h1>Career</h1>
 
-  <p>
-    These are some of the key projects that I have worked on throughout my career. I've learnt an incredible amount from
-    each of them and I hope I can provide you with some value by sharing my career path.
-  </p>
+    <p>
+      These are some of the key projects that I have worked on throughout my career. I've learnt an incredible amount from
+      each of them and I hope I can provide you with some value by sharing my career path.
+    </p>
 
 
-  <ContentRenderer v-for="article in data" :value="article" :key="article._path">
-    <section>
-      <h3>{{ article.title }}</h3>
+    <ContentRenderer v-for="article in data" :value="article" :key="article._path">
+      <section>
+        <h3>{{ article.title }}</h3>
 
-      <div class="subtitle">
-        <div>
-          {{ article.date }} @ {{ article.company }}
+        <div class="subtitle">
+          <div>
+            {{ article.date }} @ {{ article.company }}
+          </div>
+          <div>
+            {{ article.role }}
+          </div>
         </div>
-        <div>
-          {{ article.role }}
+
+        <div v-if="article.tags && article.tags.length > 0" class="tags-container">
+          <Tag v-for="tag in article.tags" :key="tag">
+            {{ tag }}
+          </Tag>
         </div>
-      </div>
 
-      <div v-if="article.tags && article.tags.length > 0" class="tags-container">
-        <Tag v-for="tag in article.tags" :key="tag">
-          {{ tag }}
-        </Tag>
-      </div>
-
-      <ContentRendererMarkdown :value="article" />
-    </section>
-  </ContentRenderer>
+        <ContentRendererMarkdown :value="article" />
+      </section>
+    </ContentRenderer>
+  </div>
 </template>
 
 <script setup lang="ts">

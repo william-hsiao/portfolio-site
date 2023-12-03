@@ -9,6 +9,10 @@ export default defineNuxtConfig({
     },
   },
 
+  app: {
+    pageTransition: { name: "page" },
+  },
+
   modules: ["@nuxt/content", "@nuxtjs/google-fonts", "nuxt-security"],
 
   googleFonts: {

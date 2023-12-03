@@ -1,9 +1,11 @@
 <template>
-  <h1>Blog</h1>
+  <div>
+    <h1>Blog</h1>
 
-  <ContentList :query="query" v-slot="{ list }">
-    <ListItem v-for="article in list" :article="article" :key="article._path" />
-  </ContentList>
+    <ContentList :query="query" v-slot="{ list }">
+      <ListItem v-for="article in list" :article="article" :key="article._path" />
+    </ContentList>
+  </div>
 </template>
 
 <script setup lang="ts">

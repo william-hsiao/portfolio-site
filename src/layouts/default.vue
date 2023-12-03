@@ -1,31 +1,33 @@
 <template>
-  <header>
-    <Panel backgroundVariant="header">
-      <NuxtLink to="/">
-        <img src="@/assets/images/logo.svg" class="logo" />
-      </NuxtLink>
+  <div class="layout">
+    <header>
+      <Panel backgroundVariant="header">
+        <NuxtLink to="/">
+          <img src="@/assets/images/logo.svg" class="logo" />
+        </NuxtLink>
 
-      <div class="links">
-        <NuxtLink to="/blog">Blog</NuxtLink>
-        <NuxtLink to="/career">Career</NuxtLink>
-      </div>
+        <div class="links">
+          <NuxtLink to="/blog">Blog</NuxtLink>
+          <NuxtLink to="/career">Career</NuxtLink>
+        </div>
 
-      <div class="spacer" />
+        <div class="spacer" />
 
-      <Socials />
-    </Panel>
-  </header>
+        <Socials />
+      </Panel>
+    </header>
 
-  <main>
-    <slot />
-  </main>
+    <main>
+      <slot />
+    </main>
 
-  <footer>
-    <Panel backgroundVariant="footer">
+    <footer>
+      <Panel backgroundVariant="footer">
 
-      {{ COPYRIGHT_STATEMENT }}
-    </Panel>
-  </footer>
+        {{ COPYRIGHT_STATEMENT }}
+      </Panel>
+    </footer>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -35,6 +37,10 @@ import { COPYRIGHT_STATEMENT } from '@/constants';
 </script>
 
 <style lang="scss" scoped>
+.layout {
+  background-color: $color-background-base;
+}
+
 header {
   margin-bottom: 5rem;
 

@@ -29,7 +29,7 @@ body {
   margin: 0;
   font-family: $font-family-body;
   color: $color-background-base-contrast;
-  background-color: $color-background-base;
+  background-color: $color-background-primary;
   line-height: 1.5;
 }
 
@@ -48,5 +48,16 @@ h4 {
 a {
   color: $color-background-base-contrast;
   text-decoration: none;
+}
+
+// Transitions
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.2s;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
 }
 </style>
