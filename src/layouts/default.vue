@@ -2,18 +2,28 @@
   <div class="layout">
     <header>
       <Panel background-variant="header">
-        <NuxtLink to="/">
-          <img src="@/assets/images/logo.svg" class="logo" />
-        </NuxtLink>
+        <div class="banner">
+          <NuxtLink to="/">
+            <img src="@/assets/images/logo.svg" class="logo" />
+          </NuxtLink>
 
-        <div class="links">
-          <NuxtLink to="/blog">Blog</NuxtLink>
-          <NuxtLink to="/career">Career</NuxtLink>
+          <img
+            src="@/assets/images/menu.svg"
+            class="menu"
+            @click="toggleExapndMenu"
+          />
         </div>
 
-        <div class="spacer" />
+        <div class="expandable" :class="{ expand: expandMenu }">
+          <div class="links">
+            <NuxtLink to="/blog">Blog</NuxtLink>
+            <NuxtLink to="/career">Career</NuxtLink>
+          </div>
 
-        <Socials />
+          <div class="spacer" />
+
+          <Socials />
+        </div>
       </Panel>
     </header>
 
@@ -33,6 +43,11 @@
 import Panel from '@/components/Panel.vue';
 import Socials from '@/components/pages/top/Socials.vue';
 import { COPYRIGHT_STATEMENT } from '@/constants';
+
+const expandMenu = ref(false);
+const toggleExapndMenu = () => {
+  expandMenu.value = !expandMenu.value;
+};
 </script>
 
 <style lang="scss" scoped>
@@ -50,37 +65,86 @@ header {
     justify-content: space-between;
     align-items: center;
 
-    .logo {
-      height: 3rem;
-    }
-
-    .links {
-      margin-left: 2rem;
-
-      a {
-        box-sizing: border-box;
-        color: $color-background-primary-contrast;
-        font-size: 1rem;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-family: $font-family-headers;
-        letter-spacing: 0.15rem;
-        padding: 0.5rem 0.5rem;
-        border-bottom: 1px solid $color-transparent;
-        transition: border-color 0.2s ease;
-
-        &:hover {
-          border-color: $color-background-primary-contrast-sub;
-        }
-
-        &:not(:last-child) {
-          margin-right: 1rem;
-        }
+    .banner {
+      .logo {
+        height: 3rem;
+      }
+      .menu {
+        cursor: pointer;
+        display: none;
+        height: 2rem;
       }
     }
 
-    .spacer {
+    .expandable {
+      display: flex;
       flex-grow: 1;
+
+      .links {
+        margin-left: 2rem;
+
+        a {
+          box-sizing: border-box;
+          color: $color-background-primary-contrast;
+          font-size: 1rem;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-family: $font-family-headers;
+          letter-spacing: 0.15rem;
+          padding: 0.5rem 0.5rem;
+          border-bottom: 1px solid $color-transparent;
+          transition: border-color 0.2s ease;
+
+          &:hover {
+            border-color: $color-background-primary-contrast-sub;
+          }
+
+          &:not(:last-child) {
+            margin-right: 1rem;
+          }
+        }
+      }
+
+      .spacer {
+        flex-grow: 1;
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  header {
+    &:deep(.content) {
+      flex-direction: column;
+
+      .banner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        .menu {
+          display: block;
+        }
+      }
+
+      .expandable {
+        display: none;
+        flex-direction: column;
+        &.expand {
+          display: inherit;
+        }
+
+        .links {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: 1rem 0;
+
+          a:not(:last-child) {
+            margin-right: 0;
+          }
+        }
+      }
     }
   }
 }
