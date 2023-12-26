@@ -128,10 +128,13 @@ header {
       }
 
       .expandable {
-        display: none;
         flex-direction: column;
+        max-height: 0;
+        transition: max-height 0.5s ease;
+        overflow: hidden;
+
         &.expand {
-          display: inherit;
+          max-height: 80vh;
         }
 
         .links {
