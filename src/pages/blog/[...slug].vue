@@ -1,12 +1,17 @@
 <template>
   <div>
+    <NuxtLink to="/blog" class="back-link">
+      <img src="@/assets/images/chevron-left.svg" />
+      Back to Blog
+    </NuxtLink>
+
     <ContentRenderer :value="data!">
       <article v-if="data">
         <div class="publish-date">{{ formatDate(new Date(data.date)) }}</div>
         <h1>{{ data.title }}</h1>
 
         <div v-if="data.tags && data.tags.length > 0" class="tags-container">
-          <Tag v-for="tag in data.tags">
+          <Tag v-for="tag in data.tags" :key="tag">
             {{ tag }}
           </Tag>
         </div>
@@ -46,6 +51,18 @@ const { data } = await useAsyncData(`blog:${route.path}`, () =>
 </script>
 
 <style lang="scss" scoped>
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  color: $color-background-base-contrast-sub;
+
+  img {
+    height: 1rem;
+    margin-right: 0.5rem;
+  }
+}
+
 article {
   .publish-date {
     color: $color-background-base-contrast-sub;
