@@ -6,8 +6,7 @@
       <h2>Hello!</h2>
       <p>
         Welcome to my corner of the internet! I am a Full-stack Web Engineer
-        based in Tokyo, currently serving as the Head of Engineering at
-        VisionWiz Inc. I consider myself more of a generalist, working my way
+        based in Tokyo. I consider myself more of a generalist, working my way
         through the frontend, backend and infrastructure. That said, my personal
         preference has always leaned toward the frontend where I started my
         career. When developing, I like to be involved in every step, from
