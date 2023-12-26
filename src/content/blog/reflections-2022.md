@@ -1,5 +1,5 @@
 ---
-title: 2022 - My thoughts on becoming Head of Engineering
+title: Reflections (2022) - Becoming Head of Engineering
 description: My year started off by getting promoted to the Head of Engineering of a small subsidiary company. To be honest, when I was first offered the opportunity, I had a lot of hesitation. At 25, I had never imagined that I would get such a position so early on in my career. Although I had led a few teams leading up to this, I still had a lot of doubt if I was ready. I always kept coming back to thinking of how many more years of experience many of my team members had over me that surely, I wasn't qualified to lead them let alone be responsible for an entire department. Surely, I just wasn't ready.
 date: 2022-12-28
 tags:

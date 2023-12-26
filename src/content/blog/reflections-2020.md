@@ -1,5 +1,5 @@
 ---
-title: Reflections - August 2020
+title: Reflections (2020)
 description: 2020 has without a doubt, been a year to remember. I went from watching my home country burn, to the beginning of a cultural revolution across the ocean and to top it off, a virus making waves around the world. On a personal level, it has really been a year to evaluate where I was and eventually deciding it was time to leave my job.
 date: 2020-08-31
 tags:
