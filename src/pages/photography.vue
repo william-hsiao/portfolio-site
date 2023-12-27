@@ -40,7 +40,7 @@ const setViewPhoto = (photo?: Photo) => {
 
 onMounted(async () => {
   await nextTick();
-  const { data } = await useFetch<Photo[]>('/assets/photography/list.json');
+  const { data } = await useFetch<Photo[]>('/images/photography/list.json');
 
   if (data.value) {
     photos.value = data.value;

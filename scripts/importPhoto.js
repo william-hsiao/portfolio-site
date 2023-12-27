@@ -4,9 +4,9 @@ const fs = require('fs');
 const jimp = require('jimp');
 const prompt = require('prompt-sync')();
 
-const LIST_JSON_FILE_PATH = 'src/assets/photography/list.json';
+const LIST_JSON_FILE_PATH = 'src/public/images/photography/list.json';
 const SIGNATURE_FILE_PATH = 'scripts/signature.png';
-const OUTPUT_PATH = (filename) => `src/assets/photography/${filename}`;
+const OUTPUT_PATH = (filename) => `src/public/images/photography/${filename}`;
 
 const main = async () => {
   const filePath = process.argv[2];
