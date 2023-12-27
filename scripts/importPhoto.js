@@ -25,7 +25,8 @@ const main = async () => {
 
   const filename = `${year}${month}_${location}`
     .toLowerCase()
-    .replace(/ /g, '_');
+    .replace(/ /g, '_')
+    .replace(/,/g, '');
   const orientation =
     image.bitmap.width > image.bitmap.height ? 'landscape' : 'portrait';
 

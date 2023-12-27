@@ -18,6 +18,7 @@
           <div class="links">
             <NuxtLink to="/blog">Blog</NuxtLink>
             <NuxtLink to="/career">Career</NuxtLink>
+            <NuxtLink to="/photography">Photography</NuxtLink>
           </div>
 
           <div class="spacer" />
