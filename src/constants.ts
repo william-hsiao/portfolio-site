@@ -1,5 +1,5 @@
 export const COPYRIGHT_STATEMENT =
-  '© 2020~2024 William Hsiao. All rights reserved.';
+  '© 2020~2025 William Hsiao. All rights reserved.';
 
 export const PHOTOGRAPHY_IMAGE_URL = (filename: string) =>
   `/images/photography/${filename}.jpg`;
